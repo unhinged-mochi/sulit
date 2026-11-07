@@ -1,0 +1,15 @@
+import type { Source } from '../schema.ts'
+import aub from './aub.ts'
+import bdo from './bdo.ts'
+import bpi from './bpi.ts'
+import chinabank from './chinabank.ts'
+import eastwest from './eastwest.ts'
+import hsbc from './hsbc.ts'
+import metrobank from './metrobank.ts'
+import pnb from './pnb.ts'
+import rcbc from './rcbc.ts'
+import securitybank from './securitybank.ts'
+import unionbank from './unionbank.ts'
+import visa from './visa.ts'
+
+export const SOURCES: Source[] = [metrobank, bpi, bdo, eastwest, rcbc, hsbc, chinabank, aub, visa, unionbank, securitybank, pnb]

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en-PH">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#c8a26b" />
+    <title>Sulit · Card promos near you</title>
+    <meta name="description" content="Every Philippine credit card promo on one map, filtered to the cards in your wallet. Updated daily from the banks' own promo pages." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="wallet" aria-label="My cards">
+      <a class="mark" href="/" aria-label="Sulit home">Sulit</a>
+      <span class="wallet-label" aria-hidden="true">Your banks</span>
+      <div class="wallet-chips" role="group" aria-label="Show promos for these banks" id="wallet"></div>
+    </header>
+
+    <main class="stage">
+      <div id="map" class="map" role="application" aria-label="Map of promos. Use the list for the same promos as text."></div>
+
+      <section class="sheet" id="sheet" aria-label="Promos">
+        <button class="sheet-grip" id="grip" aria-label="Expand list" aria-controls="sheet"><span></span></button>
+        <div class="sheet-head">
+          <div class="tabs" role="tablist">
+            <button role="tab" id="tab-here" aria-selected="true" aria-controls="list">On the map <b id="count-here">0</b></button>
+            <button role="tab" id="tab-anywhere" aria-selected="false" aria-controls="list">Online &amp; everywhere <b id="count-anywhere">0</b></button>
+          </div>
+          <div class="filters" role="group" aria-label="Filter">
+            <div class="cats" id="cats"></div>
+            <label class="soon"><input type="checkbox" id="soon" /> Ending this week</label>
+          </div>
+        </div>
+        <div class="sheet-body" id="sheet-body">
+          <article class="detail" id="detail" hidden aria-live="polite"></article>
+          <ol class="list" id="list" role="tabpanel" aria-labelledby="tab-here"></ol>
+          <footer class="fresh" id="fresh"></footer>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
