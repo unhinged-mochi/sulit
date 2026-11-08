@@ -32,7 +32,13 @@
             <button class="near" id="near" type="button">Near me</button>
           </div>
           <div class="filters" role="group" aria-label="Filter">
+            <span class="day-wrap">
+              <label class="cat day-pill" id="day-pill" aria-pressed="false"><span id="day-text">Any day</span><input type="date" id="day" aria-label="Show promos valid on this date" /></label>
+              <button class="day-clear" id="day-clear" type="button" aria-label="Any day" hidden></button>
+            </span>
+            <button class="cat fresh-chip" id="fresh-chip" type="button" aria-pressed="false" hidden>New <b id="count-new">0</b></button>
             <label class="soon"><input type="checkbox" id="soon" /> Ending this week</label>
+            <label class="minoff"><span>Min.</span><input type="range" id="min" min="0" max="70" step="5" value="0" aria-label="Minimum discount" /><output id="min-out" for="min">Any</output></label>
             <div class="cats" id="cats"></div>
           </div>
         </div>

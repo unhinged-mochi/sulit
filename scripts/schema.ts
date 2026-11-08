@@ -26,6 +26,8 @@ export interface Promo {
   image?: string
   online?: boolean // redeemable online / no physical location
   branches: Branch[] // physical locations; geocode.ts fills lat/lon
+  days?: number[] // weekdays it runs, 0 = Sunday; absent = any day
+  firstSeen?: string // Manila date of the sync that first found this id; absent = predates tracking
 }
 
 export type Source = { bank: string; fetch: () => Promise<Promo[]> }

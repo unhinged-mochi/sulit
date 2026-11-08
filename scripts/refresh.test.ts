@@ -1,11 +1,40 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { daysLeft, shortDiscount } from '../src/promo.ts'
+import { daysLeft, daysLabel, shortDiscount, validDays, validOn } from '../src/promo.ts'
 import { regexExtract } from './extract.ts'
 import { overpassQuery } from './geocode.ts'
-import { finalize } from './refresh.ts'
+import { finalize, stampFirstSeen } from './refresh.ts'
 import { isoDate, toCategory, type Promo } from './schema.ts'
 import { mentions, parse as metrobank } from './sources/metrobank.ts'
+
+test('stampFirstSeen marks only ids the previous sync lacked', () => {
+  const p = (id: string, firstSeen?: string) => ({ id, firstSeen }) as Promo
+  const out = stampFirstSeen([p('a'), p('b'), p('c')], [p('a', '2026-11-01'), p('b')], '2026-11-09')
+  assert.deepEqual(out.map((x) => x.firstSeen), ['2026-11-01', undefined, '2026-11-09'])
+  assert.equal(stampFirstSeen([p('a')], [], '2026-11-09')[0].firstSeen, undefined) // first run: nothing is "new"
+})
+
+test('validDays reads day rules, not opening hours', () => {
+  assert.deepEqual(validDays('Get P100 off every Monday, Wednesday, and Friday'), [1, 3, 5])
+  assert.deepEqual(validDays('Valid only from Mondays to Fridays, excluding holidays.'), [1, 2, 3, 4, 5])
+  assert.deepEqual(validDays('No minimum spend required. Valid every Saturday and Sunday'), [0, 6])
+  assert.deepEqual(validDays('50% off, valid on weekends only'), [0, 6])
+  assert.deepEqual(validDays('35% OFF on à la carte menu, valid Monday to Saturday'), [1, 2, 3, 4, 5, 6])
+  assert.deepEqual(validDays('Valid Friday to Sunday'), [0, 5, 6]) // wraps the week
+  assert.equal(validDays('Open daily. Sun to Thurs | 11AM to 1AM • Friday to Saturday | 11AM to 2AM'), undefined)
+  assert.equal(validDays('Valid Monday to Sunday'), undefined) // every day is no restriction
+  assert.equal(validDays('20% off all items'), undefined)
+  assert.equal(daysLabel([1, 2, 3, 4, 5]), 'Mon–Fri')
+  assert.equal(daysLabel([0, 6]), 'Sun & Sat')
+})
+
+test('validOn checks the date range and the weekday', () => {
+  const p = { validFrom: '2026-11-01', validTo: '2026-11-30', days: [0, 6] } as Promo
+  assert.equal(validOn(p, '2026-11-14'), true) // a Saturday
+  assert.equal(validOn(p, '2026-11-12'), false) // a Thursday
+  assert.equal(validOn(p, '2026-12-05'), false) // after it ends
+  assert.equal(validOn({} as Promo, '2027-01-01'), true)
+})
 
 test('isoDate reads dates as a Manila calendar day', () => {
   assert.equal(isoDate('2026-11-30T00:00:00+08:00'), '2026-11-30') // UTC would say the 29th

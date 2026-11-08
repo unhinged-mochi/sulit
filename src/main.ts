@@ -7,10 +7,10 @@ import type { GeoJSONSource, Map as MLMap } from 'maplibre-gl'
 // v6 locates its worker relative to its own module, which bundling breaks; ship the worker as an asset instead
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?url'
 import type * as GeoJSON from 'geojson'
-import { ChevronDown, createElement, ExternalLink, LocateFixed, MapPin, Search, X } from 'lucide'
+import { CalendarDays, ChevronDown, createElement, ExternalLink, LocateFixed, MapPin, Search, X } from 'lucide'
 import type { Category, Promo } from '../scripts/schema.ts'
 import type { Output } from '../scripts/refresh.ts'
-import { daysLeft, networkOnly, shortDiscount, takes } from './promo.ts'
+import { daysLabel, daysLeft, isNew, meetsMin, validOn, networkOnly, shortDiscount, takes } from './promo.ts'
 import { paperMap, rosette } from './paper.ts'
 
 // ---------- state ----------
@@ -25,6 +25,9 @@ const state = {
   cat: null as Category | null,
   q: '', // merchant / mall search, lowercased
   soon: false,
+  fresh: false, // only promos added in the last week of syncs
+  min: 0, // minimum discount, percent; 0 = any
+  day: null as string | null, // YYYY-MM-DD: only promos usable that day (date range + weekday rules)
   tab: 'here' as Tab,
   selected: null as string | null, // location key or promo id
 }
@@ -59,7 +62,19 @@ const visible = (p: Promo) =>
     // Visa's own offers work with any bank's Visa card
     (p.bank === 'Visa' && [...state.wallet].some((b) => takes(p, state.cards[b])))) &&
   (!state.cat || p.category === state.cat) &&
-  (!state.soon || (daysLeft(p.validTo) ?? 99) <= 7)
+  (!state.soon || (daysLeft(p.validTo) ?? 99) <= 7) &&
+  (!state.fresh || isNew(p)) &&
+  (!state.day || validOn(p, state.day)) &&
+  meetsMin(p, state.min)
+
+/** visible(), as if one filter were off: so the New chip can count what turning it on would show. */
+const visibleIgnoring = (k: 'fresh', p: Promo) => {
+  const was = state[k]
+  state[k] = false
+  const v = visible(p)
+  state[k] = was
+  return v && isNew(p)
+}
 
 const locKey = (lat: number, lon: number) => `${lat.toFixed(5)},${lon.toFixed(5)}`
 
@@ -191,11 +206,14 @@ function promosInView(): Promo[] {
     }
     if (best < Infinity) out.push({ p, d: best })
   }
-  return out.sort((a, b) => tier(a.p) - tier(b.p) || a.d - b.d).map((x) => x.p)
+  return out.sort((a, b) => newest(a.p, b.p) || tier(a.p) - tier(b.p) || a.d - b.d).map((x) => x.p)
 }
 
+/** With the New filter on, the latest sync's additions lead. */
+const newest = (a: Promo, b: Promo) => (state.fresh ? (b.firstSeen ?? '').localeCompare(a.firstSeen ?? '') : 0)
+
 const anywhere = () =>
-  data.promos.filter((p) => visible(p) && !p.branches.length).sort((a, b) => tier(a) - tier(b) || (daysLeft(a.validTo) ?? 999) - (daysLeft(b.validTo) ?? 999))
+  data.promos.filter((p) => visible(p) && !p.branches.length).sort((a, b) => newest(a, b) || tier(a) - tier(b) || (daysLeft(a.validTo) ?? 999) - (daysLeft(b.validTo) ?? 999))
 
 const shortDate = (iso: string) => new Date(`${iso}T00:00:00+08:00`).toLocaleDateString('en-PH', { month: 'short', day: 'numeric' })
 
@@ -213,10 +231,10 @@ function card(p: Promo, tag: 'li' | 'div' = 'li') {
   return `<${tag} class="price"><button class="price-hit" data-id="${esc(p.id)}">
     ${priceNum(p)}
     <span class="price-body">
-      <strong>${esc(p.merchant || p.title)}</strong>
+      <strong>${isNew(p) ? '<span class="new-mark">New</span>' : ''}${esc(p.merchant || p.title)}</strong>
       <span class="price-meta"><span class="stamp" style="--stamp:${STAMP[p.bank] ?? '#333'}">${esc(p.bank)}</span>${p.discount && !d ? esc(p.discount) : esc(p.merchant ? p.title : '')}</span>
     </span>
-    <span class="days${days.soon ? ' soon' : ''}">${esc(days.text)}</span>
+    <span class="days${days.soon ? ' soon' : ''}">${esc(days.text)}${p.days ? `<small>${daysLabel(p.days)} only</small>` : ''}</span>
   </button></${tag}>`
 }
 
@@ -227,6 +245,9 @@ function renderList() {
   const away = anywhere()
   $('count-here').textContent = String(here.length)
   $('count-anywhere').textContent = String(away.length)
+  const fresh = data.promos.filter((p) => visibleIgnoring('fresh', p)).length
+  $('count-new').textContent = String(fresh)
+  $('fresh-chip').hidden = !fresh && !state.fresh // nothing new from your banks: no chip, no noise
   const shown = new Set($('detail').hidden ? [] : ($('detail').dataset.ids ?? '').split('|'))
   const rows = (state.tab === 'here' ? here : away).filter((p) => !shown.has(p.id))
   const list = $('list')
@@ -236,6 +257,9 @@ function renderList() {
       state.q && `“${esc(state.q)}”`,
       state.cat && CATS.find(([c]) => c === state.cat)![1],
       state.soon && 'ending this week',
+      state.fresh && 'new this week',
+      state.day && dayName(state.day).toLowerCase(),
+      state.min && `${state.min}%+ off`,
       state.wallet.size && 'your cards',
     ].filter(Boolean)
     const other = state.tab === 'here' ? away.length : here.length
@@ -271,6 +295,8 @@ function detail(ids: string[], where?: string) {
       <h2 tabindex="-1">${esc(one.merchant || one.title)}</h2>
       ${one.merchant ? `<p class="detail-title">${esc(one.title)}</p>` : one.discount && !d ? `<p class="detail-title">${esc(one.discount)}</p>` : ''}
       <dl>
+        ${isNew(one) ? `<dt>Added</dt><dd>${esc(shortDate(one.firstSeen!))}</dd>` : ''}
+        ${one.days ? `<dt>Days</dt><dd>${daysLabel(one.days)} only</dd>` : ''}
         <dt>Bank</dt><dd><span class="stamp" style="--stamp:${STAMP[one.bank] ?? '#333'}">${esc(one.bank)}</span></dd>
         <dt>Cards</dt><dd>${one.cards.length ? one.cards.map(esc).join(', ') : `All ${esc(one.bank)} credit cards`}</dd>
         <dt>Until</dt><dd><span class="days${days.soon ? ' soon' : ''}">${one.validTo ? `${new Date(one.validTo + 'T00:00:00+08:00').toLocaleDateString('en-PH', { month: 'short', day: 'numeric', year: 'numeric' })} · ${days.text}` : 'No end date listed'}</span></dd>
@@ -479,6 +505,46 @@ $('cats').addEventListener('click', (e) => {
   document.querySelectorAll('.cat').forEach((c) => c.setAttribute('aria-pressed', String((c as HTMLElement).dataset.cat === state.cat)))
   update()
 })
+// ---------- day filter: the phone's own calendar ----------
+const manilaToday = () => new Date(Date.now() + 8 * 36e5).toISOString().slice(0, 10)
+const addDays = (iso: string, n: number) => new Date(Date.parse(`${iso}T12:00:00Z`) + n * 864e5).toISOString().slice(0, 10)
+function dayName(iso: string) {
+  const t = manilaToday()
+  if (iso === t) return 'Today'
+  if (iso === addDays(t, 1)) return 'Tomorrow'
+  return new Date(`${iso}T12:00:00+08:00`).toLocaleDateString('en-PH', { weekday: 'short', month: 'short', day: 'numeric' })
+}
+const dayInput = $<HTMLInputElement>('day')
+function setDay(iso: string | null) {
+  state.day = iso || null
+  dayInput.value = iso ?? ''
+  $('day-text').textContent = iso ? dayName(iso) : 'Any day'
+  $('day-pill').setAttribute('aria-pressed', String(!!iso))
+  $('day-clear').hidden = !iso
+}
+dayInput.min = manilaToday()
+dayInput.max = addDays(manilaToday(), 120)
+$('day-pill').insertAdjacentHTML('afterbegin', icon(CalendarDays, 15))
+$('day-clear').innerHTML = icon(X, 14)
+// desktop browsers only open the calendar from a tiny icon; open it from anywhere on the pill
+dayInput.addEventListener('click', () => { try { dayInput.showPicker() } catch {} })
+dayInput.addEventListener('change', () => (setDay(dayInput.value), update()))
+$('day-clear').addEventListener('click', () => (setDay(null), update()))
+
+$('fresh-chip').addEventListener('click', () => {
+  state.fresh = !state.fresh
+  $('fresh-chip').setAttribute('aria-pressed', String(state.fresh))
+  update()
+})
+const minLabel = (v: number) => (v ? `${v}%+` : 'Any')
+let sliding: ReturnType<typeof setTimeout> | undefined
+$<HTMLInputElement>('min').addEventListener('input', (e) => {
+  const v = +(e.target as HTMLInputElement).value
+  $('min-out').textContent = minLabel(v)
+  ;(e.target as HTMLInputElement).setAttribute('aria-valuetext', minLabel(v))
+  clearTimeout(sliding) // label follows the thumb at once; the map rebuild waits for the drag to settle
+  sliding = setTimeout(() => ((state.min = v), update()), 120)
+})
 $<HTMLInputElement>('soon').addEventListener('change', (e) => {
   state.soon = (e.target as HTMLInputElement).checked
   update()
@@ -508,6 +574,12 @@ document.querySelector('.tabs')!.addEventListener('keydown', (e) => {
 function resetFilters() {
   state.cat = null
   state.soon = false
+  state.fresh = false
+  setDay(null)
+  state.min = 0
+  $<HTMLInputElement>('min').value = '0'
+  $('min-out').textContent = 'Any'
+  $('fresh-chip').setAttribute('aria-pressed', 'false')
   state.q = ''
   $<HTMLInputElement>('q').value = ''
   $<HTMLInputElement>('soon').checked = false

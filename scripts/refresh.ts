@@ -7,6 +7,7 @@ import { isoDate, type Promo, type Source } from './schema.ts'
 import { closeBrowser } from './browser.ts'
 import { SOURCES } from './sources/index.ts'
 import { cardsIn } from './sources/unionbank.ts'
+import { validDays } from '../src/promo.ts'
 
 export interface SourceStatus {
   bank: string
@@ -38,8 +39,19 @@ export function finalize(promos: Promo[], today = manilaDay(), horizon = manilaD
     if (p.merchant && new RegExp(`^${p.bank}\\b`, 'i').test(p.merchant)) p.merchant = undefined
     // most banks list eligible cards only in the prose ("valid for BDO Platinum Mastercard"); none named = every card of the bank
     if (!p.cards?.length) p.cards = cardsIn(`${p.title} ${p.description ?? ''}`, p.bank)
+    p.days ??= validDays(`${p.title}. ${p.discount ?? ''}. ${p.description ?? ''}`)
     return (!p.validTo || p.validTo >= today) && (!p.validFrom || p.validFrom <= horizon) && !seen.has(p.id) && seen.add(p.id)
   })
+}
+
+/** Carry each promo's first-seen date forward; ids the last run didn't have are new today. A first-ever run marks nothing new. */
+export function stampFirstSeen(promos: Promo[], prev: Promo[], today = manilaDay()): Promo[] {
+  const before = new Map(prev.map((p) => [p.id, p.firstSeen]))
+  for (const p of promos) {
+    if (before.has(p.id)) p.firstSeen = before.get(p.id)
+    else if (prev.length) p.firstSeen = today
+  }
+  return promos
 }
 
 async function main() {
@@ -93,7 +105,7 @@ async function main() {
     saveCaches()
   }
 
-  const final = finalize(promos)
+  const final = stampFirstSeen(finalize(promos), prev.promos)
   write(OUT, { generatedAt: now, sources: status.sort((a, b) => a.bank.localeCompare(b.bank)), promos: final } satisfies Output, false)
   const pinned = final.filter((p) => p.branches.length).length
   console.log(`wrote ${final.length} promos (${pinned} on the map, ${final.reduce((n, p) => n + p.branches.length, 0)} pins)`)
