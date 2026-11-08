@@ -9,6 +9,7 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
   <body>
+    <a class="skip" href="#list">Skip to promo list</a>
     <header class="wallet" aria-label="My cards">
       <a class="mark" href="/" aria-label="Sulit home">Sulit</a>
       <span class="wallet-label" aria-hidden="true">Your cards</span>
@@ -16,6 +17,7 @@
     </header>
 
     <main class="stage">
+      <p class="hint" id="hint" hidden><b>Start here:</b> tap the banks you carry. Sulit hides promos your cards can’t use.</p>
       <div id="map" class="map" role="application" aria-label="Map of promos. Use the list for the same promos as text."></div>
 
       <section class="sheet" id="sheet" aria-label="Promos">
@@ -23,15 +25,19 @@
         <div class="sheet-head">
           <div class="tabs" role="tablist">
             <button role="tab" id="tab-here" aria-selected="true" aria-controls="list">On the map <b id="count-here">0</b></button>
-            <button role="tab" id="tab-anywhere" aria-selected="false" aria-controls="list">Online &amp; everywhere <b id="count-anywhere">0</b></button>
+            <button role="tab" id="tab-anywhere" aria-selected="false" aria-controls="list" tabindex="-1">Online &amp; everywhere <b id="count-anywhere">0</b></button>
+          </div>
+          <div class="finder">
+            <label class="search"><span class="sr">Search merchant or mall</span><input type="search" id="q" placeholder="Merchant or mall" autocomplete="off" enterkeyhint="search" /></label>
+            <button class="near" id="near" type="button">Near me</button>
           </div>
           <div class="filters" role="group" aria-label="Filter">
-            <div class="cats" id="cats"></div>
             <label class="soon"><input type="checkbox" id="soon" /> Ending this week</label>
+            <div class="cats" id="cats"></div>
           </div>
         </div>
         <div class="sheet-body" id="sheet-body">
-          <article class="detail" id="detail" hidden aria-live="polite"></article>
+          <article class="detail" id="detail" hidden aria-label="Promo details"></article>
           <ol class="list" id="list" role="tabpanel" aria-labelledby="tab-here"></ol>
           <footer class="fresh" id="fresh"></footer>
         </div>

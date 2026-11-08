@@ -21,12 +21,13 @@ test('toCategory prefers the first label that matches', () => {
 })
 
 test('shortDiscount turns headlines into price-tag labels', () => {
-  assert.deepEqual(shortDiscount('Up to 60% off base fares'), { label: '60%', n: 60, upTo: true })
+  assert.deepEqual(shortDiscount('Up to 60% off base fares'), { label: '60%', n: 60, upTo: true, kind: 'off' })
   assert.equal(shortDiscount('₱500 off with min spend')?.label, '₱500')
   assert.equal(shortDiscount('Get P1,500 cashback')?.label, '₱1.5k')
   assert.equal(shortDiscount('Buy 1, Take 1 pizza')?.label, 'B1T1')
-  assert.equal(shortDiscount('0% installment for 12 months')?.label, '0%')
-  assert.equal(shortDiscount('Free dessert'), null)
+  assert.deepEqual(shortDiscount('0% installment for 12 months'), { label: '0%', n: 0.5, upTo: false, kind: 'plan', note: '12 mo.' })
+  assert.equal(shortDiscount('Free dessert')?.label, 'Free')
+  assert.equal(shortDiscount('Exclusive deals in China'), null)
 })
 
 test('daysLeft counts to the end of the last day in Manila', () => {

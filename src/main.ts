@@ -7,7 +7,7 @@ import type { GeoJSONSource, Map as MLMap } from 'maplibre-gl'
 // v6 locates its worker relative to its own module, which bundling breaks; ship the worker as an asset instead
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?url'
 import type * as GeoJSON from 'geojson'
-import { ChevronDown, createElement, ExternalLink, LocateFixed, MapPin, X } from 'lucide'
+import { ChevronDown, createElement, ExternalLink, LocateFixed, MapPin, Search, X } from 'lucide'
 import type { Category, Promo } from '../scripts/schema.ts'
 import type { Output } from '../scripts/refresh.ts'
 import { daysLeft, networkOnly, shortDiscount, takes } from './promo.ts'
@@ -23,6 +23,7 @@ const state = {
   wallet: new Set<string>(JSON.parse(store.get('sulit.wallet') ?? '[]')),
   cards: JSON.parse(store.get('sulit.cards') ?? '{}') as Record<string, string[]>, // bank → cards held; none = any card of that bank
   cat: null as Category | null,
+  q: '', // merchant / mall search, lowercased
   soon: false,
   tab: 'here' as Tab,
   selected: null as string | null, // location key or promo id
@@ -44,7 +45,15 @@ const STAMP: Record<string, string> = {
 }
 
 // ---------- filtering ----------
+// what the search box matches: merchant, headline, and every branch name and address (so "megamall" works)
+const hay = new WeakMap<Promo, string>()
+const haystack = (p: Promo) => {
+  let h = hay.get(p)
+  if (h == null) hay.set(p, (h = [p.merchant, p.title, ...p.branches.flatMap((b) => [b.name, b.address])].join(' ').toLowerCase()))
+  return h
+}
 const visible = (p: Promo) =>
+  (!state.q || haystack(p).includes(state.q)) &&
   (!state.wallet.size ||
     (state.wallet.has(p.bank) && takes(p, state.cards[p.bank])) ||
     // Visa's own offers work with any bank's Visa card
@@ -94,12 +103,21 @@ map.addControl(geo, 'top-right')
 
 const markers = new Map<string, maplibregl.Marker>()
 
-function tagFor(ids: string[]): { big: string; small: string } {
+/** The marker-written number. Real discounts in sale red; 0% plans and unnumbered perks in quieter ink. */
+function priceNum(p: Promo, cls = 'price-num') {
+  const d = shortDiscount(p.discount)
+  if (!d) return `<span class="${cls} none">Perk</span>`
+  return `<span class="${cls} ${d.kind}">${d.upTo ? '<i>up to</i>' : ''}${esc(d.label)}${d.note ? `<i>${esc(d.note)}</i>` : ''}</span>`
+}
+/** List order within a group: plans and unnumbered perks after real deals. */
+const tier = (p: Promo) => { const k = shortDiscount(p.discount)?.kind; return k === 'off' || k === 'perk' ? 0 : 1 }
+
+function tagFor(ids: string[]): { big: string; small: string; kind: string } {
   const ps = ids.map((i) => byId.get(i)!).filter(Boolean)
   // the best headline wins the tag; the rest count as "+n"
   const scored = ps.map((p) => ({ p, d: shortDiscount(p.discount) })).sort((a, b) => (b.d?.n ?? 0) - (a.d?.n ?? 0))
   const best = scored[0]
-  return { big: best?.d?.label ?? 'Deal', small: ps.length > 1 ? `+${ps.length - 1}` : best.p.bank }
+  return { big: best?.d?.label ?? 'Perk', small: ps.length > 1 ? `+${ps.length - 1}` : best.p.bank, kind: best?.d?.kind ?? 'none' }
 }
 
 function syncMarkers() {
@@ -115,6 +133,7 @@ function syncMarkers() {
     const [lon, lat] = (f.geometry as GeoJSON.Point).coordinates
     if (props.cluster) {
       el.className = 'sticker'
+      el.tabIndex = -1 // the list is the keyboard path; 30+ markers in the tab order bury it
       el.innerHTML = `<span>${props.point_count_abbreviated}</span>`
       el.setAttribute('aria-label', `${props.point_count} places, zoom in`)
       el.onclick = async () => {
@@ -124,7 +143,8 @@ function syncMarkers() {
     } else {
       const ids = String(props.ids).split('|')
       const t = tagFor(ids)
-      el.className = `tag${props.approx ? ' approx' : ''}${state.selected === props.k ? ' on' : ''}`
+      el.className = `tag ${t.kind}${props.approx ? ' approx' : ''}${state.selected === props.k ? ' on' : ''}`
+      el.tabIndex = -1
       el.dataset.k = props.k
       el.innerHTML = `<b>${esc(t.big)}</b><small>${esc(t.small)}</small>`
       el.setAttribute('aria-label', `${t.big} at ${props.name}${props.approx ? ', approximate location' : ''}`)
@@ -166,11 +186,11 @@ function promosInView(): Promo[] {
     }
     if (best < Infinity) out.push({ p, d: best })
   }
-  return out.sort((a, b) => a.d - b.d).map((x) => x.p)
+  return out.sort((a, b) => tier(a.p) - tier(b.p) || a.d - b.d).map((x) => x.p)
 }
 
 const anywhere = () =>
-  data.promos.filter((p) => visible(p) && !p.branches.length).sort((a, b) => (daysLeft(a.validTo) ?? 999) - (daysLeft(b.validTo) ?? 999))
+  data.promos.filter((p) => visible(p) && !p.branches.length).sort((a, b) => tier(a) - tier(b) || (daysLeft(a.validTo) ?? 999) - (daysLeft(b.validTo) ?? 999))
 
 const shortDate = (iso: string) => new Date(`${iso}T00:00:00+08:00`).toLocaleDateString('en-PH', { month: 'short', day: 'numeric' })
 
@@ -186,7 +206,7 @@ function card(p: Promo, tag: 'li' | 'div' = 'li') {
   const d = shortDiscount(p.discount)
   const days = daysText(p)
   return `<${tag} class="price"><button class="price-hit" data-id="${esc(p.id)}">
-    <span class="price-num${d ? '' : ' none'}">${d?.upTo ? '<i>up to</i>' : ''}${esc(d?.label ?? 'Deal')}</span>
+    ${priceNum(p)}
     <span class="price-body">
       <strong>${esc(p.merchant || p.title)}</strong>
       <span class="price-meta"><span class="stamp" style="--stamp:${STAMP[p.bank] ?? '#333'}">${esc(p.bank)}</span>${p.discount && !d ? esc(p.discount) : esc(p.merchant ? p.title : '')}</span>
@@ -202,16 +222,25 @@ function renderList() {
   const away = anywhere()
   $('count-here').textContent = String(here.length)
   $('count-anywhere').textContent = String(away.length)
-  const rows = state.tab === 'here' ? here : away
+  const shown = new Set($('detail').hidden ? [] : ($('detail').dataset.ids ?? '').split('|'))
+  const rows = (state.tab === 'here' ? here : away).filter((p) => !shown.has(p.id))
   const list = $('list')
   if (!rows.length) {
-    list.innerHTML = `<li class="empty">${
-      state.tab === 'here'
-        ? state.wallet.size
-          ? 'No promos for your cards in this part of the map. Zoom out, or check “Online &amp; everywhere”.'
-          : 'No promos pinned here. Zoom out or pan to a city.'
-        : 'Nothing here for these filters.'
-    }</li>`
+    if (shown.size) return void (list.innerHTML = '')
+    const active = [
+      state.q && `“${esc(state.q)}”`,
+      state.cat && CATS.find(([c]) => c === state.cat)![1],
+      state.soon && 'ending this week',
+      state.wallet.size && 'your cards',
+    ].filter(Boolean)
+    const other = state.tab === 'here' ? away.length : here.length
+    list.innerHTML = `<li class="empty"><p>${
+      state.tab === 'here' ? 'Nothing pinned in this part of the map' : 'No online or nationwide promos'
+    }${active.length ? ` for ${active.join(' + ')}` : ''}.</p>${
+      state.tab === 'here' ? '<p>Zoom out or pan to another city.</p>' : ''
+    }<p class="empty-actions">${
+      active.length > (state.wallet.size ? 1 : 0) ? '<button class="text-btn" data-reset>Clear filters</button>' : ''
+    }${other ? `<button class="text-btn" data-other>See ${other} ${state.tab === 'here' ? 'online &amp; everywhere' : 'on the map'}</button>` : ''}</p></li>`
     return
   }
   list.innerHTML =
@@ -231,45 +260,71 @@ function detail(ids: string[], where?: string) {
     const approx = where && one.branches.find((b) => locKey(b.lat!, b.lon!) === where)?.approx
     el.innerHTML = `
       <button class="close" aria-label="Close">${icon(X, 18)}</button>
-      <div class="detail-num">${d?.upTo ? '<i>up to</i>' : ''}${esc(d?.label ?? 'Deal')}</div>
-      <h2>${esc(one.merchant || one.title)}</h2>
-      <p class="detail-title">${esc(one.discount && one.discount !== d?.label ? one.discount : one.title)}</p>
+      ${priceNum(one, 'detail-num')}
+      <h2 tabindex="-1">${esc(one.merchant || one.title)}</h2>
+      ${one.merchant ? `<p class="detail-title">${esc(one.title)}</p>` : one.discount && !d ? `<p class="detail-title">${esc(one.discount)}</p>` : ''}
       <dl>
         <dt>Bank</dt><dd><span class="stamp" style="--stamp:${STAMP[one.bank] ?? '#333'}">${esc(one.bank)}</span></dd>
         <dt>Cards</dt><dd>${one.cards.length ? one.cards.map(esc).join(', ') : `All ${esc(one.bank)} credit cards`}</dd>
         <dt>Until</dt><dd><span class="days${days.soon ? ' soon' : ''}">${one.validTo ? `${new Date(one.validTo + 'T00:00:00+08:00').toLocaleDateString('en-PH', { month: 'short', day: 'numeric', year: 'numeric' })} · ${days.text}` : 'No end date listed'}</span></dd>
         ${where ? `<dt>Where</dt><dd>${icon(MapPin, 14)} ${esc(one.branches.find((b) => locKey(b.lat!, b.lon!) === where)?.address ?? one.branches.find((b) => locKey(b.lat!, b.lon!) === where)?.name ?? '')}${approx ? ' <em>(pin is the city, not the store)</em>' : ''}</dd>` : one.branches.length ? `<dt>Where</dt><dd>${one.branches.length} location${one.branches.length > 1 ? 's' : ''} on the map</dd>` : ''}
       </dl>
-      ${one.description ? `<p class="detail-desc">${esc(one.description.slice(0, 420))}${one.description.length > 420 ? '…' : ''}</p>` : ''}
+      ${one.description ? `<p class="detail-desc">${esc(clip(one.description, 420))}</p>` : ''}
       <a class="go" href="${esc(safeUrl(one.url))}" target="_blank" rel="noopener">Read ${esc(one.bank)}’s terms ${icon(ExternalLink, 15)}</a>`
   } else {
     el.innerHTML = `<button class="close" aria-label="Close">${icon(X, 18)}</button>
-      <h2 class="detail-group">${ps.length} promos here</h2><ol class="list">${ps.map((p) => card(p)).join('')}</ol>`
+      <h2 class="detail-group" tabindex="-1">${ps.length} promos here</h2><ol class="list">${ps.map((p) => card(p)).join('')}</ol>`
   }
   el.hidden = false
+  el.dataset.ids = ps.map((p) => p.id).join('|')
   el.classList.remove('tape-in')
   if (!reduceMotion) void el.offsetWidth, el.classList.add('tape-in')
   el.querySelector<HTMLButtonElement>('.close')!.onclick = closeDetail
   $('sheet-body').scrollTop = 0
   setSheet('half', true)
+  el.querySelector<HTMLElement>('h2')!.focus({ preventScroll: true })
+  renderList()
+}
+/** Scraped mechanics: tidy stray spaces before punctuation, cut at a word, not mid-word. */
+const clip = (t: string, max: number) => {
+  t = t.replace(/\s+([.,;:!?])/g, '$1').replace(/\s{2,}/g, ' ').trim()
+  return t.length <= max ? t : `${t.slice(0, max).replace(/\s+\S*$/, '')}…`
 }
 
 function closeDetail() {
+  if ($('detail').hidden) return
   $('detail').hidden = true
   state.selected = null
   document.querySelectorAll('.tag.on').forEach((t) => t.classList.remove('on'))
+  renderList()
+}
+
+/** On phones the half sheet covers the lower ~60% of the map: keep the chosen pin in the strip above it. */
+const sheetCover = () => (innerWidth < 900 ? innerHeight * 0.58 : 0)
+function reveal(at: [number, number], zoom?: number) {
+  const pt = map.project(at)
+  const box = map.getContainer().getBoundingClientRect()
+  const inView = pt.x > 30 && pt.x < box.width - 30 && pt.y > 50 && pt.y < box.height - sheetCover() - 20
+  if (inView && (zoom == null || map.getZoom() >= zoom)) return
+  map.easeTo({ center: at, zoom: Math.max(map.getZoom(), zoom ?? 0), padding: { top: 0, left: 0, right: 0, bottom: sheetCover() }, duration: reduceMotion ? 0 : 500 })
+}
+const markOn = (k: string | null) => {
+  document.querySelectorAll('.tag.on').forEach((t) => t.classList.remove('on'))
+  if (k) document.querySelector(`.tag[data-k="${CSS.escape(k)}"]`)?.classList.add('on')
 }
 
 function select(k: string, ids: string[], at: [number, number]) {
   state.selected = k
-  document.querySelectorAll('.tag.on').forEach((t) => t.classList.remove('on'))
-  document.querySelector(`.tag[data-k="${CSS.escape(k)}"]`)?.classList.add('on')
+  markOn(k)
   detail(ids, k)
-  if (!map.getBounds().contains(at)) map.easeTo({ center: at, duration: reduceMotion ? 0 : 400 })
+  reveal(at)
 }
 
 $('sheet').addEventListener('click', (e) => {
-  const hit = (e.target as HTMLElement).closest<HTMLButtonElement>('.price-hit')
+  const t = e.target as HTMLElement
+  if (t.closest('[data-reset]')) return resetFilters()
+  if (t.closest('[data-other]')) return $(`tab-${state.tab === 'here' ? 'anywhere' : 'here'}`).click()
+  const hit = t.closest<HTMLButtonElement>('.price-hit')
   if (!hit) return
   const p = byId.get(hit.dataset.id!)
   if (!p) return
@@ -278,7 +333,7 @@ $('sheet').addEventListener('click', (e) => {
   const near = [...p.branches].sort((a, b) => (a.lat! - c.lat) ** 2 + (a.lon! - c.lng) ** 2 - ((b.lat! - c.lat) ** 2 + (b.lon! - c.lng) ** 2))[0]
   state.selected = near ? locKey(near.lat!, near.lon!) : p.id
   detail([p.id], near ? state.selected : undefined)
-  if (near) map.easeTo({ center: [near.lon!, near.lat!], zoom: Math.max(map.getZoom(), 14), duration: reduceMotion ? 0 : 600 })
+  if (near) (reveal([near.lon!, near.lat!], 14), map.once('idle', () => markOn(state.selected)))
 })
 
 // ---------- sheet (phones) ----------
@@ -326,18 +381,27 @@ const short = (card: string, bank: string) => card.replace(new RegExp(`^${bank} 
 const saveWallet = () => (store.set('sulit.wallet', JSON.stringify([...state.wallet])), store.set('sulit.cards', JSON.stringify(state.cards)))
 
 function renderWallet() {
-  const banks = [...new Set(data.promos.map((p) => p.bank))].filter((b) => b !== 'Visa').sort()
+  const all = [...new Set(data.promos.map((p) => p.bank))].filter((b) => b !== 'Visa').sort()
+  const chosen = all.filter((b) => state.wallet.has(b))
+  const clear = state.wallet.size ? `<button class="chip clear" data-clear>Show all banks</button>` : ''
+  // first-use note: peels off the map the moment a bank goes in
+  const hint = $('hint')
+  if (!state.wallet.size) hint.hidden = false
+  else if (!hint.hidden && !reduceMotion) (hint.classList.add('peel'), hint.addEventListener('animationend', () => ((hint.hidden = true), hint.classList.remove('peel')), { once: true }))
+  else hint.hidden = true
   $('wallet').innerHTML =
-    banks
+    [...chosen, ...all.filter((b) => !state.wallet.has(b))]
       .map((b) => {
         const on = state.wallet.has(b)
         const held = state.cards[b]?.length ?? 0
         const picks = on && catalog(b).length
-        return `<button class="chip" aria-pressed="${on}" data-bank="${esc(b)}"${picks ? ` aria-haspopup="dialog" aria-label="${esc(b)}, ${held ? `${held} card${held > 1 ? 's' : ''}` : 'any card'}. Choose cards"` : ''}>${esc(b)}${
+        // once in the wallet with cards to pick, the chip opens a dialog rather than toggling, so it stops claiming to be a toggle
+        return `<button class="chip${on ? ' on' : ''}" data-bank="${esc(b)}"${picks ? ` aria-haspopup="dialog" aria-label="${esc(b)}, in your wallet, ${held ? `${held} card${held > 1 ? 's' : ''}` : 'any card'}. Choose cards"` : ` aria-pressed="${on}"`}>${esc(b)}${
           picks ? `<span class="chip-cards">${held ? `${held} card${held > 1 ? 's' : ''}` : 'any card'}${icon(ChevronDown, 13)}</span>` : ''
         }</button>`
       })
-      .join('') + (state.wallet.size ? `<button class="chip clear" data-clear>Show all banks</button>` : '')
+      .join('')
+  if (clear) chosen.length ? $('wallet').children[chosen.length - 1].insertAdjacentHTML('afterend', clear) : $('wallet').insertAdjacentHTML('afterbegin', clear)
   $('wallet').classList.toggle('empty', !state.wallet.size)
 }
 $('wallet').addEventListener('click', (e) => {
@@ -401,14 +465,41 @@ $<HTMLInputElement>('soon').addEventListener('change', (e) => {
 for (const t of ['here', 'anywhere'] as Tab[]) {
   $(`tab-${t}`).addEventListener('click', () => {
     state.tab = t
-    $('tab-here').setAttribute('aria-selected', String(t === 'here'))
-    $('tab-anywhere').setAttribute('aria-selected', String(t === 'anywhere'))
+    for (const o of ['here', 'anywhere']) {
+      $(`tab-${o}`).setAttribute('aria-selected', String(o === t))
+      $(`tab-${o}`).tabIndex = o === t ? 0 : -1
+    }
     $('list').setAttribute('aria-labelledby', `tab-${t}`)
     closeDetail()
     renderList()
     setSheet('half', true)
   })
 }
+
+document.querySelector('.tabs')!.addEventListener('keydown', (e) => {
+  const k = (e as KeyboardEvent).key
+  if (k !== 'ArrowLeft' && k !== 'ArrowRight') return
+  const next = $(`tab-${state.tab === 'here' ? 'anywhere' : 'here'}`)
+  next.click()
+  next.focus()
+})
+
+function resetFilters() {
+  state.cat = null
+  state.soon = false
+  state.q = ''
+  $<HTMLInputElement>('q').value = ''
+  $<HTMLInputElement>('soon').checked = false
+  document.querySelectorAll('.cat').forEach((c) => c.setAttribute('aria-pressed', 'false'))
+  update()
+}
+
+let typing: ReturnType<typeof setTimeout> | undefined
+$<HTMLInputElement>('q').addEventListener('input', (e) => {
+  clearTimeout(typing)
+  typing = setTimeout(() => ((state.q = (e.target as HTMLInputElement).value.trim().toLowerCase()), update()), 180)
+})
+$('near').addEventListener('click', () => geo.trigger())
 
 function update() {
   closeDetail()
@@ -421,12 +512,13 @@ function renderFresh() {
   const stale = data.sources.filter((s) => !s.ok)
   $('fresh').innerHTML = `<details><summary>Updated ${at.toLocaleString('en-PH', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}${
     stale.length ? ` · <span class="soon">${stale.length} bank${stale.length > 1 ? 's' : ''} behind</span>` : ''
-  }</summary><ul>${data.sources
+  }</summary><ul><li class="fresh-head"><span>Bank</span><span>Current</span><span>Checked</span></li>${data.sources
     .map((s) => {
       const age = s.updatedAt ? Math.floor((Date.now() - Date.parse(s.updatedAt)) / 864e5) : null
-      return `<li><span>${esc(s.bank)}</span><span>${s.count}</span><span class="${s.ok ? '' : 'soon'}">${s.ok ? 'today' : age == null ? 'not reachable yet' : `${age} day${age === 1 ? '' : 's'} old`}</span></li>`
+      const shown = data.promos.filter((p) => p.bank === s.bank).length
+      return `<li><span>${esc(s.bank)}</span><span title="${s.count} found on the bank's page">${shown || '–'}</span><span class="${s.ok ? '' : 'soon'}">${s.ok ? 'today' : age == null ? 'not reachable yet' : `${age} day${age === 1 ? '' : 's'} old`}</span></li>`
     })
-    .join('')}</ul><p>Sulit copies promos from each bank’s public promo page every morning. The bank’s page is always the final word.</p></details>`
+    .join('')}</ul><p>“–” means every promo the bank lists has ended or starts later. Sulit copies promos from each bank’s public promo page every morning. The bank’s page is always the final word.</p></details>`
 }
 
 // keyboard: Esc closes the detail
@@ -434,6 +526,8 @@ addEventListener('keydown', (e) => e.key === 'Escape' && !$('detail').hidden && 
 document.querySelector('.maplibregl-ctrl-geolocate')?.replaceChildren()
 const locBtn = document.querySelector<HTMLButtonElement>('.maplibregl-ctrl-geolocate')
 if (locBtn) locBtn.innerHTML = icon(LocateFixed, 18)
+$('near').insertAdjacentHTML('afterbegin', icon(LocateFixed, 16))
+document.querySelector('.search')!.insertAdjacentHTML('afterbegin', icon(Search, 16))
 
 // ---------- boot ----------
 fetch('/data/promos.json')

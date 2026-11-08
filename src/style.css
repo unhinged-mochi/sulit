@@ -90,14 +90,17 @@ button { font: inherit; color: inherit; cursor: pointer; }
   min-height: 34px;
   transition: background-color 160ms var(--ease), transform 160ms var(--ease), border-color 160ms;
 }
-.chip[aria-pressed='true'], .cat[aria-pressed='true'] {
+.chip[aria-pressed='true'], .chip.on, .cat[aria-pressed='true'] {
   background: var(--tape);
   border: 1.5px solid transparent;
   color: var(--ink);
   box-shadow: 0 1px 2px rgb(58 38 10 / 0.25);
   transform: rotate(-1.2deg);
 }
-.chip[aria-pressed='true']:nth-child(even), .cat[aria-pressed='true']:nth-child(even) { transform: rotate(1deg); }
+.chip[aria-pressed='true']:nth-child(even), .chip.on:nth-child(even), .cat[aria-pressed='true']:nth-child(even) { transform: rotate(1deg); }
+/* thumbs get 44px even where the tape is drawn smaller; the strips' own padding leaves room */
+.chip, .cat { position: relative; }
+.chip::after, .cat::after { content: ''; position: absolute; inset: -5px -3px; }
 .chip:hover, .cat:hover { border-color: var(--ink); color: var(--ink); }
 .chip.clear { border-style: solid; border-color: transparent; text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
 
@@ -141,7 +144,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .cards form { display: grid; gap: 10px; max-height: calc(min(560px, 100dvh - 48px) - 42px); grid-template-rows: auto auto minmax(0, 1fr) auto; }
 .cards h2 { margin: 0; font-size: 20px; font-weight: 720; font-stretch: 90%; }
 .cards-hint { margin: 0; font-size: 13.5px; color: var(--ink-3); text-wrap: pretty; }
-.cards-list { list-style: none; margin: 0; padding: 0; overflow-y: auto; border-top: 1px solid var(--manila-2); }
+.cards-list { list-style: none; margin: 0; padding: 0 0 14px; overflow-y: auto; border-top: 1px solid var(--manila-2); mask-image: linear-gradient(to bottom, #000 calc(100% - 22px), transparent); /* the fade says "more below" */ }
 .cards-list label {
   display: flex;
   align-items: center;
@@ -167,7 +170,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 /* ---------- stage ---------- */
 .stage { position: relative; min-height: 0; }
-.map { position: absolute; inset: 0; background: #f1e9d8; }
+.map { position: absolute; inset: 0; background: #f1e9d8; isolation: isolate; /* a raised tag never paints over the sheet */ }
 
 /* price tags on the map */
 .tag {
@@ -195,11 +198,14 @@ button { font: inherit; color: inherit; cursor: pointer; }
   border-radius: 0 0 2px 0;
 }
 .tag b { font: 400 18px/1 var(--marker); color: var(--red); position: relative; z-index: 1; }
-.tag small { font-size: 10px; font-weight: 650; font-stretch: 75%; color: var(--ink-3); margin-top: 1px; position: relative; z-index: 1; }
+.tag small { font-size: 11px; font-weight: 650; font-stretch: 75%; color: var(--ink-3); margin-top: 1px; position: relative; z-index: 1; }
 .tag.approx { background: var(--manila-2); outline: 1.5px dashed var(--ink-3); outline-offset: -3px; }
 .tag:hover { transform: scale(1.08); z-index: 2; }
 .tag.on { background: var(--ink); transform: scale(1.14); z-index: 3; }
 .tag.on b { color: var(--tape-solid); }
+/* 0% plans and unnumbered perks: written in pencil-dark ink, not sale red */
+.tag.plan b, .tag.none b { color: var(--ink-2); font-size: 15px; }
+.tag.on.plan b, .tag.on.none b { color: var(--manila); }
 .tag.on small { color: var(--manila-2); }
 
 /* cluster: the round sale sticker */
@@ -208,8 +214,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
   height: 40px;
   border-radius: 50%;
   border: 2px solid var(--manila);
-  background: var(--red);
-  color: var(--manila);
+  background: var(--ink); /* red stays for discounts; a count is just a count */
+  color: var(--tape-solid);
   font: 400 16px/1 var(--marker);
   box-shadow: var(--shadow);
   display: grid;
@@ -238,7 +244,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   background: var(--kraft);
   border-radius: 14px 14px 0 0;
   box-shadow: 0 -2px 4px rgb(58 38 10 / 0.12), 0 -8px 24px rgb(58 38 10 / 0.18);
-  height: 34dvh;
+  height: 42dvh; /* peek: tabs, finder, filters and two full rows */
   transition: height 340ms var(--ease);
   padding-bottom: env(safe-area-inset-bottom);
 }
@@ -261,8 +267,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .tabs button {
   border: 0;
   background: var(--kraft-deep);
-  color: var(--ink-2);
-  padding: 9px 12px 8px;
+  color: var(--ink);
+  padding: 11px 12px 9px;
   border-radius: 8px 8px 0 0;
   font-weight: 650;
   font-stretch: 85%;
@@ -327,16 +333,18 @@ label.soon input { accent-color: var(--red); width: 16px; height: 16px; margin: 
   display: grid;
   overflow-wrap: anywhere;
 }
-.price-num i, .detail-num i { font: italic 600 10px/1.2 var(--ui); font-stretch: 80%; color: var(--ink-3); }
-.price-num.none { font-size: 19px; color: var(--ink-3); }
+.price-num i, .detail-num i { font: italic 600 11px/1.2 var(--ui); font-stretch: 80%; color: var(--ink-3); }
+.price-num.plan, .price-num.none { font-size: 21px; color: var(--ink-2); }
+.price-num.none { font-size: 18px; color: var(--ink-3); }
+.detail-num.plan, .detail-num.none { font-size: 42px; color: var(--ink-2); }
 .price-body { min-width: 0; display: grid; gap: 3px; }
-.price-body strong { font-weight: 680; font-size: 15px; line-height: 1.2; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.price-body strong { font-weight: 680; font-size: 15px; line-height: 1.3; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 .price-meta { display: flex; gap: 6px; align-items: baseline; color: var(--ink-3); font-size: 12.5px; min-width: 0; }
 .price-meta > :last-child:not(.stamp) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .stamp {
   flex: none;
   color: var(--stamp, var(--ink));
-  font-size: 10.5px;
+  font-size: 11.5px;
   font-weight: 750;
   font-stretch: 75%;
   letter-spacing: 0.03em;
@@ -358,6 +366,10 @@ label.soon input { accent-color: var(--red); width: 16px; height: 16px; margin: 
 }
 .days.soon { color: var(--red); }
 .empty, .more { padding: 18px 10px; color: var(--ink-2); font-weight: 550; text-align: center; text-wrap: balance; }
+.empty p { margin: 0 auto 6px; max-width: 34ch; }
+.empty-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 14px; margin-top: 10px !important; }
+.text-btn { border: 0; background: none; padding: 10px 4px; min-height: 44px; font-weight: 650; color: var(--ink); text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+.text-btn:hover { color: var(--red); }
 
 /* ---------- detail: the price card taped up ---------- */
 .detail {
@@ -461,3 +473,51 @@ label.soon input { accent-color: var(--red); width: 16px; height: 16px; margin: 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 0s !important; animation: none !important; }
 }
+
+/* ---------- finder: search + near me, in thumb reach on phones ---------- */
+.finder { display: flex; gap: 6px; background: var(--manila); margin: 0 -12px; padding: 10px 12px 0; }
+.search { flex: 1; min-width: 0; display: flex; align-items: center; gap: 6px; padding: 0 10px; min-height: 40px; background: #fffaf0; border: 1.5px solid var(--manila-2); border-radius: 3px; color: var(--ink-3); }
+.search:focus-within { border-color: var(--ink); }
+.search input { flex: 1; min-width: 0; border: 0; background: none; font: 500 16px/1.2 var(--ui); color: var(--ink); padding: 8px 0; outline: none; }
+.search input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  background: var(--ink-3);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M18 6 6 18M6 6l12 12'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.search input::placeholder { color: var(--ink-3); opacity: 1; }
+.near { flex: none; display: inline-flex; align-items: center; gap: 6px; border: 0; border-radius: 3px; background: var(--ink); color: var(--manila); padding: 0 14px; min-height: 40px; font-weight: 650; font-stretch: 85%; font-size: 14px; }
+.near:hover { background: #000; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* keyboard: jump past the markers straight to the list */
+.skip { position: fixed; left: 12px; top: -60px; z-index: 10; background: var(--ink); color: var(--manila); padding: 10px 14px; border-radius: 3px; font-weight: 650; text-decoration: none; }
+.skip:focus { top: 10px; }
+.detail h2:focus, .detail-group:focus { outline: none; }
+
+/* first visit: a taped note on the map pointing up at the wallet */
+.hint {
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  left: 12px;
+  max-width: 290px;
+  margin: 0;
+  padding: 14px 14px 12px;
+  background: var(--manila);
+  border-radius: 3px;
+  box-shadow: var(--shadow);
+  transform: rotate(-1.5deg);
+  font-size: 14px;
+  line-height: 1.35;
+  text-wrap: pretty;
+}
+.hint::before { content: ''; position: absolute; top: -9px; left: 22px; width: 64px; height: 18px; background: var(--tape); transform: rotate(-4deg); }
+.hint b { font: 400 17px/1 var(--marker); color: var(--red); display: block; margin-bottom: 4px; }
+.hint.peel { animation: peel 420ms var(--ease) forwards; transform-origin: 30px 0; }
+@keyframes peel { to { transform: rotate(-14deg) translateY(-24px); opacity: 0; } }
+@media (min-width: 900px) { .hint { left: calc(420px + 16px); } }
+
+.fresh li.fresh-head { font-weight: 700; color: var(--ink); border-bottom-width: 1.5px; }
