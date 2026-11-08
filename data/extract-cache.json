@@ -33545,5 +33545,71 @@
   ],
   "at": "2026-11-08T02:43:26.164Z",
   "via": "llm"
+ },
+ "rcbc:111126-zcc#a8632954": {
+  "merchant": "ZALORA",
+  "discount": "₱1,000 off",
+  "validFrom": "2026-11-10",
+  "validTo": "2026-11-15",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-08T23:09:54.697Z",
+  "via": "llm"
+ },
+ "bdo:204902#450a3a4b": {
+  "merchant": "Shopee",
+  "discount": "₱500 off",
+  "validFrom": "2026-11-10",
+  "validTo": "2026-11-12",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-08T23:09:55.038Z",
+  "via": "llm"
+ },
+ "bdo:204839#b943fa76": {
+  "merchant": "KATSEYE: THE WILDWORLD TOUR",
+  "discount": "Early access to presale tickets",
+  "validFrom": "2026-11-11",
+  "validTo": "2026-11-13",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-08T23:09:55.370Z",
+  "via": "llm"
+ },
+ "bdo:204965#1dea6c6c": {
+  "merchant": "Philippine Airlines",
+  "discount": "Fly now, pay next year",
+  "validFrom": "2026-11-09",
+  "validTo": "2026-11-15",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-08T23:09:56.003Z",
+  "via": "llm"
+ },
+ "pnb:25-off-at-the-orange-bucket-with-your-pnb-card-copy-2#f44841c3": {
+  "merchant": "La Jolla Hotel & Beach Resort",
+  "discount": "Up to 50% off",
+  "validFrom": "2026-04-06",
+  "validTo": "2027-04-05",
+  "online": false,
+  "branches": [
+   {
+    "name": "La Jolla Hotel and Beach Resort",
+    "address": "Km 154 Banawang, Bagac, Bataan, Philippines 2107",
+    "city": "Bagac"
+   }
+  ],
+  "at": "2026-11-08T23:09:56.109Z",
+  "via": "llm"
+ },
+ "rcbc:mc8kcb-26#0a98e59b": {
+  "merchant": null,
+  "discount": "Up to ₱8,000 cashback",
+  "validFrom": "2026-11-09",
+  "validTo": "2027-01-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-08T23:09:56.288Z",
+  "via": "llm"
  }
 }
