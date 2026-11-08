@@ -377,7 +377,8 @@ label.soon input { accent-color: var(--red); width: 16px; height: 16px; margin: 
 
 /* ---------- desktop: the sheet becomes a rail ---------- */
 @media (min-width: 900px) {
-  .stage { display: grid; grid-template-columns: 420px 1fr; }
+  /* minmax(0,1fr): without it the row grows to the list's full height and the map canvas with it */
+  .stage { display: grid; grid-template-columns: 420px 1fr; grid-template-rows: minmax(0, 1fr); }
   .map { position: relative; inset: auto; grid-column: 2; grid-row: 1; }
   .sheet, .sheet[data-pos] {
     position: relative;

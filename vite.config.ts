@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  // maplibre v6 finds its worker relative to its own module; pre-bundling moves the module and breaks that path
+  // maplibre's worker is set explicitly in main.ts; pre-bundling would also break its self-located path in dev
   optimizeDeps: { exclude: ['maplibre-gl'] },
 })

@@ -4,6 +4,8 @@ import 'maplibre-gl/dist/maplibre-gl.css'
 import './style.css'
 import * as maplibregl from 'maplibre-gl'
 import type { GeoJSONSource, Map as MLMap } from 'maplibre-gl'
+// v6 locates its worker relative to its own module, which bundling breaks; ship the worker as an asset instead
+import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?url'
 import type * as GeoJSON from 'geojson'
 import { createElement, ExternalLink, LocateFixed, MapPin, X } from 'lucide'
 import type { Category, Promo } from '../scripts/schema.ts'
@@ -73,6 +75,7 @@ function features(): GeoJSON.FeatureCollection<GeoJSON.Point> {
 }
 
 // ---------- map ----------
+maplibregl.setWorkerUrl(workerUrl)
 const map: MLMap = new maplibregl.Map({
   container: 'map',
   style: 'https://tiles.openfreemap.org/styles/positron',
