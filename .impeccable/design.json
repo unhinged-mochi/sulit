@@ -1,0 +1,595 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-08T03:36:32.489Z",
+  "title": "Design System: Sulit",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Intaglio Navy",
+        "canonical": "oklch(21.6% 0.038 257.2)",
+        "tonalRamp": [
+          "oklch(15% 0.038 257.2)",
+          "oklch(25% 0.038 257.2)",
+          "oklch(35% 0.038 257.2)",
+          "oklch(48% 0.038 257.2)",
+          "oklch(60% 0.038 257.2)",
+          "oklch(72% 0.038 257.2)",
+          "oklch(84% 0.038 257.2)",
+          "oklch(95% 0.038 257.2)"
+        ]
+      },
+      "ink-secondary": {
+        "role": "neutral",
+        "displayName": "Ink Secondary",
+        "canonical": "oklch(38.0% 0.038 258.9)",
+        "tonalRamp": [
+          "oklch(15% 0.038 258.9)",
+          "oklch(25% 0.038 258.9)",
+          "oklch(35% 0.038 258.9)",
+          "oklch(48% 0.038 258.9)",
+          "oklch(60% 0.038 258.9)",
+          "oklch(72% 0.038 258.9)",
+          "oklch(84% 0.038 258.9)",
+          "oklch(95% 0.038 258.9)"
+        ]
+      },
+      "ink-tertiary": {
+        "role": "neutral",
+        "displayName": "Ink Tertiary",
+        "canonical": "oklch(50.4% 0.032 260.3)",
+        "tonalRamp": [
+          "oklch(15% 0.032 260.3)",
+          "oklch(25% 0.032 260.3)",
+          "oklch(35% 0.032 260.3)",
+          "oklch(48% 0.032 260.3)",
+          "oklch(60% 0.032 260.3)",
+          "oklch(72% 0.032 260.3)",
+          "oklch(84% 0.032 260.3)",
+          "oklch(95% 0.032 260.3)"
+        ]
+      },
+      "ink-approx": {
+        "role": "neutral",
+        "displayName": "Approximate Ink",
+        "canonical": "oklch(39.2% 0.036 259.5)",
+        "tonalRamp": [
+          "oklch(15% 0.036 259.5)",
+          "oklch(25% 0.036 259.5)",
+          "oklch(35% 0.036 259.5)",
+          "oklch(48% 0.036 259.5)",
+          "oklch(60% 0.036 259.5)",
+          "oklch(72% 0.036 259.5)",
+          "oklch(84% 0.036 259.5)",
+          "oklch(95% 0.036 259.5)"
+        ]
+      },
+      "security-blue": {
+        "role": "secondary",
+        "displayName": "Security Blue",
+        "canonical": "oklch(48.4% 0.207 264.3)",
+        "tonalRamp": [
+          "oklch(15% 0.16 264.3)",
+          "oklch(25% 0.16 264.3)",
+          "oklch(35% 0.16 264.3)",
+          "oklch(48% 0.16 264.3)",
+          "oklch(60% 0.16 264.3)",
+          "oklch(72% 0.16 264.3)",
+          "oklch(84% 0.16 264.3)",
+          "oklch(95% 0.16 264.3)"
+        ]
+      },
+      "foil-gold": {
+        "role": "tertiary",
+        "displayName": "Foil Gold",
+        "canonical": "oklch(72.8% 0.138 89.7)",
+        "tonalRamp": [
+          "oklch(15% 0.12 89.7)",
+          "oklch(25% 0.12 89.7)",
+          "oklch(35% 0.12 89.7)",
+          "oklch(48% 0.12 89.7)",
+          "oklch(60% 0.12 89.7)",
+          "oklch(72% 0.12 89.7)",
+          "oklch(84% 0.12 89.7)",
+          "oklch(95% 0.12 89.7)"
+        ]
+      },
+      "serial-red": {
+        "role": "tertiary",
+        "displayName": "Serial Red",
+        "canonical": "oklch(50.1% 0.178 28.7)",
+        "tonalRamp": [
+          "oklch(15% 0.15 28.7)",
+          "oklch(25% 0.15 28.7)",
+          "oklch(35% 0.15 28.7)",
+          "oklch(48% 0.15 28.7)",
+          "oklch(60% 0.15 28.7)",
+          "oklch(72% 0.15 28.7)",
+          "oklch(84% 0.15 28.7)",
+          "oklch(95% 0.15 28.7)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Note Paper",
+        "canonical": "oklch(96.1% 0.008 91.5)",
+        "tonalRamp": [
+          "oklch(15% 0.008 91.5)",
+          "oklch(25% 0.008 91.5)",
+          "oklch(35% 0.008 91.5)",
+          "oklch(48% 0.008 91.5)",
+          "oklch(60% 0.008 91.5)",
+          "oklch(72% 0.008 91.5)",
+          "oklch(84% 0.008 91.5)",
+          "oklch(95% 0.008 91.5)"
+        ]
+      },
+      "paper-pressed": {
+        "role": "neutral",
+        "displayName": "Pressed Paper",
+        "canonical": "oklch(93.1% 0.012 91.5)",
+        "tonalRamp": [
+          "oklch(15% 0.012 91.5)",
+          "oklch(25% 0.012 91.5)",
+          "oklch(35% 0.012 91.5)",
+          "oklch(48% 0.012 91.5)",
+          "oklch(60% 0.012 91.5)",
+          "oklch(72% 0.012 91.5)",
+          "oklch(84% 0.012 91.5)",
+          "oklch(95% 0.012 91.5)"
+        ]
+      },
+      "note-white": {
+        "role": "neutral",
+        "displayName": "Note White",
+        "canonical": "oklch(98.5% 0.004 91.4)",
+        "tonalRamp": [
+          "oklch(15% 0.004 91.4)",
+          "oklch(25% 0.004 91.4)",
+          "oklch(35% 0.004 91.4)",
+          "oklch(48% 0.004 91.4)",
+          "oklch(60% 0.004 91.4)",
+          "oklch(72% 0.004 91.4)",
+          "oklch(84% 0.004 91.4)",
+          "oklch(95% 0.004 91.4)"
+        ]
+      },
+      "on-ink": {
+        "role": "neutral",
+        "displayName": "On-Ink Paper",
+        "canonical": "oklch(96.1% 0.008 91.5)",
+        "tonalRamp": [
+          "oklch(15% 0.008 91.5)",
+          "oklch(25% 0.008 91.5)",
+          "oklch(35% 0.008 91.5)",
+          "oklch(48% 0.008 91.5)",
+          "oklch(60% 0.008 91.5)",
+          "oklch(72% 0.008 91.5)",
+          "oklch(84% 0.008 91.5)",
+          "oklch(95% 0.008 91.5)"
+        ]
+      },
+      "on-ink-secondary": {
+        "role": "neutral",
+        "displayName": "On-Ink Secondary",
+        "canonical": "oklch(76.7% 0.024 258.4)",
+        "tonalRamp": [
+          "oklch(15% 0.024 258.4)",
+          "oklch(25% 0.024 258.4)",
+          "oklch(35% 0.024 258.4)",
+          "oklch(48% 0.024 258.4)",
+          "oklch(60% 0.024 258.4)",
+          "oklch(72% 0.024 258.4)",
+          "oklch(84% 0.024 258.4)",
+          "oklch(95% 0.024 258.4)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "canonical": "rgb(14 26 43 / 0.12)"
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Rule Strong",
+        "canonical": "rgb(14 26 43 / 0.22)"
+      },
+      "map-paper": {
+        "role": "neutral",
+        "displayName": "Map Paper",
+        "canonical": "oklch(95.5% 0.007 97.4)",
+        "tonalRamp": [
+          "oklch(15% 0.007 97.4)",
+          "oklch(25% 0.007 97.4)",
+          "oklch(35% 0.007 97.4)",
+          "oklch(48% 0.007 97.4)",
+          "oklch(60% 0.007 97.4)",
+          "oklch(72% 0.007 97.4)",
+          "oklch(84% 0.007 97.4)",
+          "oklch(95% 0.007 97.4)"
+        ]
+      },
+      "map-water": {
+        "role": "neutral",
+        "displayName": "Map Water",
+        "canonical": "oklch(88.1% 0.019 250.6)",
+        "tonalRamp": [
+          "oklch(15% 0.019 250.6)",
+          "oklch(25% 0.019 250.6)",
+          "oklch(35% 0.019 250.6)",
+          "oklch(48% 0.019 250.6)",
+          "oklch(60% 0.019 250.6)",
+          "oklch(72% 0.019 250.6)",
+          "oklch(84% 0.019 250.6)",
+          "oklch(95% 0.019 250.6)"
+        ]
+      },
+      "map-green": {
+        "role": "neutral",
+        "displayName": "Map Green",
+        "canonical": "oklch(92.2% 0.013 130.8)",
+        "tonalRamp": [
+          "oklch(15% 0.013 130.8)",
+          "oklch(25% 0.013 130.8)",
+          "oklch(35% 0.013 130.8)",
+          "oklch(48% 0.013 130.8)",
+          "oklch(60% 0.013 130.8)",
+          "oklch(72% 0.013 130.8)",
+          "oklch(84% 0.013 130.8)",
+          "oklch(95% 0.013 130.8)"
+        ]
+      },
+      "map-building": {
+        "role": "neutral",
+        "displayName": "Map Building",
+        "canonical": "oklch(91.8% 0.008 98.9)",
+        "tonalRamp": [
+          "oklch(15% 0.008 98.9)",
+          "oklch(25% 0.008 98.9)",
+          "oklch(35% 0.008 98.9)",
+          "oklch(48% 0.008 98.9)",
+          "oklch(60% 0.008 98.9)",
+          "oklch(72% 0.008 98.9)",
+          "oklch(84% 0.008 98.9)",
+          "oklch(95% 0.008 98.9)"
+        ]
+      },
+      "map-road": {
+        "role": "neutral",
+        "displayName": "Map Road",
+        "canonical": "#ffffff"
+      },
+      "map-road-edge": {
+        "role": "neutral",
+        "displayName": "Map Road Edge",
+        "canonical": "oklch(88.7% 0.011 261.8)",
+        "tonalRamp": [
+          "oklch(15% 0.011 261.8)",
+          "oklch(25% 0.011 261.8)",
+          "oklch(35% 0.011 261.8)",
+          "oklch(48% 0.011 261.8)",
+          "oklch(60% 0.011 261.8)",
+          "oklch(72% 0.011 261.8)",
+          "oklch(84% 0.011 261.8)",
+          "oklch(95% 0.011 261.8)"
+        ]
+      },
+      "map-label": {
+        "role": "neutral",
+        "displayName": "Map Label",
+        "canonical": "oklch(44.7% 0.031 259.0)",
+        "tonalRamp": [
+          "oklch(15% 0.031 259)",
+          "oklch(25% 0.031 259)",
+          "oklch(35% 0.031 259)",
+          "oklch(48% 0.031 259)",
+          "oklch(60% 0.031 259)",
+          "oklch(72% 0.031 259)",
+          "oklch(84% 0.031 259)",
+          "oklch(95% 0.031 259)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Denomination",
+        "purpose": "The detail note numeral on its cell grid; weight from deal size."
+      },
+      "headline": {
+        "displayName": "List Denomination",
+        "purpose": "The 68px denomination column in list rows; weight from deal size."
+      },
+      "brand": {
+        "displayName": "Wordmark",
+        "purpose": "Sulit in the wallet band, followed by a gold dot."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Merchant name on the detail note; dialog title."
+      },
+      "pin": {
+        "displayName": "Pin Numeral",
+        "purpose": "Discount on a map denomination tag; weight from deal size."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default text; row titles at 600."
+      },
+      "body-sm": {
+        "displayName": "Body Small",
+        "purpose": "Chips, hints, descriptions."
+      },
+      "meta": {
+        "displayName": "Meta",
+        "purpose": "Row meta line, freshness footer."
+      },
+      "serial": {
+        "displayName": "Serial",
+        "purpose": "Days left, dates, counts (Geist Mono, tabular)."
+      },
+      "label": {
+        "displayName": "Data Label",
+        "purpose": "Uppercase mono labels: dt, bank stamp, table heads."
+      }
+    },
+    "shadows": [
+      {
+        "name": "pin",
+        "value": "0 1px 2px rgb(14 26 43 / 0.3), 0 4px 10px rgb(14 26 43 / 0.18)",
+        "purpose": "Denomination tags on the map."
+      },
+      {
+        "name": "pin-selected",
+        "value": "0 0 0 2px #c9a227, 0 6px 16px rgb(31 79 209 / 0.35)",
+        "purpose": "Selected tag: foil ring plus blue glow."
+      },
+      {
+        "name": "seal",
+        "value": "0 0 0 1.5px #f4f2ec, 0 3px 10px rgb(14 26 43 / 0.28)",
+        "purpose": "Cluster seal with paper keyline."
+      },
+      {
+        "name": "sheet",
+        "value": "0 -1px 0 rgb(14 26 43 / 0.12), 0 -10px 30px rgb(14 26 43 / 0.14)",
+        "purpose": "Mobile bottom sheet."
+      },
+      {
+        "name": "note",
+        "value": "0 1px 2px rgb(14 26 43 / 0.08), 0 8px 24px rgb(14 26 43 / 0.1)",
+        "purpose": "Detail note."
+      },
+      {
+        "name": "lift",
+        "value": "0 1px 2px rgb(14 26 43 / 0.12), 0 8px 24px rgb(14 26 43 / 0.14)",
+        "purpose": "First-run hint (--lift)."
+      },
+      {
+        "name": "control-group",
+        "value": "0 1px 2px rgb(14 26 43 / 0.14), 0 4px 12px rgb(14 26 43 / 0.12)",
+        "purpose": "Map zoom and locate controls."
+      },
+      {
+        "name": "dialog",
+        "value": "0 2px 4px rgb(14 26 43 / 0.12), 0 24px 60px rgb(14 26 43 / 0.28)",
+        "purpose": "Card picker dialog over a 45% navy backdrop."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The single easing for every transition and keyframe (--ease)."
+      },
+      {
+        "name": "state",
+        "value": "140-180ms",
+        "purpose": "Hover/press colour and scale changes on rows, chips, buttons, pins."
+      },
+      {
+        "name": "engrave",
+        "value": "1100ms per ring, 90ms stagger, stroke-dashoffset 1 to 0",
+        "purpose": "Detail rosette rings draw in when a note opens."
+      },
+      {
+        "name": "count-up",
+        "value": "520ms, cubic ease-out (1 - (1 - k)^3), requestAnimationFrame",
+        "purpose": "Detail numeral counts from 0 to its value."
+      },
+      {
+        "name": "thread",
+        "value": "700ms scaleX 0 to 1 from the left",
+        "purpose": "Gold foil thread slides across under the numeral."
+      },
+      {
+        "name": "settle",
+        "value": "360ms, translateY 8px and opacity 0.4 to rest",
+        "purpose": "Detail note arrival."
+      },
+      {
+        "name": "sheet",
+        "value": "340ms height",
+        "purpose": "Bottom sheet snapping between rest, half, full."
+      },
+      {
+        "name": "rise",
+        "value": "320ms, translateY 12px scale 0.98",
+        "purpose": "Card picker dialog opening."
+      },
+      {
+        "name": "peel",
+        "value": "320ms, translateY -10px fade",
+        "purpose": "First-run hint dismissal."
+      },
+      {
+        "name": "seal-turn",
+        "value": "600ms rotate 30deg",
+        "purpose": "Cluster rosette turns on hover."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "all durations 0",
+        "purpose": "prefers-reduced-motion: everything is instant, count-up skipped."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "rail",
+        "value": "900px",
+        "purpose": "Sheet becomes a 400px left rail beside the map."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Wallet Bar",
+      "kind": "nav",
+      "refersTo": "wallet-bar",
+      "description": "Navy band with wordmark, mono group label, and bank chips; gold foil hairline underneath.",
+      "html": "<header class=\"ds-wallet\"><a class=\"ds-mark\" href=\"#\">Sulit</a><span class=\"ds-wallet-label\">Your cards</span><div class=\"ds-chips\"><button class=\"ds-chip ds-on\">BDO</button><button class=\"ds-chip\">BPI</button><button class=\"ds-chip\">Metrobank</button></div></header>",
+      "css": ".ds-wallet{position:relative;display:flex;align-items:center;gap:14px;padding:8px 16px;background:#0e1a2b;color:#f4f2ec;font-family:'Geist Variable',system-ui,sans-serif;}.ds-wallet::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:#c9a227;opacity:.55}.ds-mark{font:680 21px/1 'Geist Variable',system-ui,sans-serif;letter-spacing:-.03em;color:#f4f2ec;text-decoration:none;display:inline-flex;align-items:baseline;gap:1px}.ds-mark::after{content:'';width:6px;height:6px;border-radius:50%;background:#c9a227}.ds-wallet-label{font:500 10.5px/1.15 'Geist Mono Variable',ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;color:#aab4c3;width:5.2em}.ds-chips{display:flex;gap:6px}.ds-chip{display:inline-flex;align-items:center;min-height:34px;padding:0 12px;border-radius:999px;border:1px solid rgb(244 242 236 / .28);background:transparent;color:#f4f2ec;font:520 13.5px/1 'Geist Variable',system-ui,sans-serif;cursor:pointer;transition:background-color 160ms cubic-bezier(.16,1,.3,1),border-color 160ms}.ds-chip:hover{border-color:rgb(244 242 236 / .6)}.ds-chip.ds-on{background:#f4f2ec;border-color:#f4f2ec;color:#0e1a2b;font-weight:600}.ds-chip:focus-visible{outline:2px solid #1f4fd1;outline-offset:2px}"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Navy action; hover shifts to security blue.",
+      "html": "<a class=\"ds-go\" href=\"#\">Read BDO’s terms <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M15 3h6v6\"/><path d=\"M10 14 21 3\"/><path d=\"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3\"/></svg></a>",
+      "css": ".ds-go{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:10px;background:#0e1a2b;color:#f4f2ec;text-decoration:none;font:600 15px/1 'Geist Variable',system-ui,sans-serif;transition:background-color 160ms}.ds-go:hover{background:#1f4fd1}.ds-go:focus-visible{outline:2px solid #1f4fd1;outline-offset:2px}"
+    },
+    {
+      "name": "Text Button",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "Underlined security-blue action used in empty states.",
+      "html": "<button class=\"ds-text-btn\">Clear filters</button>",
+      "css": ".ds-text-btn{border:0;background:none;min-height:44px;padding:10px 4px;color:#1f4fd1;font:550 15px/1 'Geist Variable',system-ui,sans-serif;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;cursor:pointer}.ds-text-btn:hover{color:#0e1a2b}.ds-text-btn:focus-visible{outline:2px solid #1f4fd1;outline-offset:2px;border-radius:6px}"
+    },
+    {
+      "name": "Search + Near me",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "Note-white search field with inset stroke; blue stroke on focus; navy Near me button beside it.",
+      "html": "<div class=\"ds-finder\"><label class=\"ds-search\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg><input type=\"search\" placeholder=\"Merchant or mall\"></label><button class=\"ds-near\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"3\"/><line x1=\"2\" x2=\"5\" y1=\"12\" y2=\"12\"/><line x1=\"19\" x2=\"22\" y1=\"12\" y2=\"12\"/><line x1=\"12\" x2=\"12\" y1=\"2\" y2=\"5\"/><line x1=\"12\" x2=\"12\" y1=\"19\" y2=\"22\"/><circle cx=\"12\" cy=\"12\" r=\"7\"/></svg> Near me</button></div>",
+      "css": ".ds-finder{display:flex;gap:8px;background:#f4f2ec;padding:12px}.ds-search{flex:1;display:flex;align-items:center;gap:8px;padding:0 12px;min-height:42px;background:#fbfaf7;border-radius:10px;box-shadow:inset 0 0 0 1px rgb(14 26 43 / .22);color:#5a6577;transition:box-shadow 160ms}.ds-search:focus-within{box-shadow:inset 0 0 0 1.5px #1f4fd1}.ds-search input{flex:1;min-width:0;border:0;background:none;outline:none;font:450 16px/1.2 'Geist Variable',system-ui,sans-serif;color:#0e1a2b;caret-color:#1f4fd1}.ds-search input::placeholder{color:#5a6577}.ds-near{display:inline-flex;align-items:center;gap:7px;border:0;border-radius:10px;background:#0e1a2b;color:#f4f2ec;padding:0 14px;min-height:42px;font:550 14px/1 'Geist Variable',system-ui,sans-serif;cursor:pointer;transition:background-color 160ms}.ds-near:hover{background:#1f4fd1}.ds-near:focus-visible{outline:2px solid #1f4fd1;outline-offset:2px}"
+    },
+    {
+      "name": "Tabs and Category Chips",
+      "kind": "chip",
+      "refersTo": "chip-category",
+      "description": "Text tabs with mono counts and a navy underline; category pills that fill navy when selected; serial-red Ending this week.",
+      "html": "<div class=\"ds-head\"><div class=\"ds-tabs\"><button class=\"ds-tab\" aria-selected=\"true\">On the map <b>9</b></button><button class=\"ds-tab\" aria-selected=\"false\">Online &amp; everywhere <b>645</b></button></div><div class=\"ds-filters\"><label class=\"ds-soon\"><input type=\"checkbox\"> Ending this week</label><button class=\"ds-cat\" aria-pressed=\"true\">Dining</button><button class=\"ds-cat\" aria-pressed=\"false\">Shopping</button></div></div>",
+      "css": ".ds-head{background:#f4f2ec;padding:0 16px;font-family:'Geist Variable',system-ui,sans-serif;}.ds-tabs{display:flex;gap:20px;border-bottom:1px solid rgb(14 26 43 / .12)}.ds-tab{border:0;background:none;color:#5a6577;padding:12px 0 10px;font:550 14px/1 'Geist Variable',system-ui,sans-serif;display:flex;gap:7px;align-items:center;box-shadow:inset 0 -2px 0 transparent;cursor:pointer;transition:color 160ms,box-shadow 200ms cubic-bezier(.16,1,.3,1)}.ds-tab:hover{color:#0e1a2b}.ds-tab[aria-selected=true]{color:#0e1a2b;box-shadow:inset 0 -2px 0 #0e1a2b}.ds-tab b{font:500 11.5px/1 'Geist Mono Variable',ui-monospace,monospace;color:#5a6577}.ds-filters{display:flex;gap:6px;align-items:center;padding:10px 0 12px}.ds-soon{display:flex;gap:6px;align-items:center;font:550 13px/1 'Geist Variable',system-ui,sans-serif;color:#b3261e;padding-right:6px;margin-right:2px;border-right:1px solid rgb(14 26 43 / .12)}.ds-soon input{accent-color:#b3261e;width:16px;height:16px;margin:0}.ds-cat{min-height:30px;padding:0 11px;border-radius:999px;border:1px solid rgb(14 26 43 / .22);background:transparent;color:#364357;font:520 13px/1 'Geist Variable',system-ui,sans-serif;cursor:pointer;transition:background-color 160ms,border-color 160ms,color 160ms}.ds-cat:hover{border-color:#5a6577;color:#0e1a2b}.ds-cat[aria-pressed=true]{background:#0e1a2b;border-color:#0e1a2b;color:#f4f2ec}.ds-cat:focus-visible,.ds-tab:focus-visible{outline:2px solid #1f4fd1;outline-offset:2px}"
+    },
+    {
+      "name": "Denomination Tags",
+      "kind": "custom",
+      "refersTo": "denomination-tag",
+      "description": "Map pins: navy tag, numeral weight from deal size; selected, approximate, and quiet variants.",
+      "html": "<div class=\"ds-map\"><button class=\"ds-tag\" style=\"--w:450\"><b>15%</b><small>BPI</small></button><button class=\"ds-tag\" style=\"--w:810\"><b>50%</b><small>+2</small></button><button class=\"ds-tag ds-tag-on\" style=\"--w:630\"><b>30%</b><small>BDO</small></button><button class=\"ds-tag ds-tag-approx\" style=\"--w:540\"><b>20%</b><small>RCBC</small></button><button class=\"ds-tag ds-tag-quiet\"><b>0%</b><small>HSBC</small></button></div>",
+      "css": ".ds-map{display:flex;gap:18px;align-items:end;padding:24px 20px 20px;background:#f1f0eb}.ds-tag{position:relative;display:grid;justify-items:center;padding:4px 8px;border:0;border-radius:7px;background:#0e1a2b;color:#f4f2ec;line-height:1;cursor:pointer;box-shadow:0 1px 2px rgb(14 26 43 / .3),0 4px 10px rgb(14 26 43 / .18);transform-origin:50% 100%;transition:transform 180ms cubic-bezier(.16,1,.3,1),background-color 180ms}.ds-tag::after{content:'';position:absolute;left:50%;bottom:-4px;width:8px;height:8px;background:inherit;transform:translateX(-50%) rotate(45deg);border-radius:0 0 2px 0}.ds-tag b{position:relative;z-index:1;font:var(--w,600) 15px/1 'Geist Variable',system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:-.02em}.ds-tag small{position:relative;z-index:1;margin-top:3px;font:500 10px/1 'Geist Mono Variable',ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;color:#aab4c3}.ds-tag:hover{transform:scale(1.08)}.ds-tag:focus-visible{outline:2px solid #1f4fd1;outline-offset:2px}.ds-tag-on{background:#1f4fd1;color:#fff;transform:scale(1.16);box-shadow:0 0 0 2px #c9a227,0 6px 16px rgb(31 79 209 / .35)}.ds-tag-on small{color:rgb(255 255 255 / .78)}.ds-tag-on::before{content:'';position:absolute;inset:0;border-radius:inherit;background:repeating-radial-gradient(circle at 50% 120%,transparent 0 2px,rgb(255 255 255 / .12) 2px 2.6px)}.ds-tag-approx{background:#3a4659;outline:1px dashed rgb(244 242 236 / .6);outline-offset:-3px}.ds-tag-quiet{background:#fbfaf7;color:#364357;box-shadow:0 1px 2px rgb(14 26 43 / .2),0 4px 10px rgb(14 26 43 / .14)}.ds-tag-quiet small{color:#5a6577}"
+    },
+    {
+      "name": "Cluster Seal",
+      "kind": "custom",
+      "refersTo": "cluster-seal",
+      "description": "Navy disc engraved with a guilloche rosette; count on a navy centre; rosette turns on hover.",
+      "html": "<div class=\"ds-map2\"><button class=\"ds-seal\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 44 44\" width=\"44\" height=\"44\" fill=\"none\" stroke=\"rgb(244 242 236 / 0.55)\" stroke-width=\"0.5\" aria-hidden=\"true\"><path d=\"M41.4 22.0L41.1 20.4L40.2 18.9L38.8 17.7L37.0 16.9L35.0 16.7L32.8 17.0L30.7 17.9L28.8 19.4L27.2 21.3L26.1 23.5L25.6 25.9L25.5 28.4L26.1 30.7L27.1 32.8L28.5 34.4L30.3 35.6L32.1 36.1L33.9 36.1L35.5 35.5L36.8 34.4L37.7 33.0L38.0 31.3L37.7 29.5L36.8 27.8L35.4 26.3L33.5 25.2L31.3 24.5L28.9 24.4L26.5 24.8L24.2 25.8L22.2 27.3L20.6 29.2L19.5 31.3L19.0 33.5L19.0 35.7L19.6 37.7L20.7 39.3L22.1 40.5L23.7 41.1L25.4 41.1L26.9 40.5L28.2 39.4L29.2 37.8L29.6 35.9L29.5 33.9L28.8 31.8L27.5 29.9L25.8 28.3L23.6 27.0L21.2 26.3L18.7 26.2L16.3 26.6L14.1 27.5L12.3 28.9L10.9 30.6L10.1 32.5L9.9 34.4L10.2 36.2L11.0 37.7L12.3 38.8L13.9 39.3L15.6 39.3L17.3 38.7L18.9 37.6L20.1 35.9L20.9 33.9L21.2 31.6L20.9 29.2L20.0 26.9L18.6 24.8L16.8 23.1L14.7 21.9L12.4 21.2L10.1 21.0L8.0 21.5L6.1 22.4L4.7 23.7L3.8 25.3L3.5 27.0L3.8 28.6L4.7 30.1L6.0 31.2L7.7 31.8L9.6 31.9L11.6 31.4L13.5 30.4L15.2 28.8L16.5 26.8L17.3 24.5L17.6 22.0L17.3 19.5L16.5 17.2L15.2 15.2L13.5 13.6L11.6 12.6L9.6 12.1L7.7 12.2L6.0 12.8L4.7 13.9L3.8 15.4L3.5 17.0L3.8 18.7L4.7 20.3L6.1 21.6L8.0 22.5L10.1 23.0L12.4 22.8L14.7 22.1L16.8 20.9L18.6 19.2L20.0 17.1L20.9 14.8L21.2 12.4L20.9 10.1L20.1 8.1L18.9 6.4L17.3 5.3L15.6 4.7L13.9 4.7L12.3 5.2L11.0 6.3L10.2 7.8L9.9 9.6L10.1 11.5L10.9 13.4L12.3 15.1L14.1 16.5L16.3 17.4L18.7 17.8L21.2 17.7L23.6 17.0L25.8 15.7L27.5 14.1L28.8 12.2L29.5 10.1L29.6 8.1L29.2 6.2L28.2 4.6L26.9 3.5L25.4 2.9L23.7 2.9L22.1 3.5L20.7 4.7L19.6 6.3L19.0 8.3L19.0 10.5L19.5 12.7L20.6 14.8L22.2 16.7L24.2 18.2L26.5 19.2L28.9 19.6L31.3 19.5L33.5 18.8L35.4 17.7L36.8 16.2L37.7 14.5L38.0 12.7L37.7 11.0L36.8 9.6L35.5 8.5L33.9 7.9L32.1 7.9L30.3 8.4L28.5 9.6L27.1 11.2L26.1 13.3L25.5 15.6L25.6 18.1L26.1 20.5L27.2 22.7L28.8 24.6L30.7 26.1L32.8 27.0L35.0 27.3L37.0 27.1L38.8 26.3L40.2 25.1L41.1 23.6L41.4 22.0Z\"/><path d=\"M38.7 22.0L38.4 20.3L37.4 18.8L35.9 17.7L34.1 17.1L32.0 17.2L29.9 17.8L27.9 19.1L26.4 20.9L25.3 23.1L24.9 25.5L25.1 27.8L25.9 30.0L27.2 31.8L28.9 33.0L30.8 33.7L32.6 33.6L34.3 33.0L35.5 31.8L36.3 30.3L36.4 28.5L35.8 26.7L34.6 25.2L32.9 23.9L30.8 23.2L28.5 23.2L26.2 23.7L24.1 24.8L22.3 26.5L21.1 28.5L20.5 30.8L20.5 33.0L21.1 35.0L22.2 36.6L23.8 37.7L25.5 38.1L27.2 37.9L28.7 37.1L29.8 35.7L30.4 33.9L30.4 32.0L29.7 30.0L28.4 28.2L26.6 26.8L24.4 25.8L22.0 25.5L19.6 25.8L17.4 26.8L15.6 28.2L14.3 30.0L13.6 32.0L13.6 33.9L14.2 35.7L15.3 37.1L16.8 37.9L18.5 38.1L20.2 37.7L21.8 36.6L22.9 35.0L23.5 33.0L23.5 30.8L22.9 28.5L21.7 26.5L19.9 24.8L17.8 23.7L15.5 23.2L13.2 23.2L11.1 23.9L9.4 25.2L8.2 26.7L7.6 28.5L7.7 30.3L8.5 31.8L9.7 33.0L11.4 33.6L13.2 33.7L15.1 33.0L16.8 31.8L18.1 30.0L18.9 27.8L19.1 25.5L18.7 23.1L17.6 20.9L16.1 19.1L14.1 17.8L12.0 17.2L9.9 17.1L8.1 17.7L6.6 18.8L5.6 20.3L5.3 22.0L5.6 23.7L6.6 25.2L8.1 26.3L9.9 26.9L12.0 26.8L14.1 26.2L16.1 24.9L17.6 23.1L18.7 20.9L19.1 18.5L18.9 16.2L18.1 14.0L16.8 12.2L15.1 11.0L13.2 10.3L11.4 10.4L9.7 11.0L8.5 12.2L7.7 13.7L7.6 15.5L8.2 17.3L9.4 18.8L11.1 20.1L13.2 20.8L15.5 20.8L17.8 20.3L19.9 19.2L21.7 17.5L22.9 15.5L23.5 13.2L23.5 11.0L22.9 9.0L21.8 7.4L20.2 6.3L18.5 5.9L16.8 6.1L15.3 6.9L14.2 8.3L13.6 10.1L13.6 12.0L14.3 14.0L15.6 15.8L17.4 17.2L19.6 18.2L22.0 18.5L24.4 18.2L26.6 17.2L28.4 15.8L29.7 14.0L30.4 12.0L30.4 10.1L29.8 8.3L28.7 6.9L27.2 6.1L25.5 5.9L23.8 6.3L22.2 7.4L21.1 9.0L20.5 11.0L20.5 13.2L21.1 15.5L22.3 17.5L24.1 19.2L26.2 20.3L28.5 20.8L30.8 20.8L32.9 20.1L34.6 18.8L35.8 17.3L36.4 15.5L36.3 13.7L35.5 12.2L34.3 11.0L32.6 10.4L30.8 10.3L28.9 11.0L27.2 12.2L25.9 14.0L25.1 16.2L24.9 18.5L25.3 20.9L26.4 23.1L27.9 24.9L29.9 26.2L32.0 26.8L34.1 26.9L35.9 26.3L37.4 25.2L38.4 23.7L38.7 22.0Z\"/><path d=\"M34.3 22.0L34.2 21.3L34.0 20.7L33.6 20.1L33.0 19.6L32.3 19.2L31.5 18.9L30.6 18.7L29.7 18.7L28.7 18.9L27.7 19.2L26.7 19.7L25.8 20.3L24.9 21.0L24.2 21.9L23.5 22.9L23.0 23.9L22.6 25.0L22.4 26.1L22.3 27.3L22.4 28.3L22.7 29.4L23.0 30.3L23.5 31.1L24.1 31.8L24.7 32.4L25.4 32.7L26.1 33.0L26.9 33.0L27.5 32.9L28.2 32.7L28.7 32.3L29.1 31.7L29.4 31.1L29.6 30.3L29.6 29.5L29.5 28.7L29.1 27.9L28.7 27.0L28.0 26.2L27.3 25.5L26.4 24.9L25.4 24.4L24.3 24.1L23.2 23.8L22.0 23.8L20.8 23.8L19.7 24.1L18.6 24.4L17.6 24.9L16.7 25.5L16.0 26.2L15.3 27.0L14.9 27.9L14.5 28.7L14.4 29.5L14.4 30.3L14.6 31.1L14.9 31.7L15.3 32.3L15.8 32.7L16.5 32.9L17.1 33.0L17.9 33.0L18.6 32.7L19.3 32.4L19.9 31.8L20.5 31.1L21.0 30.3L21.3 29.4L21.6 28.3L21.7 27.3L21.6 26.1L21.4 25.0L21.0 23.9L20.5 22.9L19.8 21.9L19.1 21.0L18.2 20.3L17.3 19.7L16.3 19.2L15.3 18.9L14.3 18.7L13.4 18.7L12.5 18.9L11.7 19.2L11.0 19.6L10.4 20.1L10.0 20.7L9.8 21.3L9.7 22.0L9.8 22.7L10.0 23.3L10.4 23.9L11.0 24.4L11.7 24.8L12.5 25.1L13.4 25.3L14.3 25.3L15.3 25.1L16.3 24.8L17.3 24.3L18.2 23.7L19.1 23.0L19.8 22.1L20.5 21.1L21.0 20.1L21.4 19.0L21.6 17.9L21.7 16.7L21.6 15.7L21.3 14.6L21.0 13.7L20.5 12.9L19.9 12.2L19.3 11.6L18.6 11.3L17.9 11.0L17.1 11.0L16.5 11.1L15.8 11.3L15.3 11.7L14.9 12.3L14.6 12.9L14.4 13.7L14.4 14.5L14.5 15.3L14.9 16.1L15.3 17.0L16.0 17.8L16.7 18.5L17.6 19.1L18.6 19.6L19.7 19.9L20.8 20.2L22.0 20.2L23.2 20.2L24.3 19.9L25.4 19.6L26.4 19.1L27.3 18.5L28.0 17.8L28.7 17.0L29.1 16.1L29.5 15.3L29.6 14.5L29.6 13.7L29.4 12.9L29.1 12.3L28.7 11.7L28.2 11.3L27.5 11.1L26.9 11.0L26.1 11.0L25.4 11.3L24.7 11.6L24.1 12.2L23.5 12.9L23.0 13.7L22.7 14.6L22.4 15.7L22.3 16.7L22.4 17.9L22.6 19.0L23.0 20.1L23.5 21.1L24.2 22.1L24.9 23.0L25.8 23.7L26.7 24.3L27.7 24.8L28.7 25.1L29.7 25.3L30.6 25.3L31.5 25.1L32.3 24.8L33.0 24.4L33.6 23.9L34.0 23.3L34.2 22.7L34.3 22.0Z\"/><path d=\"M32.0 22.0L31.9 21.3L31.5 20.6L30.8 20.1L30.0 19.7L29.0 19.7L28.0 19.8L27.0 20.3L26.1 21.0L25.3 21.9L24.8 23.0L24.5 24.2L24.5 25.4L24.7 26.5L25.2 27.5L25.9 28.3L26.7 28.9L27.5 29.1L28.3 29.2L29.1 28.9L29.7 28.4L30.0 27.8L30.2 27.0L30.0 26.2L29.6 25.4L28.9 24.7L28.0 24.2L26.9 23.9L25.8 23.9L24.6 24.1L23.5 24.6L22.5 25.3L21.7 26.2L21.2 27.2L20.9 28.3L20.9 29.3L21.2 30.2L21.6 31.0L22.3 31.6L23.0 31.8L23.7 31.9L24.4 31.6L25.0 31.1L25.4 30.3L25.6 29.5L25.5 28.5L25.2 27.5L24.5 26.6L23.7 25.8L22.6 25.3L21.5 24.9L20.3 24.8L19.1 25.0L18.0 25.5L17.1 26.1L16.5 26.9L16.1 27.8L15.9 28.7L16.0 29.5L16.4 30.2L17.0 30.7L17.7 30.9L18.5 30.9L19.3 30.6L20.0 30.0L20.5 29.2L20.9 28.3L21.0 27.2L20.8 26.0L20.4 24.9L19.7 23.9L18.9 23.1L17.8 22.5L16.7 22.1L15.6 22.0L14.6 22.2L13.7 22.6L13.1 23.2L12.6 23.9L12.5 24.7L12.6 25.4L13.0 26.1L13.6 26.6L14.4 26.8L15.3 26.9L16.2 26.6L17.1 26.1L17.9 25.3L18.5 24.3L18.9 23.2L19.0 22.0L18.9 20.8L18.5 19.7L17.9 18.7L17.1 17.9L16.2 17.4L15.3 17.1L14.4 17.2L13.6 17.4L13.0 17.9L12.6 18.6L12.5 19.3L12.6 20.1L13.1 20.8L13.7 21.4L14.6 21.8L15.6 22.0L16.7 21.9L17.8 21.5L18.9 20.9L19.7 20.1L20.4 19.1L20.8 18.0L21.0 16.8L20.9 15.7L20.5 14.8L20.0 14.0L19.3 13.4L18.5 13.1L17.7 13.1L17.0 13.3L16.4 13.8L16.0 14.5L15.9 15.3L16.1 16.2L16.5 17.1L17.1 17.9L18.0 18.5L19.1 19.0L20.3 19.2L21.5 19.1L22.6 18.7L23.7 18.2L24.5 17.4L25.2 16.5L25.5 15.5L25.6 14.5L25.4 13.7L25.0 12.9L24.4 12.4L23.7 12.1L23.0 12.2L22.3 12.4L21.6 13.0L21.2 13.8L20.9 14.7L20.9 15.7L21.2 16.8L21.7 17.8L22.5 18.7L23.5 19.4L24.6 19.9L25.8 20.1L26.9 20.1L28.0 19.8L28.9 19.3L29.6 18.6L30.0 17.8L30.2 17.0L30.0 16.2L29.7 15.6L29.1 15.1L28.3 14.8L27.5 14.9L26.7 15.1L25.9 15.7L25.2 16.5L24.7 17.5L24.5 18.6L24.5 19.8L24.8 21.0L25.3 22.1L26.1 23.0L27.0 23.7L28.0 24.2L29.0 24.3L30.0 24.3L30.8 23.9L31.5 23.4L31.9 22.7L32.0 22.0Z\"/></svg><span>24</span></button><button class=\"ds-seal\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 44 44\" width=\"44\" height=\"44\" fill=\"none\" stroke=\"rgb(244 242 236 / 0.55)\" stroke-width=\"0.5\" aria-hidden=\"true\"><path d=\"M41.4 22.0L41.1 20.4L40.2 18.9L38.8 17.7L37.0 16.9L35.0 16.7L32.8 17.0L30.7 17.9L28.8 19.4L27.2 21.3L26.1 23.5L25.6 25.9L25.5 28.4L26.1 30.7L27.1 32.8L28.5 34.4L30.3 35.6L32.1 36.1L33.9 36.1L35.5 35.5L36.8 34.4L37.7 33.0L38.0 31.3L37.7 29.5L36.8 27.8L35.4 26.3L33.5 25.2L31.3 24.5L28.9 24.4L26.5 24.8L24.2 25.8L22.2 27.3L20.6 29.2L19.5 31.3L19.0 33.5L19.0 35.7L19.6 37.7L20.7 39.3L22.1 40.5L23.7 41.1L25.4 41.1L26.9 40.5L28.2 39.4L29.2 37.8L29.6 35.9L29.5 33.9L28.8 31.8L27.5 29.9L25.8 28.3L23.6 27.0L21.2 26.3L18.7 26.2L16.3 26.6L14.1 27.5L12.3 28.9L10.9 30.6L10.1 32.5L9.9 34.4L10.2 36.2L11.0 37.7L12.3 38.8L13.9 39.3L15.6 39.3L17.3 38.7L18.9 37.6L20.1 35.9L20.9 33.9L21.2 31.6L20.9 29.2L20.0 26.9L18.6 24.8L16.8 23.1L14.7 21.9L12.4 21.2L10.1 21.0L8.0 21.5L6.1 22.4L4.7 23.7L3.8 25.3L3.5 27.0L3.8 28.6L4.7 30.1L6.0 31.2L7.7 31.8L9.6 31.9L11.6 31.4L13.5 30.4L15.2 28.8L16.5 26.8L17.3 24.5L17.6 22.0L17.3 19.5L16.5 17.2L15.2 15.2L13.5 13.6L11.6 12.6L9.6 12.1L7.7 12.2L6.0 12.8L4.7 13.9L3.8 15.4L3.5 17.0L3.8 18.7L4.7 20.3L6.1 21.6L8.0 22.5L10.1 23.0L12.4 22.8L14.7 22.1L16.8 20.9L18.6 19.2L20.0 17.1L20.9 14.8L21.2 12.4L20.9 10.1L20.1 8.1L18.9 6.4L17.3 5.3L15.6 4.7L13.9 4.7L12.3 5.2L11.0 6.3L10.2 7.8L9.9 9.6L10.1 11.5L10.9 13.4L12.3 15.1L14.1 16.5L16.3 17.4L18.7 17.8L21.2 17.7L23.6 17.0L25.8 15.7L27.5 14.1L28.8 12.2L29.5 10.1L29.6 8.1L29.2 6.2L28.2 4.6L26.9 3.5L25.4 2.9L23.7 2.9L22.1 3.5L20.7 4.7L19.6 6.3L19.0 8.3L19.0 10.5L19.5 12.7L20.6 14.8L22.2 16.7L24.2 18.2L26.5 19.2L28.9 19.6L31.3 19.5L33.5 18.8L35.4 17.7L36.8 16.2L37.7 14.5L38.0 12.7L37.7 11.0L36.8 9.6L35.5 8.5L33.9 7.9L32.1 7.9L30.3 8.4L28.5 9.6L27.1 11.2L26.1 13.3L25.5 15.6L25.6 18.1L26.1 20.5L27.2 22.7L28.8 24.6L30.7 26.1L32.8 27.0L35.0 27.3L37.0 27.1L38.8 26.3L40.2 25.1L41.1 23.6L41.4 22.0Z\"/><path d=\"M38.7 22.0L38.4 20.3L37.4 18.8L35.9 17.7L34.1 17.1L32.0 17.2L29.9 17.8L27.9 19.1L26.4 20.9L25.3 23.1L24.9 25.5L25.1 27.8L25.9 30.0L27.2 31.8L28.9 33.0L30.8 33.7L32.6 33.6L34.3 33.0L35.5 31.8L36.3 30.3L36.4 28.5L35.8 26.7L34.6 25.2L32.9 23.9L30.8 23.2L28.5 23.2L26.2 23.7L24.1 24.8L22.3 26.5L21.1 28.5L20.5 30.8L20.5 33.0L21.1 35.0L22.2 36.6L23.8 37.7L25.5 38.1L27.2 37.9L28.7 37.1L29.8 35.7L30.4 33.9L30.4 32.0L29.7 30.0L28.4 28.2L26.6 26.8L24.4 25.8L22.0 25.5L19.6 25.8L17.4 26.8L15.6 28.2L14.3 30.0L13.6 32.0L13.6 33.9L14.2 35.7L15.3 37.1L16.8 37.9L18.5 38.1L20.2 37.7L21.8 36.6L22.9 35.0L23.5 33.0L23.5 30.8L22.9 28.5L21.7 26.5L19.9 24.8L17.8 23.7L15.5 23.2L13.2 23.2L11.1 23.9L9.4 25.2L8.2 26.7L7.6 28.5L7.7 30.3L8.5 31.8L9.7 33.0L11.4 33.6L13.2 33.7L15.1 33.0L16.8 31.8L18.1 30.0L18.9 27.8L19.1 25.5L18.7 23.1L17.6 20.9L16.1 19.1L14.1 17.8L12.0 17.2L9.9 17.1L8.1 17.7L6.6 18.8L5.6 20.3L5.3 22.0L5.6 23.7L6.6 25.2L8.1 26.3L9.9 26.9L12.0 26.8L14.1 26.2L16.1 24.9L17.6 23.1L18.7 20.9L19.1 18.5L18.9 16.2L18.1 14.0L16.8 12.2L15.1 11.0L13.2 10.3L11.4 10.4L9.7 11.0L8.5 12.2L7.7 13.7L7.6 15.5L8.2 17.3L9.4 18.8L11.1 20.1L13.2 20.8L15.5 20.8L17.8 20.3L19.9 19.2L21.7 17.5L22.9 15.5L23.5 13.2L23.5 11.0L22.9 9.0L21.8 7.4L20.2 6.3L18.5 5.9L16.8 6.1L15.3 6.9L14.2 8.3L13.6 10.1L13.6 12.0L14.3 14.0L15.6 15.8L17.4 17.2L19.6 18.2L22.0 18.5L24.4 18.2L26.6 17.2L28.4 15.8L29.7 14.0L30.4 12.0L30.4 10.1L29.8 8.3L28.7 6.9L27.2 6.1L25.5 5.9L23.8 6.3L22.2 7.4L21.1 9.0L20.5 11.0L20.5 13.2L21.1 15.5L22.3 17.5L24.1 19.2L26.2 20.3L28.5 20.8L30.8 20.8L32.9 20.1L34.6 18.8L35.8 17.3L36.4 15.5L36.3 13.7L35.5 12.2L34.3 11.0L32.6 10.4L30.8 10.3L28.9 11.0L27.2 12.2L25.9 14.0L25.1 16.2L24.9 18.5L25.3 20.9L26.4 23.1L27.9 24.9L29.9 26.2L32.0 26.8L34.1 26.9L35.9 26.3L37.4 25.2L38.4 23.7L38.7 22.0Z\"/><path d=\"M34.3 22.0L34.2 21.3L34.0 20.7L33.6 20.1L33.0 19.6L32.3 19.2L31.5 18.9L30.6 18.7L29.7 18.7L28.7 18.9L27.7 19.2L26.7 19.7L25.8 20.3L24.9 21.0L24.2 21.9L23.5 22.9L23.0 23.9L22.6 25.0L22.4 26.1L22.3 27.3L22.4 28.3L22.7 29.4L23.0 30.3L23.5 31.1L24.1 31.8L24.7 32.4L25.4 32.7L26.1 33.0L26.9 33.0L27.5 32.9L28.2 32.7L28.7 32.3L29.1 31.7L29.4 31.1L29.6 30.3L29.6 29.5L29.5 28.7L29.1 27.9L28.7 27.0L28.0 26.2L27.3 25.5L26.4 24.9L25.4 24.4L24.3 24.1L23.2 23.8L22.0 23.8L20.8 23.8L19.7 24.1L18.6 24.4L17.6 24.9L16.7 25.5L16.0 26.2L15.3 27.0L14.9 27.9L14.5 28.7L14.4 29.5L14.4 30.3L14.6 31.1L14.9 31.7L15.3 32.3L15.8 32.7L16.5 32.9L17.1 33.0L17.9 33.0L18.6 32.7L19.3 32.4L19.9 31.8L20.5 31.1L21.0 30.3L21.3 29.4L21.6 28.3L21.7 27.3L21.6 26.1L21.4 25.0L21.0 23.9L20.5 22.9L19.8 21.9L19.1 21.0L18.2 20.3L17.3 19.7L16.3 19.2L15.3 18.9L14.3 18.7L13.4 18.7L12.5 18.9L11.7 19.2L11.0 19.6L10.4 20.1L10.0 20.7L9.8 21.3L9.7 22.0L9.8 22.7L10.0 23.3L10.4 23.9L11.0 24.4L11.7 24.8L12.5 25.1L13.4 25.3L14.3 25.3L15.3 25.1L16.3 24.8L17.3 24.3L18.2 23.7L19.1 23.0L19.8 22.1L20.5 21.1L21.0 20.1L21.4 19.0L21.6 17.9L21.7 16.7L21.6 15.7L21.3 14.6L21.0 13.7L20.5 12.9L19.9 12.2L19.3 11.6L18.6 11.3L17.9 11.0L17.1 11.0L16.5 11.1L15.8 11.3L15.3 11.7L14.9 12.3L14.6 12.9L14.4 13.7L14.4 14.5L14.5 15.3L14.9 16.1L15.3 17.0L16.0 17.8L16.7 18.5L17.6 19.1L18.6 19.6L19.7 19.9L20.8 20.2L22.0 20.2L23.2 20.2L24.3 19.9L25.4 19.6L26.4 19.1L27.3 18.5L28.0 17.8L28.7 17.0L29.1 16.1L29.5 15.3L29.6 14.5L29.6 13.7L29.4 12.9L29.1 12.3L28.7 11.7L28.2 11.3L27.5 11.1L26.9 11.0L26.1 11.0L25.4 11.3L24.7 11.6L24.1 12.2L23.5 12.9L23.0 13.7L22.7 14.6L22.4 15.7L22.3 16.7L22.4 17.9L22.6 19.0L23.0 20.1L23.5 21.1L24.2 22.1L24.9 23.0L25.8 23.7L26.7 24.3L27.7 24.8L28.7 25.1L29.7 25.3L30.6 25.3L31.5 25.1L32.3 24.8L33.0 24.4L33.6 23.9L34.0 23.3L34.2 22.7L34.3 22.0Z\"/><path d=\"M32.0 22.0L31.9 21.3L31.5 20.6L30.8 20.1L30.0 19.7L29.0 19.7L28.0 19.8L27.0 20.3L26.1 21.0L25.3 21.9L24.8 23.0L24.5 24.2L24.5 25.4L24.7 26.5L25.2 27.5L25.9 28.3L26.7 28.9L27.5 29.1L28.3 29.2L29.1 28.9L29.7 28.4L30.0 27.8L30.2 27.0L30.0 26.2L29.6 25.4L28.9 24.7L28.0 24.2L26.9 23.9L25.8 23.9L24.6 24.1L23.5 24.6L22.5 25.3L21.7 26.2L21.2 27.2L20.9 28.3L20.9 29.3L21.2 30.2L21.6 31.0L22.3 31.6L23.0 31.8L23.7 31.9L24.4 31.6L25.0 31.1L25.4 30.3L25.6 29.5L25.5 28.5L25.2 27.5L24.5 26.6L23.7 25.8L22.6 25.3L21.5 24.9L20.3 24.8L19.1 25.0L18.0 25.5L17.1 26.1L16.5 26.9L16.1 27.8L15.9 28.7L16.0 29.5L16.4 30.2L17.0 30.7L17.7 30.9L18.5 30.9L19.3 30.6L20.0 30.0L20.5 29.2L20.9 28.3L21.0 27.2L20.8 26.0L20.4 24.9L19.7 23.9L18.9 23.1L17.8 22.5L16.7 22.1L15.6 22.0L14.6 22.2L13.7 22.6L13.1 23.2L12.6 23.9L12.5 24.7L12.6 25.4L13.0 26.1L13.6 26.6L14.4 26.8L15.3 26.9L16.2 26.6L17.1 26.1L17.9 25.3L18.5 24.3L18.9 23.2L19.0 22.0L18.9 20.8L18.5 19.7L17.9 18.7L17.1 17.9L16.2 17.4L15.3 17.1L14.4 17.2L13.6 17.4L13.0 17.9L12.6 18.6L12.5 19.3L12.6 20.1L13.1 20.8L13.7 21.4L14.6 21.8L15.6 22.0L16.7 21.9L17.8 21.5L18.9 20.9L19.7 20.1L20.4 19.1L20.8 18.0L21.0 16.8L20.9 15.7L20.5 14.8L20.0 14.0L19.3 13.4L18.5 13.1L17.7 13.1L17.0 13.3L16.4 13.8L16.0 14.5L15.9 15.3L16.1 16.2L16.5 17.1L17.1 17.9L18.0 18.5L19.1 19.0L20.3 19.2L21.5 19.1L22.6 18.7L23.7 18.2L24.5 17.4L25.2 16.5L25.5 15.5L25.6 14.5L25.4 13.7L25.0 12.9L24.4 12.4L23.7 12.1L23.0 12.2L22.3 12.4L21.6 13.0L21.2 13.8L20.9 14.7L20.9 15.7L21.2 16.8L21.7 17.8L22.5 18.7L23.5 19.4L24.6 19.9L25.8 20.1L26.9 20.1L28.0 19.8L28.9 19.3L29.6 18.6L30.0 17.8L30.2 17.0L30.0 16.2L29.7 15.6L29.1 15.1L28.3 14.8L27.5 14.9L26.7 15.1L25.9 15.7L25.2 16.5L24.7 17.5L24.5 18.6L24.5 19.8L24.8 21.0L25.3 22.1L26.1 23.0L27.0 23.7L28.0 24.2L29.0 24.3L30.0 24.3L30.8 23.9L31.5 23.4L31.9 22.7L32.0 22.0Z\"/></svg><span>7</span></button></div>",
+      "css": ".ds-map2{display:flex;gap:20px;padding:20px;background:#f1f0eb}.ds-seal{width:44px;height:44px;padding:0;border:0;border-radius:50%;background:#0e1a2b;color:#f4f2ec;display:grid;place-items:center;cursor:pointer;box-shadow:0 0 0 1.5px #f4f2ec,0 3px 10px rgb(14 26 43 / .28);transition:transform 200ms cubic-bezier(.16,1,.3,1)}.ds-seal>*{grid-area:1/1}.ds-seal svg{opacity:.7;transition:transform 600ms cubic-bezier(.16,1,.3,1)}.ds-seal span{width:26px;height:26px;border-radius:50%;background:#0e1a2b;display:grid;place-items:center;font:620 13px/1 'Geist Variable',system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:-.02em}.ds-seal:hover{transform:scale(1.08)}.ds-seal:hover svg{transform:rotate(30deg)}.ds-seal:focus-visible{outline:2px solid #1f4fd1;outline-offset:2px}"
+    },
+    {
+      "name": "List Rows",
+      "kind": "card",
+      "refersTo": "list-row",
+      "description": "Ruled ledger rows: denomination column, merchant, bank stamp, mono days; red when ending soon.",
+      "html": "<ol class=\"ds-list\"><li><button class=\"ds-row\"><span class=\"ds-num\" style=\"--w:810\">50%</span><span class=\"ds-body\"><strong>Mary Grace Café</strong><span class=\"ds-meta\"><span class=\"ds-stamp\" style=\"--stamp:#a3121a\">BPI</span>Dining</span></span><span class=\"ds-days ds-soon\">3 days</span></button></li><li><button class=\"ds-row\"><span class=\"ds-num\" style=\"--w:540\">20%</span><span class=\"ds-body\"><strong>National Book Store</strong><span class=\"ds-meta\"><span class=\"ds-stamp\" style=\"--stamp:#0a3a8c\">BDO</span>Shopping</span></span><span class=\"ds-days\">41 days</span></button></li><li><button class=\"ds-row\"><span class=\"ds-num ds-plan\">0%<i>plan</i></span><span class=\"ds-body\"><strong>Abenson</strong><span class=\"ds-meta\"><span class=\"ds-stamp\" style=\"--stamp:#0b3f91\">Metrobank</span>Installment</span></span><span class=\"ds-days\">12 days</span></button></li></ol>",
+      "css": ".ds-list{list-style:none;margin:0;padding:0 16px;background:#f4f2ec;color:#0e1a2b;font-family:'Geist Variable',system-ui,sans-serif;}.ds-list>li+li{border-top:1px solid rgb(14 26 43 / .12)}.ds-row{display:grid;grid-template-columns:68px 1fr auto;gap:12px;align-items:center;width:calc(100% + 8px);margin:0 -4px;padding:12px 4px;border:0;border-radius:10px;background:transparent;color:inherit;text-align:left;cursor:pointer;font:450 15px/1.4 'Geist Variable',system-ui,sans-serif;transition:background-color 140ms}.ds-row:hover{background:#ebe8df}.ds-row:focus-visible{outline:2px solid #1f4fd1;outline-offset:2px}.ds-num{display:grid;font:var(--w,600) 26px/.95 'Geist Variable',system-ui,sans-serif;letter-spacing:-.04em;font-variant-numeric:tabular-nums}.ds-num.ds-plan{font-size:20px;font-weight:500;color:#5a6577}.ds-num i{font:500 10px/1.3 'Geist Mono Variable',ui-monospace,monospace;font-style:normal;letter-spacing:.05em;text-transform:uppercase;color:#5a6577}.ds-body{display:grid;gap:4px;min-width:0}.ds-body strong{font-weight:600;font-size:15px;line-height:1.3;letter-spacing:-.01em}.ds-meta{display:flex;gap:8px;align-items:baseline;color:#5a6577;font-size:12.5px}.ds-stamp{display:inline-flex;align-items:center;gap:5px;color:#364357;font:550 10.5px/1 'Geist Mono Variable',ui-monospace,monospace;letter-spacing:.05em;text-transform:uppercase}.ds-stamp::before{content:'';width:7px;height:7px;border-radius:2px;background:var(--stamp,#0e1a2b)}.ds-days{font:500 12px/1.2 'Geist Mono Variable',ui-monospace,monospace;font-variant-numeric:tabular-nums;color:#5a6577;white-space:nowrap}.ds-days.ds-soon{color:#b3261e;font-weight:600}"
+    },
+    {
+      "name": "Detail Note",
+      "kind": "card",
+      "refersTo": "detail-note",
+      "description": "The printed note: cropped rosette, display numeral on a cell grid, gold windowed thread, ruled mono-labelled facts. Hover replays the printing.",
+      "html": "<article class=\"ds-note\"><span class=\"ds-ros\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 220 220\" width=\"220\" height=\"220\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"0.55\" aria-hidden=\"true\"><path d=\"M206.8 110.0L206.4 105.8L205.3 101.8L203.5 97.9L201.0 94.3L197.8 91.1L194.1 88.4L189.9 86.2L185.2 84.7L180.2 83.7L175.0 83.5L169.6 84.0L164.2 85.2L158.8 87.1L153.6 89.7L148.7 93.0L144.1 96.9L139.9 101.4L136.2 106.4L133.1 111.8L130.7 117.5L128.9 123.5L127.8 129.6L127.4 135.8L127.7 141.9L128.7 147.9L130.4 153.6L132.7 159.0L135.5 163.9L138.9 168.3L142.7 172.1L146.9 175.3L151.3 177.8L155.9 179.5L160.6 180.6L165.2 180.9L169.6 180.5L173.8 179.4L177.7 177.6L181.2 175.2L184.2 172.2L186.5 168.8L188.3 165.0L189.4 160.8L189.8 156.5L189.4 152.0L188.3 147.5L186.5 143.1L183.9 138.9L180.7 135.0L176.8 131.5L172.4 128.4L167.5 125.8L162.1 123.8L156.5 122.5L150.6 121.8L144.5 121.9L138.4 122.6L132.4 124.1L126.6 126.2L121.0 129.1L115.8 132.5L111.0 136.5L106.7 140.9L103.0 145.8L100.0 151.0L97.6 156.5L95.9 162.1L94.9 167.7L94.7 173.2L95.2 178.6L96.3 183.7L98.1 188.5L100.5 192.8L103.3 196.6L106.7 199.8L110.4 202.3L114.3 204.2L118.4 205.3L122.6 205.7L126.8 205.3L130.8 204.2L134.7 202.4L138.2 200.0L141.2 196.9L143.8 193.2L145.9 189.1L147.3 184.5L148.0 179.7L148.1 174.6L147.4 169.4L146.0 164.2L143.9 159.1L141.1 154.1L137.6 149.4L133.5 145.1L128.8 141.3L123.7 138.0L118.1 135.2L112.3 133.1L106.2 131.7L100.0 130.9L93.7 130.9L87.6 131.6L81.6 133.0L75.9 135.0L70.6 137.6L65.7 140.8L61.4 144.5L57.6 148.6L54.5 153.0L52.1 157.7L50.4 162.5L49.5 167.3L49.3 172.0L49.8 176.6L50.9 180.9L52.8 184.9L55.2 188.4L58.2 191.4L61.6 193.8L65.4 195.6L69.5 196.7L73.7 197.0L78.1 196.6L82.4 195.5L86.6 193.6L90.6 191.1L94.3 187.8L97.6 184.0L100.5 179.5L102.7 174.6L104.4 169.4L105.4 163.8L105.8 157.9L105.4 152.0L104.3 146.1L102.5 140.2L100.0 134.5L96.9 129.2L93.1 124.1L88.9 119.6L84.1 115.6L79.0 112.1L73.5 109.3L67.8 107.2L62.1 105.8L56.3 105.2L50.6 105.2L45.1 105.9L39.9 107.3L35.0 109.3L30.6 111.9L26.8 115.0L23.6 118.5L21.0 122.3L19.2 126.4L18.0 130.6L17.6 134.9L18.0 139.1L19.0 143.1L20.8 146.9L23.3 150.3L26.3 153.3L29.9 155.8L33.9 157.8L38.4 159.0L43.1 159.7L48.0 159.5L53.0 158.7L58.0 157.1L62.9 154.9L67.6 151.9L72.0 148.2L76.0 144.0L79.5 139.2L82.5 134.0L84.8 128.3L86.6 122.4L87.6 116.2L88.0 110.0L87.6 103.8L86.6 97.6L84.8 91.7L82.5 86.0L79.5 80.8L76.0 76.0L72.0 71.8L67.6 68.1L62.9 65.1L58.0 62.9L53.0 61.3L48.0 60.5L43.1 60.3L38.4 61.0L33.9 62.2L29.9 64.2L26.3 66.7L23.3 69.7L20.8 73.1L19.0 76.9L18.0 80.9L17.6 85.1L18.0 89.4L19.2 93.6L21.0 97.7L23.6 101.5L26.8 105.0L30.6 108.1L35.0 110.7L39.9 112.7L45.1 114.1L50.6 114.8L56.3 114.8L62.1 114.2L67.8 112.8L73.5 110.7L79.0 107.9L84.1 104.4L88.9 100.4L93.1 95.9L96.9 90.8L100.0 85.5L102.5 79.8L104.3 73.9L105.4 68.0L105.8 62.1L105.4 56.2L104.4 50.6L102.7 45.4L100.5 40.5L97.6 36.0L94.3 32.2L90.6 28.9L86.6 26.4L82.4 24.5L78.1 23.4L73.7 23.0L69.5 23.3L65.4 24.4L61.6 26.2L58.2 28.6L55.2 31.6L52.8 35.1L50.9 39.1L49.8 43.4L49.3 48.0L49.5 52.7L50.4 57.5L52.1 62.3L54.5 67.0L57.6 71.4L61.4 75.5L65.7 79.2L70.6 82.4L75.9 85.0L81.6 87.0L87.6 88.4L93.7 89.1L100.0 89.1L106.2 88.3L112.3 86.9L118.1 84.8L123.7 82.0L128.8 78.7L133.5 74.9L137.6 70.6L141.1 65.9L143.9 60.9L146.0 55.8L147.4 50.6L148.1 45.4L148.0 40.3L147.3 35.5L145.9 30.9L143.8 26.8L141.2 23.1L138.2 20.0L134.7 17.6L130.8 15.8L126.8 14.7L122.6 14.3L118.4 14.7L114.3 15.8L110.4 17.7L106.7 20.2L103.3 23.4L100.5 27.2L98.1 31.5L96.3 36.3L95.2 41.4L94.7 46.8L94.9 52.3L95.9 57.9L97.6 63.5L100.0 69.0L103.0 74.2L106.7 79.1L111.0 83.5L115.8 87.5L121.0 90.9L126.6 93.8L132.4 95.9L138.4 97.4L144.5 98.1L150.6 98.2L156.5 97.5L162.1 96.2L167.5 94.2L172.4 91.6L176.8 88.5L180.7 85.0L183.9 81.1L186.5 76.9L188.3 72.5L189.4 68.0L189.8 63.5L189.4 59.2L188.3 55.0L186.5 51.2L184.2 47.8L181.2 44.8L177.7 42.4L173.8 40.6L169.6 39.5L165.2 39.1L160.6 39.4L155.9 40.5L151.3 42.2L146.9 44.7L142.7 47.9L138.9 51.7L135.5 56.1L132.7 61.0L130.4 66.4L128.7 72.1L127.7 78.1L127.4 84.2L127.8 90.4L128.9 96.5L130.7 102.5L133.1 108.2L136.2 113.6L139.9 118.6L144.1 123.1L148.7 127.0L153.6 130.3L158.8 132.9L164.2 134.8L169.6 136.0L175.0 136.5L180.2 136.3L185.2 135.3L189.9 133.8L194.1 131.6L197.8 128.9L201.0 125.7L203.5 122.1L205.3 118.2L206.4 114.2L206.8 110.0Z\"/><path d=\"M193.6 110.0L193.2 105.7L192.0 101.6L189.9 97.7L187.2 94.1L183.7 91.1L179.7 88.6L175.2 86.8L170.3 85.7L165.1 85.3L159.8 85.8L154.5 87.1L149.3 89.1L144.3 92.0L139.7 95.5L135.5 99.8L131.9 104.6L129.0 109.8L126.7 115.4L125.2 121.3L124.5 127.3L124.6 133.3L125.5 139.2L127.2 144.8L129.5 150.0L132.5 154.7L136.1 158.9L140.1 162.4L144.5 165.1L149.1 167.1L153.8 168.3L158.5 168.7L163.1 168.2L167.4 167.0L171.3 165.0L174.8 162.4L177.6 159.1L179.8 155.4L181.3 151.4L181.9 147.0L181.8 142.5L180.8 138.0L179.0 133.7L176.4 129.5L173.1 125.8L169.1 122.4L164.5 119.7L159.5 117.6L154.1 116.2L148.4 115.6L142.5 115.8L136.7 116.7L131.0 118.5L125.5 121.0L120.3 124.2L115.7 128.1L111.6 132.6L108.2 137.5L105.4 142.7L103.5 148.2L102.3 153.8L101.9 159.4L102.4 164.9L103.6 170.1L105.5 174.9L108.0 179.2L111.2 182.9L114.8 186.0L118.8 188.3L123.0 189.8L127.3 190.5L131.6 190.4L135.8 189.5L139.8 187.8L143.3 185.3L146.4 182.2L148.9 178.5L150.8 174.3L151.9 169.7L152.2 164.8L151.8 159.8L150.5 154.8L148.4 149.9L145.6 145.2L142.0 140.9L137.7 137.1L132.9 133.8L127.6 131.1L122.0 129.2L116.0 128.0L110.0 127.6L104.0 128.0L98.0 129.2L92.4 131.1L87.1 133.8L82.3 137.1L78.0 140.9L74.4 145.2L71.6 149.9L69.5 154.8L68.2 159.8L67.8 164.8L68.1 169.7L69.2 174.3L71.1 178.5L73.6 182.2L76.7 185.3L80.2 187.8L84.2 189.5L88.4 190.4L92.7 190.5L97.0 189.8L101.2 188.3L105.2 186.0L108.8 182.9L112.0 179.2L114.5 174.9L116.4 170.1L117.6 164.9L118.1 159.4L117.7 153.8L116.5 148.2L114.6 142.7L111.8 137.5L108.4 132.6L104.3 128.1L99.7 124.2L94.5 121.0L89.0 118.5L83.3 116.7L77.5 115.8L71.6 115.6L65.9 116.2L60.5 117.6L55.5 119.7L50.9 122.4L46.9 125.8L43.6 129.5L41.0 133.7L39.2 138.0L38.2 142.5L38.1 147.0L38.7 151.4L40.2 155.4L42.4 159.1L45.2 162.4L48.7 165.0L52.6 167.0L56.9 168.2L61.5 168.7L66.2 168.3L70.9 167.1L75.5 165.1L79.9 162.4L83.9 158.9L87.5 154.7L90.5 150.0L92.8 144.8L94.5 139.2L95.4 133.3L95.5 127.3L94.8 121.3L93.3 115.4L91.0 109.8L88.1 104.6L84.5 99.8L80.3 95.5L75.7 92.0L70.7 89.1L65.5 87.1L60.2 85.8L54.9 85.3L49.7 85.7L44.8 86.8L40.3 88.6L36.3 91.1L32.8 94.1L30.1 97.7L28.0 101.6L26.8 105.7L26.4 110.0L26.8 114.3L28.0 118.4L30.1 122.3L32.8 125.9L36.3 128.9L40.3 131.4L44.8 133.2L49.7 134.3L54.9 134.7L60.2 134.2L65.5 132.9L70.7 130.9L75.7 128.0L80.3 124.5L84.5 120.2L88.1 115.4L91.0 110.2L93.3 104.6L94.8 98.7L95.5 92.7L95.4 86.7L94.5 80.8L92.8 75.2L90.5 70.0L87.5 65.3L83.9 61.1L79.9 57.6L75.5 54.9L70.9 52.9L66.2 51.7L61.5 51.3L56.9 51.8L52.6 53.0L48.7 55.0L45.2 57.6L42.4 60.9L40.2 64.6L38.7 68.6L38.1 73.0L38.2 77.5L39.2 82.0L41.0 86.3L43.6 90.5L46.9 94.2L50.9 97.6L55.5 100.3L60.5 102.4L65.9 103.8L71.6 104.4L77.5 104.2L83.3 103.3L89.0 101.5L94.5 99.0L99.7 95.8L104.3 91.9L108.4 87.4L111.8 82.5L114.6 77.3L116.5 71.8L117.7 66.2L118.1 60.6L117.6 55.1L116.4 49.9L114.5 45.1L112.0 40.8L108.8 37.1L105.2 34.0L101.2 31.7L97.0 30.2L92.7 29.5L88.4 29.6L84.2 30.5L80.2 32.2L76.7 34.7L73.6 37.8L71.1 41.5L69.2 45.7L68.1 50.3L67.8 55.2L68.2 60.2L69.5 65.2L71.6 70.1L74.4 74.8L78.0 79.1L82.3 82.9L87.1 86.2L92.4 88.9L98.0 90.8L104.0 92.0L110.0 92.4L116.0 92.0L122.0 90.8L127.6 88.9L132.9 86.2L137.7 82.9L142.0 79.1L145.6 74.8L148.4 70.1L150.5 65.2L151.8 60.2L152.2 55.2L151.9 50.3L150.8 45.7L148.9 41.5L146.4 37.8L143.3 34.7L139.8 32.2L135.8 30.5L131.6 29.6L127.3 29.5L123.0 30.2L118.8 31.7L114.8 34.0L111.2 37.1L108.0 40.8L105.5 45.1L103.6 49.9L102.4 55.1L101.9 60.6L102.3 66.2L103.5 71.8L105.4 77.3L108.2 82.5L111.6 87.4L115.7 91.9L120.3 95.8L125.5 99.0L131.0 101.5L136.7 103.3L142.5 104.2L148.4 104.4L154.1 103.8L159.5 102.4L164.5 100.3L169.1 97.6L173.1 94.2L176.4 90.5L179.0 86.3L180.8 82.0L181.8 77.5L181.9 73.0L181.3 68.6L179.8 64.6L177.6 60.9L174.8 57.6L171.3 55.0L167.4 53.0L163.1 51.8L158.5 51.3L153.8 51.7L149.1 52.9L144.5 54.9L140.1 57.6L136.1 61.1L132.5 65.3L129.5 70.0L127.2 75.2L125.5 80.8L124.6 86.7L124.5 92.7L125.2 98.7L126.7 104.6L129.0 110.2L131.9 115.4L135.5 120.2L139.7 124.5L144.3 128.0L149.3 130.9L154.5 132.9L159.8 134.2L165.1 134.7L170.3 134.3L175.2 133.2L179.7 131.4L183.7 128.9L187.2 125.9L189.9 122.3L192.0 118.4L193.2 114.3L193.6 110.0Z\"/><path d=\"M171.6 110.0L171.5 108.3L171.2 106.6L170.7 105.0L169.9 103.4L169.0 101.9L167.9 100.5L166.6 99.1L165.1 97.9L163.4 96.8L161.6 95.9L159.7 95.1L157.6 94.5L155.5 94.0L153.2 93.7L150.8 93.6L148.4 93.7L146.0 94.0L143.5 94.5L141.0 95.2L138.5 96.0L136.0 97.1L133.6 98.4L131.2 99.8L129.0 101.5L126.8 103.3L124.7 105.2L122.7 107.3L120.9 109.6L119.2 111.9L117.6 114.4L116.2 117.0L115.0 119.6L114.0 122.3L113.2 125.1L112.5 127.9L112.1 130.7L111.8 133.5L111.7 136.3L111.9 139.0L112.2 141.7L112.6 144.3L113.3 146.8L114.1 149.1L115.1 151.4L116.2 153.6L117.5 155.5L118.9 157.4L120.4 159.0L121.9 160.5L123.6 161.8L125.3 162.9L127.1 163.7L128.9 164.4L130.7 164.9L132.5 165.1L134.3 165.2L136.0 165.0L137.7 164.7L139.3 164.1L140.8 163.3L142.2 162.4L143.5 161.3L144.6 160.0L145.7 158.6L146.5 157.0L147.2 155.4L147.7 153.6L148.0 151.7L148.1 149.7L148.0 147.7L147.8 145.6L147.3 143.5L146.6 141.4L145.7 139.3L144.6 137.2L143.3 135.1L141.8 133.1L140.2 131.2L138.3 129.4L136.3 127.7L134.2 126.1L131.9 124.6L129.4 123.3L126.9 122.1L124.2 121.1L121.5 120.3L118.7 119.7L115.8 119.2L112.9 118.9L110.0 118.8L107.1 118.9L104.2 119.2L101.3 119.7L98.5 120.3L95.8 121.1L93.1 122.1L90.6 123.3L88.1 124.6L85.8 126.1L83.7 127.7L81.7 129.4L79.8 131.2L78.2 133.1L76.7 135.1L75.4 137.2L74.3 139.3L73.4 141.4L72.7 143.5L72.2 145.6L72.0 147.7L71.9 149.7L72.0 151.7L72.3 153.6L72.8 155.4L73.5 157.0L74.3 158.6L75.4 160.0L76.5 161.3L77.8 162.4L79.2 163.3L80.7 164.1L82.3 164.7L84.0 165.0L85.7 165.2L87.5 165.1L89.3 164.9L91.1 164.4L92.9 163.7L94.7 162.9L96.4 161.8L98.1 160.5L99.6 159.0L101.1 157.4L102.5 155.5L103.8 153.6L104.9 151.4L105.9 149.1L106.7 146.8L107.4 144.3L107.8 141.7L108.1 139.0L108.3 136.3L108.2 133.5L107.9 130.7L107.5 127.9L106.8 125.1L106.0 122.3L105.0 119.6L103.8 117.0L102.4 114.4L100.8 111.9L99.1 109.6L97.3 107.3L95.3 105.2L93.2 103.3L91.0 101.5L88.8 99.8L86.4 98.4L84.0 97.1L81.5 96.0L79.0 95.2L76.5 94.5L74.0 94.0L71.6 93.7L69.2 93.6L66.8 93.7L64.5 94.0L62.4 94.5L60.3 95.1L58.4 95.9L56.6 96.8L54.9 97.9L53.4 99.1L52.1 100.5L51.0 101.9L50.1 103.4L49.3 105.0L48.8 106.6L48.5 108.3L48.4 110.0L48.5 111.7L48.8 113.4L49.3 115.0L50.1 116.6L51.0 118.1L52.1 119.5L53.4 120.9L54.9 122.1L56.6 123.2L58.4 124.1L60.3 124.9L62.4 125.5L64.5 126.0L66.8 126.3L69.2 126.4L71.6 126.3L74.0 126.0L76.5 125.5L79.0 124.8L81.5 124.0L84.0 122.9L86.4 121.6L88.8 120.2L91.0 118.5L93.2 116.7L95.3 114.8L97.3 112.7L99.1 110.4L100.8 108.1L102.4 105.6L103.8 103.0L105.0 100.4L106.0 97.7L106.8 94.9L107.5 92.1L107.9 89.3L108.2 86.5L108.3 83.7L108.1 81.0L107.8 78.3L107.4 75.7L106.7 73.2L105.9 70.9L104.9 68.6L103.8 66.4L102.5 64.5L101.1 62.6L99.6 61.0L98.1 59.5L96.4 58.2L94.7 57.1L92.9 56.3L91.1 55.6L89.3 55.1L87.5 54.9L85.7 54.8L84.0 55.0L82.3 55.3L80.7 55.9L79.2 56.7L77.8 57.6L76.5 58.7L75.4 60.0L74.3 61.4L73.5 63.0L72.8 64.6L72.3 66.4L72.0 68.3L71.9 70.3L72.0 72.3L72.2 74.4L72.7 76.5L73.4 78.6L74.3 80.7L75.4 82.8L76.7 84.9L78.2 86.9L79.8 88.8L81.7 90.6L83.7 92.3L85.8 93.9L88.1 95.4L90.6 96.7L93.1 97.9L95.8 98.9L98.5 99.7L101.3 100.3L104.2 100.8L107.1 101.1L110.0 101.2L112.9 101.1L115.8 100.8L118.7 100.3L121.5 99.7L124.2 98.9L126.9 97.9L129.4 96.7L131.9 95.4L134.2 93.9L136.3 92.3L138.3 90.6L140.2 88.8L141.8 86.9L143.3 84.9L144.6 82.8L145.7 80.7L146.6 78.6L147.3 76.5L147.8 74.4L148.0 72.3L148.1 70.3L148.0 68.3L147.7 66.4L147.2 64.6L146.5 63.0L145.7 61.4L144.6 60.0L143.5 58.7L142.2 57.6L140.8 56.7L139.3 55.9L137.7 55.3L136.0 55.0L134.3 54.8L132.5 54.9L130.7 55.1L128.9 55.6L127.1 56.3L125.3 57.1L123.6 58.2L121.9 59.5L120.4 61.0L118.9 62.6L117.5 64.5L116.2 66.4L115.1 68.6L114.1 70.9L113.3 73.2L112.6 75.7L112.2 78.3L111.9 81.0L111.7 83.7L111.8 86.5L112.1 89.3L112.5 92.1L113.2 94.9L114.0 97.7L115.0 100.4L116.2 103.0L117.6 105.6L119.2 108.1L120.9 110.4L122.7 112.7L124.7 114.8L126.8 116.7L129.0 118.5L131.2 120.2L133.6 121.6L136.0 122.9L138.5 124.0L141.0 124.8L143.5 125.5L146.0 126.0L148.4 126.3L150.8 126.4L153.2 126.3L155.5 126.0L157.6 125.5L159.7 124.9L161.6 124.1L163.4 123.2L165.1 122.1L166.6 120.9L167.9 119.5L169.0 118.1L169.9 116.6L170.7 115.0L171.2 113.4L171.5 111.7L171.6 110.0Z\"/><path d=\"M160.0 110.0L159.9 108.1L159.3 106.3L158.5 104.5L157.3 102.9L155.8 101.5L154.0 100.3L152.0 99.4L149.8 98.7L147.5 98.3L145.0 98.3L142.5 98.6L139.9 99.2L137.4 100.2L134.9 101.5L132.5 103.2L130.4 105.1L128.4 107.3L126.6 109.7L125.1 112.3L124.0 115.1L123.1 118.0L122.5 120.9L122.3 123.9L122.4 126.9L122.9 129.7L123.6 132.5L124.7 135.1L126.0 137.5L127.5 139.6L129.3 141.5L131.2 143.0L133.3 144.3L135.4 145.2L137.5 145.7L139.6 145.9L141.7 145.8L143.6 145.3L145.4 144.6L147.0 143.5L148.3 142.2L149.4 140.6L150.2 138.9L150.7 137.0L150.8 135.0L150.5 132.9L150.0 130.9L149.0 128.9L147.8 127.0L146.2 125.2L144.3 123.5L142.2 122.1L139.8 121.0L137.2 120.1L134.5 119.5L131.7 119.2L128.8 119.3L125.8 119.7L122.9 120.4L120.1 121.5L117.4 122.9L114.9 124.5L112.6 126.4L110.5 128.6L108.7 130.9L107.2 133.4L106.0 136.0L105.1 138.6L104.6 141.3L104.4 144.0L104.6 146.5L105.0 148.9L105.8 151.2L106.8 153.3L108.1 155.1L109.6 156.6L111.3 157.8L113.0 158.7L114.9 159.2L116.8 159.4L118.7 159.3L120.5 158.8L122.2 158.0L123.8 156.8L125.2 155.4L126.3 153.6L127.2 151.7L127.8 149.6L128.1 147.3L128.0 144.9L127.6 142.4L126.9 140.0L125.8 137.6L124.4 135.2L122.7 133.0L120.7 131.0L118.4 129.2L115.9 127.6L113.2 126.3L110.4 125.3L107.4 124.6L104.4 124.3L101.4 124.2L98.4 124.5L95.6 125.2L92.8 126.1L90.2 127.3L87.9 128.8L85.7 130.5L83.9 132.4L82.4 134.5L81.2 136.6L80.3 138.9L79.8 141.1L79.6 143.3L79.7 145.4L80.2 147.4L81.0 149.3L82.1 150.9L83.4 152.3L85.0 153.3L86.7 154.1L88.5 154.6L90.5 154.7L92.5 154.5L94.4 153.9L96.4 153.0L98.2 151.7L99.9 150.2L101.4 148.3L102.6 146.2L103.6 143.8L104.4 141.3L104.8 138.6L104.9 135.8L104.7 132.9L104.1 130.1L103.2 127.3L102.0 124.6L100.4 122.0L98.6 119.5L96.6 117.3L94.3 115.4L91.8 113.7L89.2 112.3L86.5 111.3L83.7 110.6L80.9 110.2L78.2 110.1L75.6 110.4L73.1 111.0L70.8 111.9L68.7 113.0L66.8 114.4L65.3 116.0L64.1 117.7L63.1 119.5L62.6 121.5L62.4 123.4L62.5 125.3L63.0 127.1L63.8 128.8L64.9 130.4L66.3 131.7L68.0 132.8L69.9 133.6L71.9 134.2L74.1 134.4L76.4 134.3L78.8 133.8L81.1 133.0L83.4 131.8L85.6 130.3L87.6 128.5L89.5 126.5L91.2 124.1L92.6 121.6L93.7 118.9L94.5 116.0L95.0 113.0L95.2 110.0L95.0 107.0L94.5 104.0L93.7 101.1L92.6 98.4L91.2 95.9L89.5 93.5L87.6 91.5L85.6 89.7L83.4 88.2L81.1 87.0L78.8 86.2L76.4 85.7L74.1 85.6L71.9 85.8L69.9 86.4L68.0 87.2L66.3 88.3L64.9 89.6L63.8 91.2L63.0 92.9L62.5 94.7L62.4 96.6L62.6 98.5L63.1 100.5L64.1 102.3L65.3 104.0L66.8 105.6L68.7 107.0L70.8 108.1L73.1 109.0L75.6 109.6L78.2 109.9L80.9 109.8L83.7 109.4L86.5 108.7L89.2 107.7L91.8 106.3L94.3 104.6L96.6 102.7L98.6 100.5L100.4 98.0L102.0 95.4L103.2 92.7L104.1 89.9L104.7 87.1L104.9 84.2L104.8 81.4L104.4 78.7L103.6 76.2L102.6 73.8L101.4 71.7L99.9 69.8L98.2 68.3L96.4 67.0L94.4 66.1L92.5 65.5L90.5 65.3L88.5 65.4L86.7 65.9L85.0 66.7L83.4 67.7L82.1 69.1L81.0 70.7L80.2 72.6L79.7 74.6L79.6 76.7L79.8 78.9L80.3 81.1L81.2 83.4L82.4 85.5L83.9 87.6L85.7 89.5L87.9 91.2L90.2 92.7L92.8 93.9L95.6 94.8L98.4 95.5L101.4 95.8L104.4 95.7L107.4 95.4L110.4 94.7L113.2 93.7L115.9 92.4L118.4 90.8L120.7 89.0L122.7 87.0L124.4 84.8L125.8 82.4L126.9 80.0L127.6 77.6L128.0 75.1L128.1 72.7L127.8 70.4L127.2 68.3L126.3 66.4L125.2 64.6L123.8 63.2L122.2 62.0L120.5 61.2L118.7 60.7L116.8 60.6L114.9 60.8L113.0 61.3L111.3 62.2L109.6 63.4L108.1 64.9L106.8 66.7L105.8 68.8L105.0 71.1L104.6 73.5L104.4 76.0L104.6 78.7L105.1 81.4L106.0 84.0L107.2 86.6L108.7 89.1L110.5 91.4L112.6 93.6L114.9 95.5L117.4 97.1L120.1 98.5L122.9 99.6L125.8 100.3L128.8 100.7L131.7 100.8L134.5 100.5L137.2 99.9L139.8 99.0L142.2 97.9L144.3 96.5L146.2 94.8L147.8 93.0L149.0 91.1L150.0 89.1L150.5 87.1L150.8 85.0L150.7 83.0L150.2 81.1L149.4 79.4L148.3 77.8L147.0 76.5L145.4 75.4L143.6 74.7L141.7 74.2L139.6 74.1L137.5 74.3L135.4 74.8L133.3 75.7L131.2 77.0L129.3 78.5L127.5 80.4L126.0 82.5L124.7 84.9L123.6 87.5L122.9 90.3L122.4 93.1L122.3 96.1L122.5 99.1L123.1 102.0L124.0 104.9L125.1 107.7L126.6 110.3L128.4 112.7L130.4 114.9L132.5 116.8L134.9 118.5L137.4 119.8L139.9 120.8L142.5 121.4L145.0 121.7L147.5 121.7L149.8 121.3L152.0 120.6L154.0 119.7L155.8 118.5L157.3 117.1L158.5 115.5L159.3 113.7L159.9 111.9L160.0 110.0Z\"/></svg></span><div class=\"ds-denom\"><span class=\"ds-dnum\" style=\"--w:630\">30%</span></div><svg class=\"ds-thread\" preserveAspectRatio=\"none\" viewBox=\"0 0 100 2\" aria-hidden=\"true\"><line x1=\"0\" y1=\"1\" x2=\"100\" y2=\"1\"/></svg><h2>The Peninsula Manila</h2><p class=\"ds-sub\">30% off at The Peninsula Manila</p><dl><dt>Bank</dt><dd>BDO</dd><dt>Cards</dt><dd>BDO Mastercard</dd><dt>Until</dt><dd class=\"ds-soon\">Nov 13, 2026 · 5 days left</dd></dl></article>",
+      "css": ".ds-note{position:relative;overflow:hidden;max-width:380px;background:#fbfaf7;color:#0e1a2b;border-radius:16px;padding:20px 18px 18px 22px;box-shadow:0 1px 2px rgb(14 26 43 / .08),0 8px 24px rgb(14 26 43 / .1);font-family:'Geist Variable',system-ui,sans-serif;}.ds-ros{position:absolute;top:-70px;right:-50px;color:#0e1a2b;opacity:.22;pointer-events:none}.ds-ros path{stroke-dasharray:1;stroke-dashoffset:0}.ds-note:hover .ds-ros path{animation:ds-engrave 1100ms cubic-bezier(.16,1,.3,1) both}.ds-note:hover .ds-ros path:nth-child(2){animation-delay:90ms}.ds-note:hover .ds-ros path:nth-child(3){animation-delay:180ms}.ds-note:hover .ds-ros path:nth-child(4){animation-delay:270ms}.ds-note:hover .ds-thread{animation:ds-thread 700ms cubic-bezier(.16,1,.3,1) both}@keyframes ds-engrave{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}@keyframes ds-thread{from{transform:scaleX(0)}}.ds-denom{position:relative;margin:-4px 0 0 -4px;padding:10px 4px 4px}.ds-denom::before{content:'';position:absolute;inset:0;background:linear-gradient(rgb(14 26 43 / .12) 1px,transparent 1px) 0 0/100% 24px,linear-gradient(90deg,rgb(14 26 43 / .12) 1px,transparent 1px) 0 0/24px 100%;-webkit-mask-image:linear-gradient(to right,#000 55%,transparent 90%);mask-image:linear-gradient(to right,#000 55%,transparent 90%)}.ds-dnum{position:relative;display:block;font:var(--w,700) 88px/.88 'Geist Variable',system-ui,sans-serif;letter-spacing:-.045em;font-variant-numeric:tabular-nums}.ds-thread{display:block;width:100%;height:3px;margin-top:14px;overflow:visible;transform-origin:left}.ds-thread line{stroke:#c9a227;stroke-width:3;stroke-dasharray:9 3;vector-effect:non-scaling-stroke}.ds-note h2{position:relative;margin:16px 0 2px;font:640 20px/1.2 'Geist Variable',system-ui,sans-serif;letter-spacing:-.02em}.ds-sub{position:relative;margin:0 0 14px;color:#5a6577}.ds-note dl{position:relative;display:grid;grid-template-columns:auto 1fr;gap:8px 16px;margin:0;padding-top:12px;border-top:1px solid rgb(14 26 43 / .12);font-size:14px}.ds-note dt{font:500 10.5px/1.9 'Geist Mono Variable',ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;color:#5a6577}.ds-note dd{margin:0}.ds-note dd.ds-soon{font:600 12px/1.9 'Geist Mono Variable',ui-monospace,monospace;color:#b3261e}@media (prefers-reduced-motion:reduce){.ds-note *{animation:none!important}}"
+    },
+    {
+      "name": "Empty State",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "An 88px rosette at half strength over centred copy and text-button actions.",
+      "html": "<div class=\"ds-empty\"><span class=\"ds-eseal\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 88 88\" width=\"88\" height=\"88\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"0.6\" aria-hidden=\"true\"><path d=\"M82.7 44.0L82.4 41.5L81.4 39.2L79.8 37.1L77.6 35.4L75.0 34.1L72.1 33.5L68.9 33.5L65.7 34.1L62.5 35.3L59.5 37.2L56.8 39.6L54.5 42.5L52.7 45.8L51.5 49.4L51.0 53.1L51.1 56.8L51.8 60.3L53.1 63.6L54.9 66.5L57.1 68.8L59.6 70.6L62.4 71.8L65.1 72.3L67.8 72.2L70.3 71.4L72.5 70.1L74.2 68.2L75.3 66.0L75.9 63.5L75.8 60.8L75.0 58.1L73.6 55.6L71.5 53.3L69.0 51.3L65.9 49.9L62.6 49.0L59.0 48.7L55.4 49.0L51.8 50.0L48.4 51.6L45.3 53.8L42.7 56.4L40.6 59.4L39.0 62.6L38.1 66.0L37.9 69.3L38.3 72.5L39.2 75.4L40.7 77.9L42.7 79.9L44.9 81.3L47.4 82.1L49.9 82.2L52.3 81.7L54.6 80.5L56.5 78.7L58.0 76.5L58.9 73.8L59.3 70.9L59.0 67.8L58.0 64.6L56.4 61.6L54.2 58.9L51.5 56.5L48.4 54.6L44.9 53.2L41.2 52.5L37.5 52.4L33.8 52.9L30.4 54.0L27.2 55.7L24.6 57.8L22.4 60.3L20.9 63.1L19.9 66.0L19.7 68.8L20.1 71.5L21.1 74.0L22.7 76.0L24.6 77.5L27.0 78.5L29.5 78.8L32.1 78.5L34.7 77.5L37.0 75.8L39.1 73.6L40.7 70.9L41.8 67.7L42.3 64.3L42.2 60.8L41.4 57.2L40.0 53.8L38.0 50.6L35.5 47.8L32.6 45.5L29.4 43.7L26.0 42.6L22.5 42.1L19.1 42.2L15.9 42.9L13.1 44.2L10.7 46.0L8.9 48.1L7.7 50.6L7.1 53.1L7.2 55.6L7.9 58.0L9.3 60.1L11.2 61.9L13.6 63.1L16.3 63.8L19.2 63.8L22.2 63.2L25.2 61.9L27.9 60.1L30.4 57.6L32.4 54.7L33.9 51.3L34.9 47.7L35.2 44.0L34.9 40.3L33.9 36.7L32.4 33.3L30.4 30.4L27.9 27.9L25.2 26.1L22.2 24.8L19.2 24.2L16.3 24.2L13.6 24.9L11.2 26.1L9.3 27.9L7.9 30.0L7.2 32.4L7.1 34.9L7.7 37.4L8.9 39.9L10.7 42.0L13.1 43.8L15.9 45.1L19.1 45.8L22.5 45.9L26.0 45.4L29.4 44.3L32.6 42.5L35.5 40.2L38.0 37.4L40.0 34.2L41.4 30.8L42.2 27.2L42.3 23.7L41.8 20.3L40.7 17.1L39.1 14.4L37.0 12.2L34.7 10.5L32.1 9.5L29.5 9.2L27.0 9.5L24.6 10.5L22.7 12.0L21.1 14.0L20.1 16.5L19.7 19.2L19.9 22.0L20.9 24.9L22.4 27.7L24.6 30.2L27.2 32.3L30.4 34.0L33.8 35.1L37.5 35.6L41.2 35.5L44.9 34.8L48.4 33.4L51.5 31.5L54.2 29.1L56.4 26.4L58.0 23.4L59.0 20.2L59.3 17.1L58.9 14.2L58.0 11.5L56.5 9.3L54.6 7.5L52.3 6.3L49.9 5.8L47.4 5.9L44.9 6.7L42.7 8.1L40.7 10.1L39.2 12.6L38.3 15.5L37.9 18.7L38.1 22.0L39.0 25.4L40.6 28.6L42.7 31.6L45.3 34.2L48.4 36.4L51.8 38.0L55.4 39.0L59.0 39.3L62.6 39.0L65.9 38.1L69.0 36.7L71.5 34.7L73.6 32.4L75.0 29.9L75.8 27.2L75.9 24.5L75.3 22.0L74.2 19.8L72.5 17.9L70.3 16.6L67.8 15.8L65.1 15.7L62.4 16.2L59.6 17.4L57.1 19.2L54.9 21.5L53.1 24.4L51.8 27.7L51.1 31.2L51.0 34.9L51.5 38.6L52.7 42.2L54.5 45.5L56.8 48.4L59.5 50.8L62.5 52.7L65.7 53.9L68.9 54.5L72.1 54.5L75.0 53.9L77.6 52.6L79.8 50.9L81.4 48.8L82.4 46.5L82.7 44.0Z\"/><path d=\"M77.4 44.0L77.1 41.4L76.0 39.1L74.2 37.0L71.9 35.4L69.1 34.4L66.1 34.1L62.9 34.5L59.7 35.7L56.8 37.5L54.2 39.9L52.2 42.9L50.7 46.2L49.9 49.7L49.9 53.3L50.5 56.8L51.8 60.0L53.7 62.8L56.0 65.0L58.7 66.5L61.5 67.3L64.3 67.4L67.0 66.8L69.3 65.5L71.1 63.7L72.3 61.4L72.8 58.8L72.5 56.1L71.6 53.5L69.9 51.0L67.6 49.0L64.8 47.4L61.6 46.5L58.2 46.2L54.7 46.7L51.3 47.9L48.1 49.7L45.4 52.1L43.3 55.0L41.7 58.2L40.9 61.5L40.8 64.9L41.4 68.0L42.7 70.8L44.5 73.2L46.7 74.9L49.2 75.9L51.8 76.2L54.3 75.8L56.6 74.7L58.6 72.9L60.0 70.6L60.8 67.9L60.8 64.9L60.2 61.9L58.8 59.0L56.8 56.4L54.2 54.1L51.1 52.5L47.6 51.4L44.0 51.0L40.4 51.4L36.9 52.5L33.8 54.1L31.2 56.4L29.2 59.0L27.8 61.9L27.2 64.9L27.2 67.9L28.0 70.6L29.4 72.9L31.4 74.7L33.7 75.8L36.2 76.2L38.8 75.9L41.3 74.9L43.5 73.2L45.3 70.8L46.6 68.0L47.2 64.9L47.1 61.5L46.3 58.2L44.7 55.0L42.6 52.1L39.9 49.7L36.7 47.9L33.3 46.7L29.8 46.2L26.4 46.5L23.2 47.4L20.4 49.0L18.1 51.0L16.4 53.5L15.5 56.1L15.2 58.8L15.7 61.4L16.9 63.7L18.7 65.5L21.0 66.8L23.7 67.4L26.5 67.3L29.3 66.5L32.0 65.0L34.3 62.8L36.2 60.0L37.5 56.8L38.1 53.3L38.1 49.7L37.3 46.2L35.8 42.9L33.8 39.9L31.2 37.5L28.3 35.7L25.1 34.5L21.9 34.1L18.9 34.4L16.1 35.4L13.8 37.0L12.0 39.1L10.9 41.4L10.6 44.0L10.9 46.6L12.0 48.9L13.8 51.0L16.1 52.6L18.9 53.6L21.9 53.9L25.1 53.5L28.3 52.3L31.2 50.5L33.8 48.1L35.8 45.1L37.3 41.8L38.1 38.3L38.1 34.7L37.5 31.2L36.2 28.0L34.3 25.2L32.0 23.0L29.3 21.5L26.5 20.7L23.7 20.6L21.0 21.2L18.7 22.5L16.9 24.3L15.7 26.6L15.2 29.2L15.5 31.9L16.4 34.5L18.1 37.0L20.4 39.0L23.2 40.6L26.4 41.5L29.8 41.8L33.3 41.3L36.7 40.1L39.9 38.3L42.6 35.9L44.7 33.0L46.3 29.8L47.1 26.5L47.2 23.1L46.6 20.0L45.3 17.2L43.5 14.8L41.3 13.1L38.8 12.1L36.2 11.8L33.7 12.2L31.4 13.3L29.4 15.1L28.0 17.4L27.2 20.1L27.2 23.1L27.8 26.1L29.2 29.0L31.2 31.6L33.8 33.9L36.9 35.5L40.4 36.6L44.0 37.0L47.6 36.6L51.1 35.5L54.2 33.9L56.8 31.6L58.8 29.0L60.2 26.1L60.8 23.1L60.8 20.1L60.0 17.4L58.6 15.1L56.6 13.3L54.3 12.2L51.8 11.8L49.2 12.1L46.7 13.1L44.5 14.8L42.7 17.2L41.4 20.0L40.8 23.1L40.9 26.5L41.7 29.8L43.3 33.0L45.4 35.9L48.1 38.3L51.3 40.1L54.7 41.3L58.2 41.8L61.6 41.5L64.8 40.6L67.6 39.0L69.9 37.0L71.6 34.5L72.5 31.9L72.8 29.2L72.3 26.6L71.1 24.3L69.3 22.5L67.0 21.2L64.3 20.6L61.5 20.7L58.7 21.5L56.0 23.0L53.7 25.2L51.8 28.0L50.5 31.2L49.9 34.7L49.9 38.3L50.7 41.8L52.2 45.1L54.2 48.1L56.8 50.5L59.7 52.3L62.9 53.5L66.1 53.9L69.1 53.6L71.9 52.6L74.2 51.0L76.0 48.9L77.1 46.6L77.4 44.0Z\"/><path d=\"M68.6 44.0L68.5 43.0L68.3 42.0L67.8 41.1L67.1 40.2L66.3 39.4L65.4 38.7L64.3 38.2L63.1 37.8L61.7 37.5L60.3 37.4L58.9 37.5L57.4 37.8L55.9 38.2L54.4 38.8L53.0 39.6L51.6 40.6L50.3 41.7L49.1 42.9L48.0 44.3L47.0 45.8L46.2 47.3L45.6 48.9L45.1 50.6L44.8 52.3L44.7 53.9L44.7 55.6L45.0 57.2L45.3 58.7L45.8 60.1L46.5 61.4L47.3 62.6L48.1 63.6L49.1 64.5L50.1 65.1L51.2 65.6L52.3 66.0L53.4 66.1L54.4 66.0L55.4 65.8L56.3 65.3L57.1 64.8L57.9 64.0L58.4 63.1L58.9 62.1L59.1 61.0L59.2 59.9L59.2 58.7L58.9 57.4L58.5 56.1L57.8 54.9L57.0 53.6L56.1 52.5L54.9 51.4L53.7 50.4L52.3 49.6L50.8 48.9L49.1 48.3L47.5 47.9L45.7 47.6L44.0 47.5L42.3 47.6L40.5 47.9L38.9 48.3L37.2 48.9L35.7 49.6L34.3 50.4L33.1 51.4L31.9 52.5L31.0 53.6L30.2 54.9L29.5 56.1L29.1 57.4L28.8 58.7L28.8 59.9L28.9 61.0L29.1 62.1L29.6 63.1L30.1 64.0L30.9 64.8L31.7 65.3L32.6 65.8L33.6 66.0L34.6 66.1L35.7 66.0L36.8 65.6L37.9 65.1L38.9 64.5L39.9 63.6L40.7 62.6L41.5 61.4L42.2 60.1L42.7 58.7L43.0 57.2L43.3 55.6L43.3 53.9L43.2 52.3L42.9 50.6L42.4 48.9L41.8 47.3L41.0 45.8L40.0 44.3L38.9 42.9L37.7 41.7L36.4 40.6L35.0 39.6L33.6 38.8L32.1 38.2L30.6 37.8L29.1 37.5L27.7 37.4L26.3 37.5L24.9 37.8L23.7 38.2L22.6 38.7L21.7 39.4L20.9 40.2L20.2 41.1L19.7 42.0L19.5 43.0L19.4 44.0L19.5 45.0L19.7 46.0L20.2 46.9L20.9 47.8L21.7 48.6L22.6 49.3L23.7 49.8L24.9 50.2L26.3 50.5L27.7 50.6L29.1 50.5L30.6 50.2L32.1 49.8L33.6 49.2L35.0 48.4L36.4 47.4L37.7 46.3L38.9 45.1L40.0 43.7L41.0 42.2L41.8 40.7L42.4 39.1L42.9 37.4L43.2 35.7L43.3 34.1L43.3 32.4L43.0 30.8L42.7 29.3L42.2 27.9L41.5 26.6L40.7 25.4L39.9 24.4L38.9 23.5L37.9 22.9L36.8 22.4L35.7 22.0L34.6 21.9L33.6 22.0L32.6 22.2L31.7 22.7L30.9 23.2L30.1 24.0L29.6 24.9L29.1 25.9L28.9 27.0L28.8 28.1L28.8 29.3L29.1 30.6L29.5 31.9L30.2 33.1L31.0 34.4L31.9 35.5L33.1 36.6L34.3 37.6L35.7 38.4L37.2 39.1L38.9 39.7L40.5 40.1L42.3 40.4L44.0 40.5L45.7 40.4L47.5 40.1L49.1 39.7L50.8 39.1L52.3 38.4L53.7 37.6L54.9 36.6L56.1 35.5L57.0 34.4L57.8 33.1L58.5 31.9L58.9 30.6L59.2 29.3L59.2 28.1L59.1 27.0L58.9 25.9L58.4 24.9L57.9 24.0L57.1 23.2L56.3 22.7L55.4 22.2L54.4 22.0L53.4 21.9L52.3 22.0L51.2 22.4L50.1 22.9L49.1 23.5L48.1 24.4L47.3 25.4L46.5 26.6L45.8 27.9L45.3 29.3L45.0 30.8L44.7 32.4L44.7 34.1L44.8 35.7L45.1 37.4L45.6 39.1L46.2 40.7L47.0 42.2L48.0 43.7L49.1 45.1L50.3 46.3L51.6 47.4L53.0 48.4L54.4 49.2L55.9 49.8L57.4 50.2L58.9 50.5L60.3 50.6L61.7 50.5L63.1 50.2L64.3 49.8L65.4 49.3L66.3 48.6L67.1 47.8L67.8 46.9L68.3 46.0L68.5 45.0L68.6 44.0Z\"/><path d=\"M64.0 44.0L63.9 42.9L63.4 41.8L62.6 40.9L61.6 40.1L60.4 39.6L59.0 39.3L57.5 39.4L56.0 39.7L54.4 40.3L53.0 41.3L51.7 42.5L50.6 43.9L49.8 45.5L49.2 47.2L49.0 49.0L49.0 50.7L49.3 52.5L49.9 54.0L50.7 55.4L51.7 56.6L52.9 57.5L54.2 58.1L55.4 58.4L56.7 58.3L57.8 58.0L58.8 57.4L59.6 56.6L60.1 55.5L60.3 54.4L60.2 53.2L59.8 52.0L59.1 50.8L58.1 49.7L56.9 48.9L55.4 48.2L53.8 47.8L52.1 47.7L50.3 47.9L48.6 48.4L47.0 49.1L45.5 50.2L44.2 51.4L43.2 52.9L42.4 54.4L41.9 56.0L41.8 57.6L41.9 59.1L42.3 60.5L43.0 61.7L43.8 62.6L44.9 63.3L46.0 63.7L47.1 63.8L48.2 63.5L49.2 63.0L50.1 62.1L50.7 61.1L51.1 59.8L51.2 58.4L51.0 57.0L50.5 55.5L49.8 54.1L48.7 52.8L47.4 51.7L45.8 50.8L44.1 50.1L42.4 49.8L40.6 49.7L38.8 49.9L37.1 50.4L35.6 51.2L34.3 52.2L33.2 53.4L32.5 54.7L32.0 56.0L31.8 57.3L32.0 58.6L32.4 59.7L33.1 60.6L34.0 61.3L35.0 61.8L36.2 61.9L37.4 61.7L38.5 61.2L39.6 60.4L40.5 59.3L41.3 58.0L41.7 56.5L42.0 54.9L41.9 53.2L41.5 51.5L40.8 49.8L39.8 48.3L38.6 46.9L37.2 45.8L35.7 44.9L34.0 44.4L32.4 44.1L30.8 44.1L29.2 44.4L27.9 45.0L26.7 45.8L25.9 46.7L25.3 47.8L25.0 49.0L25.0 50.1L25.3 51.2L26.0 52.1L26.8 52.9L27.9 53.5L29.2 53.7L30.6 53.7L32.0 53.4L33.4 52.7L34.7 51.8L35.8 50.6L36.8 49.2L37.5 47.5L37.9 45.8L38.1 44.0L37.9 42.2L37.5 40.5L36.8 38.8L35.8 37.4L34.7 36.2L33.4 35.3L32.0 34.6L30.6 34.3L29.2 34.3L27.9 34.5L26.8 35.1L26.0 35.9L25.3 36.8L25.0 37.9L25.0 39.0L25.3 40.2L25.9 41.3L26.7 42.2L27.9 43.0L29.2 43.6L30.8 43.9L32.4 43.9L34.0 43.6L35.7 43.1L37.2 42.2L38.6 41.1L39.8 39.7L40.8 38.2L41.5 36.5L41.9 34.8L42.0 33.1L41.7 31.5L41.3 30.0L40.5 28.7L39.6 27.6L38.5 26.8L37.4 26.3L36.2 26.1L35.0 26.2L34.0 26.7L33.1 27.4L32.4 28.3L32.0 29.4L31.8 30.7L32.0 32.0L32.5 33.3L33.2 34.6L34.3 35.8L35.6 36.8L37.1 37.6L38.8 38.1L40.6 38.3L42.4 38.2L44.1 37.9L45.8 37.2L47.4 36.3L48.7 35.2L49.8 33.9L50.5 32.5L51.0 31.0L51.2 29.6L51.1 28.2L50.7 26.9L50.1 25.9L49.2 25.0L48.2 24.5L47.1 24.2L46.0 24.3L44.9 24.7L43.8 25.4L43.0 26.3L42.3 27.5L41.9 28.9L41.8 30.4L41.9 32.0L42.4 33.6L43.2 35.1L44.2 36.6L45.5 37.8L47.0 38.9L48.6 39.6L50.3 40.1L52.1 40.3L53.8 40.2L55.4 39.8L56.9 39.1L58.1 38.3L59.1 37.2L59.8 36.0L60.2 34.8L60.3 33.6L60.1 32.5L59.6 31.4L58.8 30.6L57.8 30.0L56.7 29.7L55.4 29.6L54.2 29.9L52.9 30.5L51.7 31.4L50.7 32.6L49.9 34.0L49.3 35.5L49.0 37.3L49.0 39.0L49.2 40.8L49.8 42.5L50.6 44.1L51.7 45.5L53.0 46.7L54.4 47.7L56.0 48.3L57.5 48.6L59.0 48.7L60.4 48.4L61.6 47.9L62.6 47.1L63.4 46.2L63.9 45.1L64.0 44.0Z\"/></svg></span><p>No promos for BPI near here with these filters.</p><button class=\"ds-ebtn\">Clear filters</button></div>",
+      "css": ".ds-empty{padding:28px 10px;text-align:center;background:#f4f2ec;color:#364357;font:450 15px/1.4 'Geist Variable',system-ui,sans-serif}.ds-eseal{display:block;width:88px;margin:0 auto 10px;color:#5a6577;opacity:.5}.ds-empty p{margin:0 auto 6px;max-width:34ch;text-wrap:balance}.ds-ebtn{border:0;background:none;min-height:44px;padding:10px 4px;color:#1f4fd1;font:550 15px/1 'Geist Variable',system-ui,sans-serif;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;cursor:pointer}.ds-ebtn:hover{color:#0e1a2b}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Peso Intaglio",
+    "overview": "Sulit is printed, not painted. Every promo is a denomination: the discount is set like the numeral on a Bangko Sentral peso note, in one intaglio navy ink on cool note paper, and the map underneath is reprinted in the same restrained ink so the denominations are the only dark things on it. The security-printing vocabulary carries the craft: guilloche rosettes drawn as real hypotrochoid geometry, a gold foil thread, a serial-number red for anything running out, and hairline rules in place of boxes.\n\nThe system is dense and quiet. It is used one-handed on a phone in a mall, so hierarchy comes from the numeral, not from colour or chrome. A bigger deal is engraved heavier: numeral weight tracks discount size, so a map of pins ranks itself before anything is read. Interaction speaks in one security blue; gold is foil, never paint. Bank brand colours are quarantined to a 7px stamp.\n\nIt refuses the bank-banner grid and blue fintech chrome: no gradients, no glossy cards, no brand-coloured promo tiles.",
+    "keyCharacteristics": [
+      "One navy ink on warm-white note paper; a single cool blue for interaction.",
+      "Discount numerals in Geist with variable weight mapped to deal size (360 to 900).",
+      "Geist Mono for serials: dates, days left, counts, and data labels.",
+      "Guilloche rosettes as live SVG geometry on cluster seals, the detail note, and the empty state.",
+      "1px rules separate rows; shadows belong only to things floating above the map.",
+      "The selected note \"prints\": rings engrave in, the numeral counts up, the foil thread slides across."
+    ],
+    "rules": [
+      {
+        "name": "The One Ink Rule",
+        "body": "Navy is the only dark colour on screen. If something needs emphasis, make it navy or make it heavier; do not introduce another dark hue.",
+        "section": "colors"
+      },
+      {
+        "name": "The Foil Rule",
+        "body": "Gold is a thread, a ring, or a dot. It is never text, never a fill larger than 6px, and it marks the brand band and the selected note only.",
+        "section": "colors"
+      },
+      {
+        "name": "The Stamp Quarantine Rule",
+        "body": "A bank's brand colour appears only in its 7px stamp square beside a mono bank name. Nowhere else: not on pins, chips, rows, or buttons.",
+        "section": "colors"
+      },
+      {
+        "name": "The Denomination Weight Rule",
+        "body": "Discount numerals take their weight from the deal: `wght = 360 + min(n, 60) / 60 × 540`. A 50% note is engraved heavier than a 10% one. Plans (0%) and unnumbered perks never use this ramp; they are set quieter in ink-secondary or ink-tertiary.",
+        "section": "typography"
+      },
+      {
+        "name": "The Serial Rule",
+        "body": "Dates, days left, counts, and data labels are Geist Mono with tabular numerals. Names and prose are never mono.",
+        "section": "typography"
+      },
+      {
+        "name": "The Single Measure Rule",
+        "body": "The 24px cell grid exists under the detail numeral only: it is the measuring field for the denomination, faded out to the right. No other surface gets a grid.",
+        "section": "layout"
+      },
+      {
+        "name": "The Ruled Ledger Rule",
+        "body": "Lists are ruled, not boxed. Rows sit on paper divided by 1px rule lines; hover presses the paper (paper-pressed) instead of raising it.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Printing Rule",
+        "body": "Opening a note plays the signature once: the rosette's four rings engrave in (stroke-dashoffset, 1100ms each, staggered 90ms), the numeral counts up to its value over 520ms with a cubic ease-out, the foil thread scales in from the left over 700ms, and the note settles 8px over 360ms, all on `cubic-bezier(0.16, 1, 0.3, 1)`. Under reduced motion all of it is instant.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do set every discount numeral's weight from the deal size (360 to 900) and keep plans and perks visibly quieter.",
+      "Do separate rows with 1px rule lines (12% navy) and press the paper on hover.",
+      "Do put dates, days left, counts, and data labels in Geist Mono with tabular numerals.",
+      "Do draw rosettes as SVG geometry from the hypotrochoid generator, stroked 0.5 to 0.6px, and only on cluster seals, the detail note, and the empty state.",
+      "Do reserve security blue for interaction and focus; reserve serial red for urgency and destructive actions.",
+      "Do keep every touch target at 44px, extending hit areas invisibly where the visual is smaller.",
+      "Do make every motion instant under `prefers-reduced-motion`."
+    ],
+    "donts": [
+      "Don't introduce a second dark hue or a gradient; navy is the only ink.",
+      "Don't use gold as text or as a surface; it is a thread, a ring, or a dot.",
+      "Don't use a bank's brand colour anywhere but its 7px stamp square.",
+      "Don't box or shadow list rows, tabs, or filters; shadows are for things floating over the map.",
+      "Don't place a rosette as wallpaper behind content, or a cell grid anywhere but under the detail numeral.",
+      "Don't set mono text below 10.5px; anything smaller stops reading as a serial and starts failing outdoors."
+    ]
+  }
+}
