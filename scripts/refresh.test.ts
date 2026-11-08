@@ -103,3 +103,21 @@ test('metrobank: a branch only counts when the promo names its merchant', () => 
   assert.equal(mentions('20% OFF at Mijo', 'Mijo Comfort Food'), true)
   assert.equal(mentions('10% OFF at Bread Broth & Beyond', 'Bread Broth & Beyond'), true)
 })
+
+test('cards: specific cards, network-only cards, and "any card" on either side', async () => {
+  const { takes } = await import('../src/promo.ts')
+  const p = (bank: string, ...cards: string[]) => ({ bank, cards }) as Promo
+  assert.equal(takes(p('BDO', 'BDO Platinum Mastercard'), ['BDO Platinum Mastercard']), true)
+  assert.equal(takes(p('BDO', 'BDO Platinum Mastercard'), ['BDO Gold Visa']), false)
+  assert.equal(takes(p('BDO'), ['BDO Gold Visa']), true) // no cards listed = all of them
+  assert.equal(takes(p('BDO', 'BDO Platinum Mastercard')), true) // no cards held = any card
+  assert.equal(takes(p('BDO', 'BDO Mastercard'), ['BDO Gold Mastercard']), true)
+  assert.equal(takes(p('BDO', 'BDO Mastercard'), ['BDO Gold Visa']), false)
+  assert.equal(takes(p('Visa', 'Any Visa card'), ['Travel Signature Visa']), true)
+  assert.equal(takes(p('Visa', 'Any Visa card'), ['Titanium Mastercard']), false)
+})
+
+test('finalize reads eligible cards out of the promo text', () => {
+  const [p] = finalize([{ id: 'x', bank: 'BDO', title: '10% off', description: 'Valid for BDO JCB Platinum Credit Card and BDO Credit Card holders', cards: [] } as unknown as Promo], '2026-11-08', '2026-11-15')
+  assert.deepEqual(p.cards, ['BDO JCB Platinum'])
+})

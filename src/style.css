@@ -101,6 +101,70 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .chip:hover, .cat:hover { border-color: var(--ink); color: var(--ink); }
 .chip.clear { border-style: solid; border-color: transparent; text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
 
+/* "BDO · 2 cards ▾": the chip tells you it narrows further */
+.chip { display: inline-flex; align-items: center; gap: 6px; }
+.chip-cards {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  padding-left: 6px;
+  border-left: 1px solid rgb(63 50 32 / 0.35);
+  font-size: 12.5px;
+  font-weight: 550;
+  color: var(--ink-2);
+}
+
+/* ---------- card picker: an index card taped over the map ---------- */
+.cards {
+  width: min(380px, calc(100vw - 32px));
+  max-height: min(560px, calc(100dvh - 48px));
+  padding: 26px 18px 16px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--manila);
+  color: var(--ink);
+  box-shadow: 0 2px 2px rgb(58 38 10 / 0.25), 0 14px 40px rgb(58 38 10 / 0.35);
+  overflow: visible;
+}
+.cards[open] { animation: drop 420ms var(--ease) both; }
+.cards::backdrop { background: rgb(40 28 10 / 0.4); }
+.cards::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 92px;
+  height: 22px;
+  background: var(--tape);
+  transform: translateX(-50%) rotate(-3deg);
+}
+.cards form { display: grid; gap: 10px; max-height: calc(min(560px, 100dvh - 48px) - 42px); grid-template-rows: auto auto minmax(0, 1fr) auto; }
+.cards h2 { margin: 0; font-size: 20px; font-weight: 720; font-stretch: 90%; }
+.cards-hint { margin: 0; font-size: 13.5px; color: var(--ink-3); text-wrap: pretty; }
+.cards-list { list-style: none; margin: 0; padding: 0; overflow-y: auto; border-top: 1px solid var(--manila-2); }
+.cards-list label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 4px 2px;
+  border-bottom: 1px solid var(--manila-2);
+  font-weight: 560;
+  cursor: pointer;
+}
+.cards-list input { width: 18px; height: 18px; margin: 0; accent-color: var(--red); flex: none; }
+.cards-actions { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-top: 4px; }
+.cards-remove { border: 0; background: none; padding: 10px 2px; color: #8f1610; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.cards-done {
+  border: 0;
+  background: var(--ink);
+  color: var(--manila);
+  padding: 10px 22px;
+  min-height: 44px;
+  border-radius: 3px;
+  font-weight: 650;
+}
+
 /* ---------- stage ---------- */
 .stage { position: relative; min-height: 0; }
 .map { position: absolute; inset: 0; background: #f1e9d8; }

@@ -7,10 +7,10 @@ import type { GeoJSONSource, Map as MLMap } from 'maplibre-gl'
 // v6 locates its worker relative to its own module, which bundling breaks; ship the worker as an asset instead
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?url'
 import type * as GeoJSON from 'geojson'
-import { createElement, ExternalLink, LocateFixed, MapPin, X } from 'lucide'
+import { ChevronDown, createElement, ExternalLink, LocateFixed, MapPin, X } from 'lucide'
 import type { Category, Promo } from '../scripts/schema.ts'
 import type { Output } from '../scripts/refresh.ts'
-import { daysLeft, shortDiscount } from './promo.ts'
+import { daysLeft, networkOnly, shortDiscount, takes } from './promo.ts'
 import { paperMap } from './paper.ts'
 
 // ---------- state ----------
@@ -21,6 +21,7 @@ const store = {
 }
 const state = {
   wallet: new Set<string>(JSON.parse(store.get('sulit.wallet') ?? '[]')),
+  cards: JSON.parse(store.get('sulit.cards') ?? '{}') as Record<string, string[]>, // bank → cards held; none = any card of that bank
   cat: null as Category | null,
   soon: false,
   tab: 'here' as Tab,
@@ -44,8 +45,10 @@ const STAMP: Record<string, string> = {
 
 // ---------- filtering ----------
 const visible = (p: Promo) =>
-  // Visa's own offers work with any bank's Visa card
-  (!state.wallet.size || state.wallet.has(p.bank) || p.bank === 'Visa') &&
+  (!state.wallet.size ||
+    (state.wallet.has(p.bank) && takes(p, state.cards[p.bank])) ||
+    // Visa's own offers work with any bank's Visa card
+    (p.bank === 'Visa' && [...state.wallet].some((b) => takes(p, state.cards[b])))) &&
   (!state.cat || p.category === state.cat) &&
   (!state.soon || (daysLeft(p.validTo) ?? 99) <= 7)
 
@@ -312,22 +315,76 @@ setSheet('peek')
 }
 
 // ---------- controls ----------
+/** Specific cards a bank's promos name, most-mentioned first. Network-only names ("BDO Visa") aren't products to pick. */
+function catalog(bank: string): string[] {
+  const n = new Map<string, number>()
+  for (const p of data.promos) if (p.bank === bank) for (const c of p.cards) if (!networkOnly(c, bank)) n.set(c, (n.get(c) ?? 0) + 1)
+  for (const c of state.cards[bank] ?? []) n.set(c, n.get(c) ?? 0) // a held card that dropped out of today's promos stays tickable
+  return [...n].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).map(([c]) => c)
+}
+const short = (card: string, bank: string) => card.replace(new RegExp(`^${bank} `), '')
+const saveWallet = () => (store.set('sulit.wallet', JSON.stringify([...state.wallet])), store.set('sulit.cards', JSON.stringify(state.cards)))
+
 function renderWallet() {
   const banks = [...new Set(data.promos.map((p) => p.bank))].filter((b) => b !== 'Visa').sort()
   $('wallet').innerHTML =
-    banks.map((b) => `<button class="chip" aria-pressed="${state.wallet.has(b)}" data-bank="${esc(b)}">${esc(b)}</button>`).join('') +
-    (state.wallet.size ? `<button class="chip clear" data-clear>Show all banks</button>` : '')
+    banks
+      .map((b) => {
+        const on = state.wallet.has(b)
+        const held = state.cards[b]?.length ?? 0
+        const picks = on && catalog(b).length
+        return `<button class="chip" aria-pressed="${on}" data-bank="${esc(b)}"${picks ? ` aria-haspopup="dialog" aria-label="${esc(b)}, ${held ? `${held} card${held > 1 ? 's' : ''}` : 'any card'}. Choose cards"` : ''}>${esc(b)}${
+          picks ? `<span class="chip-cards">${held ? `${held} card${held > 1 ? 's' : ''}` : 'any card'}${icon(ChevronDown, 13)}</span>` : ''
+        }</button>`
+      })
+      .join('') + (state.wallet.size ? `<button class="chip clear" data-clear>Show all banks</button>` : '')
   $('wallet').classList.toggle('empty', !state.wallet.size)
 }
 $('wallet').addEventListener('click', (e) => {
   const b = (e.target as HTMLElement).closest<HTMLButtonElement>('button')
   if (!b) return
-  if (b.dataset.clear != null) state.wallet.clear()
-  else state.wallet.has(b.dataset.bank!) ? state.wallet.delete(b.dataset.bank!) : state.wallet.add(b.dataset.bank!)
-  store.set('sulit.wallet', JSON.stringify([...state.wallet]))
+  const bank = b.dataset.bank!
+  if (b.dataset.clear != null) (state.wallet.clear(), (state.cards = {}))
+  // first tap adds the bank; once it's in, the chip opens its card list (where it can also be removed)
+  else if (!state.wallet.has(bank)) state.wallet.add(bank)
+  else if (catalog(bank).length) return openCards(bank)
+  else state.wallet.delete(bank)
+  saveWallet()
   renderWallet()
   update()
 })
+
+const cardsDialog = $<HTMLDialogElement>('cards')
+function openCards(bank: string) {
+  const held = new Set(state.cards[bank] ?? [])
+  cardsDialog.dataset.bank = bank
+  $('cards-title').textContent = `Your ${bank} cards`
+  $('cards-any').textContent = `Leave all unticked to see every ${bank} promo.`
+  $('cards-list').innerHTML = catalog(bank)
+    .map((c) => `<li><label><input type="checkbox" value="${esc(c)}"${held.has(c) ? ' checked' : ''} /> ${esc(short(c, bank))}</label></li>`)
+    .join('')
+  $('cards-remove').textContent = `Remove ${bank}`
+  cardsDialog.showModal()
+}
+$('cards-list').addEventListener('change', () => {
+  const bank = cardsDialog.dataset.bank!
+  const held = [...$('cards-list').querySelectorAll<HTMLInputElement>('input:checked')].map((i) => i.value)
+  held.length ? (state.cards[bank] = held) : delete state.cards[bank]
+  saveWallet()
+  renderWallet()
+  update()
+})
+$('cards-remove').addEventListener('click', () => {
+  const bank = cardsDialog.dataset.bank!
+  state.wallet.delete(bank)
+  delete state.cards[bank]
+  saveWallet()
+  renderWallet()
+  update()
+  cardsDialog.close()
+})
+// tap outside the card to dismiss
+cardsDialog.addEventListener('click', (e) => e.target === cardsDialog && cardsDialog.close())
 
 $('cats').innerHTML = CATS.map(([c, l]) => `<button class="cat" aria-pressed="false" data-cat="${c}">${l}</button>`).join('')
 $('cats').addEventListener('click', (e) => {

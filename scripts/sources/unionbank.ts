@@ -105,9 +105,11 @@ export function branchesFromHtml(html: string, merchant: string | undefined): Br
 /** Specific cards named in text, e.g. "UnionBank Lazada Credit Card", "PNB-PAL Mabuhay Miles World Elite Mastercard". Generic "<Bank> Credit Card" is dropped. */
 export function cardsIn(text: string, prefix: string): string[] {
   const re = new RegExp(String.raw`\b${prefix}(?:[ -](?!(?:Credit|Debit|Card|Cards|and|or|with)\b)[A-Z0-9][\w'’-]*)*\s(?:Mastercard|Visa|JCB|American Express|Credit Card)(?:\s+Credit Card)?`, 'g')
-  const generic = new RegExp(`^${prefix} Credit Card$`, 'i')
-  const norm = (c: string) => c.replace(/\s+/g, ' ').trim().replace(/ (Mastercard|Visa|JCB|American Express) Credit Card$/, ' $1')
-  return [...new Set((text.match(re) ?? []).map(norm).filter((c) => !generic.test(c)))]
+  // "BDO JCB Platinum Credit Card" and "BDO JCB Platinum" are the same card
+  const norm = (c: string) => c.replace(/\s+/g, ' ').trim().replace(/ Credit Card$/, '')
+  // bare "<Bank>" means any card; issuer-side and company cards aren't in anyone's wallet
+  const junk = (c: string) => c.toLowerCase() === prefix.toLowerCase() || /\b(?:Issued|Acquired|Corporate|Business)\b/i.test(c)
+  return [...new Set((text.match(re) ?? []).map(norm).filter((c) => !junk(c)))]
 }
 
 /** Merchant from a headline: the last capitalised "at X" ("20% OFF on all orders at House of Zhou"), else "on/from X" ("P300 OFF on GrabFood"). */

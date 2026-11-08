@@ -6,6 +6,7 @@ import { geocodeAll, type GeoCache } from './geocode.ts'
 import { isoDate, type Promo, type Source } from './schema.ts'
 import { closeBrowser } from './browser.ts'
 import { SOURCES } from './sources/index.ts'
+import { cardsIn } from './sources/unionbank.ts'
 
 export interface SourceStatus {
   bank: string
@@ -35,6 +36,8 @@ export function finalize(promos: Promo[], today = manilaDay(), horizon = manilaD
   return promos.filter((p) => {
     // "BPI", "RCBC Visa Infinite", "PNB JCB Platinum": the issuer or its card, never the place to go
     if (p.merchant && new RegExp(`^${p.bank}\\b`, 'i').test(p.merchant)) p.merchant = undefined
+    // most banks list eligible cards only in the prose ("valid for BDO Platinum Mastercard"); none named = every card of the bank
+    if (!p.cards?.length) p.cards = cardsIn(`${p.title} ${p.description ?? ''}`, p.bank)
     return (!p.validTo || p.validTo >= today) && (!p.validFrom || p.validFrom <= horizon) && !seen.has(p.id) && seen.add(p.id)
   })
 }

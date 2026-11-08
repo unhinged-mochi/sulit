@@ -1,3 +1,4 @@
+import type { Promo } from '../scripts/schema.ts'
 // Pure helpers shared by the UI and its test.
 
 /** "Get up to 20% off on dining" → { label: "20%", n: 20, upTo: true }. Null when there's no number worth a price tag. */
@@ -23,3 +24,11 @@ export function daysLeft(validTo: string | undefined, now = Date.now()): number 
   if (!validTo) return null
   return Math.floor((Date.parse(`${validTo}T23:59:59+08:00`) - now) / 864e5)
 }
+
+const NETWORK = /\b(Mastercard|Visa|JCB|American Express|UnionPay)\b/i
+const network = (card: string) => card.match(NETWORK)?.[1].toLowerCase()
+/** "BDO Mastercard", "Any Visa card": a network, not a product. Any held card on that network qualifies. */
+export const networkOnly = (card: string, bank: string) => new RegExp(`^(?:${bank}|Any) (?:${NETWORK.source.slice(3, -3)})(?: card)?$`, 'i').test(card)
+/** Does a promo take any of these cards? No cards held = any card of the bank; no cards listed = every card of the bank. */
+export const takes = (p: Promo, held: string[] = []) =>
+  !held.length || !p.cards.length || p.cards.some((c) => held.includes(c) || (networkOnly(c, p.bank) && held.some((h) => network(h) === network(c))))

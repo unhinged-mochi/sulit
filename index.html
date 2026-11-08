@@ -11,7 +11,7 @@
   <body>
     <header class="wallet" aria-label="My cards">
       <a class="mark" href="/" aria-label="Sulit home">Sulit</a>
-      <span class="wallet-label" aria-hidden="true">Your banks</span>
+      <span class="wallet-label" aria-hidden="true">Your cards</span>
       <div class="wallet-chips" role="group" aria-label="Show promos for these banks" id="wallet"></div>
     </header>
 
@@ -37,6 +37,17 @@
         </div>
       </section>
     </main>
+    <dialog class="cards" id="cards" aria-labelledby="cards-title">
+      <form method="dialog">
+        <h2 id="cards-title">Your cards</h2>
+        <p class="cards-hint">Some promos only take certain cards. Tick the ones in your wallet. <span id="cards-any"></span></p>
+        <ul class="cards-list" id="cards-list"></ul>
+        <div class="cards-actions">
+          <button type="button" class="cards-remove" id="cards-remove">Remove</button>
+          <button class="cards-done" autofocus>Done</button>
+        </div>
+      </form>
+    </dialog>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
