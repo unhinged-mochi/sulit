@@ -44,10 +44,14 @@ test('regexExtract pulls merchant, discount and dates from prose', () => {
   assert.equal(e.validTo, '2026-12-15')
 })
 
-test('finalize drops expired promos and duplicates, keeps open-ended ones', () => {
-  const p = (id: string, validTo?: string) => ({ id, validTo }) as Promo
-  const out = finalize([p('a', '2026-11-07'), p('b', '2026-11-08'), p('b', '2026-11-08'), p('c')], '2026-11-08')
-  assert.deepEqual(out.map((x) => x.id), ['b', 'c'])
+test('finalize drops expired, far-future and duplicate promos, keeps open-ended ones', () => {
+  const p = (id: string, validTo?: string, validFrom?: string) => ({ id, validTo, validFrom }) as Promo
+  const out = finalize(
+    [p('a', '2026-11-07'), p('b', '2026-11-08'), p('b', '2026-11-08'), p('c'), p('soon', undefined, '2026-11-15'), p('later', undefined, '2026-12-01')],
+    '2026-11-08',
+    '2026-11-15',
+  )
+  assert.deepEqual(out.map((x) => x.id), ['b', 'c', 'soon'])
 })
 
 test('overpassQuery escapes regex characters in merchant names', () => {

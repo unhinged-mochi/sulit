@@ -3,7 +3,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { extractAll, pruneRegex, type ExtractCache } from './extract.ts'
 import { geocodeAll, type GeoCache } from './geocode.ts'
-import type { Promo, Source } from './schema.ts'
+import { isoDate, type Promo, type Source } from './schema.ts'
 import { closeBrowser } from './browser.ts'
 import { SOURCES } from './sources/index.ts'
 
@@ -27,10 +27,14 @@ const write = (path: string, v: unknown, pretty = true) => {
   writeFileSync(path, JSON.stringify(v, null, pretty ? 1 : 0) + '\n')
 }
 
-/** Drop expired, keep promos with no end date (bank still lists them). Dedupe by id. */
-export function finalize(promos: Promo[], today = new Date().toISOString().slice(0, 10)): Promo[] {
+const manilaDay = (offsetDays = 0) => isoDate(Date.now() + offsetDays * 864e5)!
+
+/** Drop expired and far-future promos (a week's notice is useful, a month's is noise); keep open-ended ones. Dedupe by id. */
+export function finalize(promos: Promo[], today = manilaDay(), horizon = manilaDay(7)): Promo[] {
   const seen = new Set<string>()
-  return promos.filter((p) => (!p.validTo || p.validTo >= today) && !seen.has(p.id) && seen.add(p.id))
+  return promos.filter(
+    (p) => (!p.validTo || p.validTo >= today) && (!p.validFrom || p.validFrom <= horizon) && !seen.has(p.id) && seen.add(p.id),
+  )
 }
 
 async function main() {
@@ -75,13 +79,13 @@ async function main() {
   if (process.env.RETRY_REGEX) pruneRegex(extractCache)
   const geoCache = read<GeoCache>('data/geocache.json', { address: {}, merchant: {} })
   const promos = finalize(fresh)
+  // caches are the expensive part: checkpoint them as we go so a killed run keeps its LLM calls and lookups
+  const saveCaches = () => (write('data/extract-cache.json', extractCache), write('data/geocache.json', geoCache))
   try {
-    await extractAll(promos.filter((p) => ran.has(p.bank)), extractCache)
-    await geocodeAll(promos.filter((p) => ran.has(p.bank)), geoCache)
+    await extractAll(promos.filter((p) => ran.has(p.bank)), extractCache, saveCaches)
+    await geocodeAll(promos.filter((p) => ran.has(p.bank)), geoCache, saveCaches)
   } finally {
-    // caches are the expensive part — save them even if a step throws midway
-    write('data/extract-cache.json', extractCache)
-    write('data/geocache.json', geoCache)
+    saveCaches()
   }
 
   const final = finalize(promos)

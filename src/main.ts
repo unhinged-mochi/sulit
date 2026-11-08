@@ -166,7 +166,10 @@ function promosInView(): Promo[] {
 const anywhere = () =>
   data.promos.filter((p) => visible(p) && !p.branches.length).sort((a, b) => (daysLeft(a.validTo) ?? 999) - (daysLeft(b.validTo) ?? 999))
 
+const shortDate = (iso: string) => new Date(`${iso}T00:00:00+08:00`).toLocaleDateString('en-PH', { month: 'short', day: 'numeric' })
+
 function daysText(p: Promo) {
+  if (p.validFrom && (daysLeft(p.validFrom) ?? 0) > 0) return { text: `Starts ${shortDate(p.validFrom)}`, soon: false }
   const d = daysLeft(p.validTo)
   if (d == null) return { text: 'Ongoing', soon: false }
   if (d <= 0) return { text: 'Last day', soon: true }

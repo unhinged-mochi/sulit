@@ -97,7 +97,7 @@ async function pageText(url: string): Promise<string> {
 const needs = (p: Promo) => !p.merchant || !p.discount || !p.validTo || (!p.branches.length && !p.online)
 const key = (p: Promo) => `${p.id}#${createHash('sha1').update(p.title).digest('hex').slice(0, 8)}`
 
-export async function extractAll(promos: Promo[], cache: ExtractCache, concurrency = 4): Promise<void> {
+export async function extractAll(promos: Promo[], cache: ExtractCache, checkpoint = () => {}, concurrency = 4): Promise<void> {
   const todo = promos.filter((p) => needs(p) && !cache[key(p)])
   console.log(`extract: ${todo.length} new of ${promos.length} (cache ${Object.keys(cache).length})`)
   let i = 0
@@ -107,7 +107,7 @@ export async function extractAll(promos: Promo[], cache: ExtractCache, concurren
       const text = [p.description ?? '', p.url.startsWith('http') ? await pageText(p.url) : ''].join('\n\n')
       const llm = await llmExtract(p, text)
       cache[key(p)] = { ...(llm ?? regexExtract(p.title, text)), at: new Date().toISOString(), via: llm ? 'llm' : 'regex' }
-      if (i % 25 === 0) console.log(`  extract ${i}/${todo.length}`)
+      if (i % 25 === 0) (console.log(`  extract ${i}/${todo.length}`), checkpoint())
     }
   }
   await Promise.all(Array.from({ length: concurrency }, worker))
