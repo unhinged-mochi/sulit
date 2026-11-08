@@ -54,8 +54,12 @@ export function isNew(p: Promo, now = Date.now()): boolean {
  */
 export function meetsMin(p: Promo, min: number): boolean {
   if (!min) return true
-  // TODO(you): which promos survive a "20%+" filter? See the notes in the chat.
-  return true
+  const d = shortDiscount(p.discount)
+  // ponytail: strict. Only deals that state a percent (B1T1 counts as 50%) can clear the bar; ₱ amounts, freebies,
+  // 0% plans and unnumbered perks can't be compared, so a set slider hides them. "Up to 50%" passes at 50: its label says "up to".
+  if (!d || d.kind !== 'off') return false
+  if (/^B\dT\d$/.test(d.label)) return 50 >= min
+  return d.label.endsWith('%') && d.n >= min
 }
 
 const DAY = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat']

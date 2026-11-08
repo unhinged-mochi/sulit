@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { daysLeft, daysLabel, shortDiscount, validDays, validOn } from '../src/promo.ts'
+import { daysLeft, daysLabel, meetsMin, shortDiscount, validDays, validOn } from '../src/promo.ts'
 import { regexExtract } from './extract.ts'
 import { overpassQuery } from './geocode.ts'
 import { finalize, stampFirstSeen } from './refresh.ts'
@@ -26,6 +26,18 @@ test('validDays reads day rules, not opening hours', () => {
   assert.equal(validDays('20% off all items'), undefined)
   assert.equal(daysLabel([1, 2, 3, 4, 5]), 'Mon–Fri')
   assert.equal(daysLabel([0, 6]), 'Sun & Sat')
+})
+
+test('meetsMin keeps only deals that state enough percent', () => {
+  const p = (discount: string) => ({ discount }) as Promo
+  assert.equal(meetsMin(p('40% off'), 30), true)
+  assert.equal(meetsMin(p('10% off'), 30), false)
+  assert.equal(meetsMin(p('Up to 50% off'), 50), true)
+  assert.equal(meetsMin(p('Buy 1, Take 1'), 50), true)
+  assert.equal(meetsMin(p('₱500 off'), 10), false)
+  assert.equal(meetsMin(p('Free dessert'), 5), false)
+  assert.equal(meetsMin(p('0% installment for 12 months'), 5), false)
+  assert.equal(meetsMin(p('₱500 off'), 0), true) // slider off: everything
 })
 
 test('validOn checks the date range and the weekday', () => {
