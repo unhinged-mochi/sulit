@@ -1,5 +1,5 @@
-import '@fontsource/permanent-marker'
-import '@fontsource-variable/archivo/wdth.css'
+import '@fontsource-variable/geist'
+import '@fontsource-variable/geist-mono'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import './style.css'
 import * as maplibregl from 'maplibre-gl'
@@ -11,7 +11,7 @@ import { ChevronDown, createElement, ExternalLink, LocateFixed, MapPin, Search, 
 import type { Category, Promo } from '../scripts/schema.ts'
 import type { Output } from '../scripts/refresh.ts'
 import { daysLeft, networkOnly, shortDiscount, takes } from './promo.ts'
-import { paperMap } from './paper.ts'
+import { paperMap, rosette } from './paper.ts'
 
 // ---------- state ----------
 type Tab = 'here' | 'anywhere'
@@ -102,22 +102,25 @@ const geo = new maplibregl.GeolocateControl({ positionOptions: { enableHighAccur
 map.addControl(geo, 'top-right')
 
 const markers = new Map<string, maplibregl.Marker>()
+const SEAL = rosette(44, 'rgb(244 242 236 / 0.55)', { width: 0.5 }) // cluster seal: engraved, not a flat dot
 
-/** The marker-written number. Real discounts in sale red; 0% plans and unnumbered perks in quieter ink. */
+/** Denomination weight: a 50% note is engraved heavier than a 10% one, so the map ranks itself. */
+const wght = (n = 0) => Math.round(360 + (Math.min(n, 60) / 60) * 540)
+/** The denomination. Real discounts at full ink; 0% plans and unnumbered perks quieter. */
 function priceNum(p: Promo, cls = 'price-num') {
   const d = shortDiscount(p.discount)
   if (!d) return `<span class="${cls} none">Perk</span>`
-  return `<span class="${cls} ${d.kind}">${d.upTo ? '<i>up to</i>' : ''}${esc(d.label)}${d.note ? `<i>${esc(d.note)}</i>` : ''}</span>`
+  return `<span class="${cls} ${d.kind}" style="--w:${wght(d.n)}">${d.upTo ? '<i>up to</i>' : ''}${esc(d.label)}${d.note ? `<i>${esc(d.note)}</i>` : ''}</span>`
 }
 /** List order within a group: plans and unnumbered perks after real deals. */
 const tier = (p: Promo) => { const k = shortDiscount(p.discount)?.kind; return k === 'off' || k === 'perk' ? 0 : 1 }
 
-function tagFor(ids: string[]): { big: string; small: string; kind: string } {
+function tagFor(ids: string[]): { big: string; small: string; kind: string; w: number } {
   const ps = ids.map((i) => byId.get(i)!).filter(Boolean)
   // the best headline wins the tag; the rest count as "+n"
   const scored = ps.map((p) => ({ p, d: shortDiscount(p.discount) })).sort((a, b) => (b.d?.n ?? 0) - (a.d?.n ?? 0))
   const best = scored[0]
-  return { big: best?.d?.label ?? 'Perk', small: ps.length > 1 ? `+${ps.length - 1}` : best.p.bank, kind: best?.d?.kind ?? 'none' }
+  return { big: best?.d?.label ?? 'Perk', small: ps.length > 1 ? `+${ps.length - 1}` : best.p.bank, kind: best?.d?.kind ?? 'none', w: wght(best?.d?.n) }
 }
 
 function syncMarkers() {
@@ -134,7 +137,7 @@ function syncMarkers() {
     if (props.cluster) {
       el.className = 'sticker'
       el.tabIndex = -1 // the list is the keyboard path; 30+ markers in the tab order bury it
-      el.innerHTML = `<span>${props.point_count_abbreviated}</span>`
+      el.innerHTML = `${SEAL}<span>${props.point_count_abbreviated}</span>`
       el.setAttribute('aria-label', `${props.point_count} places, zoom in`)
       el.onclick = async () => {
         const z = await (map.getSource('spots') as GeoJSONSource).getClusterExpansionZoom(props.cluster_id)
@@ -146,6 +149,7 @@ function syncMarkers() {
       el.className = `tag ${t.kind}${props.approx ? ' approx' : ''}${state.selected === props.k ? ' on' : ''}`
       el.tabIndex = -1
       el.dataset.k = props.k
+      el.style.setProperty('--w', String(t.w))
       el.innerHTML = `<b>${esc(t.big)}</b><small>${esc(t.small)}</small>`
       el.setAttribute('aria-label', `${t.big} at ${props.name}${props.approx ? ', approximate location' : ''}`)
       el.onclick = () => select(props.k, ids, [lon, lat])
@@ -260,6 +264,8 @@ function detail(ids: string[], where?: string) {
     const approx = where && one.branches.find((b) => locKey(b.lat!, b.lon!) === where)?.approx
     el.innerHTML = `
       <button class="close" aria-label="Close">${icon(X, 18)}</button>
+      <span class="detail-rosette">${rosette(220, 'currentColor', { cls: 'ring', width: 0.55 })}</span>
+      <span class="thread" aria-hidden="true"></span>
       ${priceNum(one, 'detail-num')}
       <h2 tabindex="-1">${esc(one.merchant || one.title)}</h2>
       ${one.merchant ? `<p class="detail-title">${esc(one.title)}</p>` : one.discount && !d ? `<p class="detail-title">${esc(one.discount)}</p>` : ''}
@@ -278,12 +284,26 @@ function detail(ids: string[], where?: string) {
   el.hidden = false
   el.dataset.ids = ps.map((p) => p.id).join('|')
   el.classList.remove('tape-in')
-  if (!reduceMotion) void el.offsetWidth, el.classList.add('tape-in')
+  if (!reduceMotion) void el.offsetWidth, el.classList.add('tape-in'), countUp(el.querySelector('.detail-num'))
   el.querySelector<HTMLButtonElement>('.close')!.onclick = closeDetail
   $('sheet-body').scrollTop = 0
   setSheet('half', true)
   el.querySelector<HTMLElement>('h2')!.focus({ preventScroll: true })
   renderList()
+}
+/** The note prints: the denomination counts up to its value as the rosette engraves in. */
+function countUp(num: Element | null) {
+  const node = [...(num?.childNodes ?? [])].find((n) => n.nodeType === 3 && /\d/.test(n.textContent!))
+  const m = node?.textContent!.match(/^(\D*)(\d+)(.*)$/)
+  if (!node || !m) return
+  const [, pre, n, post] = m
+  const t0 = performance.now()
+  const step = (t: number) => {
+    const k = Math.min(1, (t - t0) / 520)
+    node.textContent = `${pre}${Math.round(+n * (1 - (1 - k) ** 3))}${post}`
+    if (k < 1) requestAnimationFrame(step)
+  }
+  requestAnimationFrame(step)
 }
 /** Scraped mechanics: tidy stray spaces before punctuation, cut at a word, not mid-word. */
 const clip = (t: string, max: number) => {
