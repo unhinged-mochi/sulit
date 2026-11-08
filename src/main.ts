@@ -7,7 +7,7 @@ import type { GeoJSONSource, Map as MLMap } from 'maplibre-gl'
 // v6 locates its worker relative to its own module, which bundling breaks; ship the worker as an asset instead
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?url'
 import type * as GeoJSON from 'geojson'
-import { CalendarDays, ChevronDown, createElement, ExternalLink, LocateFixed, MapPin, Search, X } from 'lucide'
+import { CalendarDays, ChevronDown, createElement, SlidersHorizontal, ExternalLink, LocateFixed, MapPin, Search, X } from 'lucide'
 import type { Category, Promo } from '../scripts/schema.ts'
 import type { Output } from '../scripts/refresh.ts'
 import { daysLabel, daysLeft, isNew, meetsMin, validOn, networkOnly, shortDiscount, takes } from './promo.ts'
@@ -502,7 +502,7 @@ $('cats').addEventListener('click', (e) => {
   const b = (e.target as HTMLElement).closest<HTMLButtonElement>('button')
   if (!b) return
   state.cat = state.cat === b.dataset.cat ? null : (b.dataset.cat as Category)
-  document.querySelectorAll('.cat').forEach((c) => c.setAttribute('aria-pressed', String((c as HTMLElement).dataset.cat === state.cat)))
+  document.querySelectorAll('#cats .cat').forEach((c) => c.setAttribute('aria-pressed', String((c as HTMLElement).dataset.cat === state.cat)))
   update()
 })
 // ---------- day filter: the phone's own calendar ----------
@@ -583,7 +583,7 @@ function resetFilters() {
   state.q = ''
   $<HTMLInputElement>('q').value = ''
   $<HTMLInputElement>('soon').checked = false
-  document.querySelectorAll('.cat').forEach((c) => c.setAttribute('aria-pressed', 'false'))
+  document.querySelectorAll('#cats .cat').forEach((c) => c.setAttribute('aria-pressed', 'false'))
   update()
 }
 
@@ -598,7 +598,23 @@ function update() {
   closeDetail()
   refreshSource()
   renderList()
+  renderFilterCount()
 }
+
+/** Phones keep the filters folded behind one button; the badge says how many are on, so nothing is hidden by surprise. */
+function renderFilterCount() {
+  const n = [state.day, state.soon, state.fresh, state.min, state.cat].filter(Boolean).length
+  $('filters-count').textContent = String(n)
+  $('filters-count').hidden = !n
+  $('fclear').hidden = !n
+}
+$('fclear').addEventListener('click', resetFilters)
+$('filters-btn').addEventListener('click', () => {
+  const open = sheet.dataset.filters !== 'open'
+  sheet.dataset.filters = open ? 'open' : ''
+  $('filters-btn').setAttribute('aria-expanded', String(open))
+  if (open) setSheet('full')
+})
 
 function renderFresh() {
   const at = new Date(data.generatedAt)
@@ -620,6 +636,7 @@ document.querySelector('.maplibregl-ctrl-geolocate')?.replaceChildren()
 const locBtn = document.querySelector<HTMLButtonElement>('.maplibregl-ctrl-geolocate')
 if (locBtn) locBtn.innerHTML = icon(LocateFixed, 18)
 $('near').insertAdjacentHTML('afterbegin', icon(LocateFixed, 16))
+$('filters-btn').insertAdjacentHTML('afterbegin', icon(SlidersHorizontal, 16))
 document.querySelector('.search')!.insertAdjacentHTML('afterbegin', icon(Search, 16))
 
 // ---------- boot ----------

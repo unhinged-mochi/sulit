@@ -250,25 +250,32 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .tabs b { font: 500 11.5px/1 var(--mono); font-variant-numeric: tabular-nums; color: var(--ink-3); }
 .tabs button[aria-selected='true'] b { color: var(--ink-2); }
 
-.filters { display: flex; align-items: center; gap: 6px; padding: 10px 0 12px; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding-inline: 16px; }
-.cats { display: flex; gap: 6px; }
-.cat { min-height: 30px; padding: 0 11px; font-size: 13px; color: var(--ink-2); border-color: var(--rule-2); }
+/* ---------- filters: labelled rows that wrap; never a sideways scroll ---------- */
+.filters { display: grid; gap: 10px; padding: 12px 0 14px; }
+.frow { display: grid; grid-template-columns: 4.6em 1fr; align-items: center; gap: 10px; }
+.flabel { font: 500 10.5px/1.2 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+.fchips { display: flex; flex-wrap: wrap; gap: 6px; }
+.cat { min-height: 32px; padding: 0 12px; font-size: 13px; color: var(--ink-2); border-color: var(--rule-2); }
 .cat:hover { border-color: var(--ink-3); color: var(--ink); }
 .cat[aria-pressed='true'] { background: var(--ink); border-color: var(--ink); color: var(--on-ink); }
-label.soon {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex: none;
-  font-size: 13px;
-  font-weight: 550;
-  color: var(--serial);
-  padding-right: 6px;
-  margin-right: 2px;
-  border-right: 1px solid var(--rule);
-  white-space: nowrap;
+/* "Ending this week": a real checkbox inside a chip, pressed when checked */
+label.soon { gap: 7px; cursor: pointer; color: var(--serial); font-weight: 550; }
+label.soon input { accent-color: var(--serial); width: 15px; height: 15px; margin: 0; }
+label.soon:has(input:checked) { background: var(--serial); border-color: var(--serial); color: #fff; }
+label.soon:has(input:checked) input { accent-color: #fff; }
+label.soon:has(input:focus-visible) { outline: 2px solid var(--blue); outline-offset: 2px; }
+.fclear { justify-self: start; min-height: 32px; padding: 4px 0; font-size: 13px; }
+
+/* the Filters button: phones only; the desktop rail has room to show them all */
+.filters-btn { flex: none; display: inline-flex; align-items: center; gap: 7px; border: 0; border-radius: 10px; background: var(--white); box-shadow: inset 0 0 0 1px var(--rule-2); color: var(--ink); padding: 0 12px; min-height: 42px; font-weight: 550; font-size: 14px; }
+.filters-btn[aria-expanded='true'] { background: var(--ink); color: var(--on-ink); box-shadow: none; }
+.filters-btn b { min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px; background: var(--blue); color: #fff; font: 600 11px/18px var(--mono); text-align: center; }
+@media (max-width: 899px) {
+  .sheet:not([data-filters='open']) .filters { display: none; }
+  .near { width: 42px; padding: 0; justify-content: center; }
+  .near-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 }
-label.soon input { accent-color: var(--serial); width: 16px; height: 16px; margin: 0; }
+@media (min-width: 900px) { .filters-btn { display: none; } }
 
 .sheet-body { overflow-y: auto; flex: 1; min-height: 0; padding: 0 16px 16px; overscroll-behavior: contain; }
 
@@ -516,28 +523,17 @@ li.empty, li.more { padding: 28px 10px; color: var(--ink-2); text-align: center;
   text-transform: uppercase;
 }
 
-.minoff {
-  flex: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 0 10px 0 4px;
-  margin-right: 2px;
-  border-right: 1px solid var(--rule);
-  font-size: 13px;
-  font-weight: 550;
-  color: var(--ink-2);
-}
-.minoff output { min-width: 3.4em; font: 600 12px/1 var(--mono); font-variant-numeric: tabular-nums; color: var(--ink); }
+.minoff { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.minoff output { min-width: 3.4em; text-align: right; font: 600 12px/1 var(--mono); font-variant-numeric: tabular-nums; color: var(--ink); }
 .minoff input {
-  width: 112px;
+  flex: 1;
+  min-width: 0;
   height: 30px;
   margin: 0;
   background: transparent;
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
-  touch-action: pan-y; /* the drag belongs to the thumb, not the scrolling filter row */
 }
 .minoff input::-webkit-slider-runnable-track { height: 2px; border-radius: 1px; background: var(--rule-2); }
 .minoff input::-moz-range-track { height: 2px; border-radius: 1px; background: var(--rule-2); }
