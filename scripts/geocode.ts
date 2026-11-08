@@ -85,11 +85,12 @@ async function nominatimChain(merchant: string): Promise<Branch[] | null> {
 const inPH = (b: { lat?: number; lon?: number }) =>
   b.lat != null && b.lon != null && b.lat > PH_BBOX.s && b.lat < PH_BBOX.n && b.lon > PH_BBOX.w && b.lon < PH_BBOX.e
 
-export async function geocodeAll(promos: Promo[], cache: GeoCache, checkpoint = () => {}): Promise<void> {
+/** `offline`: apply what the cache already knows, no network (previews, UI work). */
+export async function geocodeAll(promos: Promo[], cache: GeoCache, checkpoint = () => {}, offline = false): Promise<void> {
   // 1. explicit addresses
   const addr = new Map<string, [Promo, Branch]>()
   for (const p of promos) for (const b of p.branches) if (!inPH(b)) addr.set(addrKey(p, b), [p, b])
-  const newAddr = [...addr].filter(([q]) => !(q in cache.address))
+  const newAddr = offline ? [] : [...addr].filter(([q]) => !(q in cache.address))
   console.log(`geocode: ${newAddr.length} new addresses (nominatim, ~${Math.ceil(newAddr.length * 2)}s)`)
   let n = 0
   for (const [q, [p, b]] of newAddr) {
@@ -103,7 +104,7 @@ export async function geocodeAll(promos: Promo[], cache: GeoCache, checkpoint = 
   // 2. chain lookups for promos with a merchant but no listed branches
   const fresh = (m: string) => cache.merchant[m] && Date.now() - Date.parse(cache.merchant[m].at) < MERCHANT_TTL_DAYS * 864e5
   const merchants = new Set(promos.filter((p) => !p.branches.length && !p.online && p.merchant && !GENERIC.test(p.merchant)).map((p) => norm(p.merchant!)))
-  const todo = [...merchants].filter((m) => !fresh(m))
+  const todo = offline ? [] : [...merchants].filter((m) => !fresh(m))
   console.log(`geocode: ${todo.length} merchants to look up on OSM`)
   n = 0
   for (const m of todo) {
