@@ -173,6 +173,7 @@ map.on('load', () => {
   // invisible layer so querySourceFeatures has tiles to read; markers draw the visuals
   map.addLayer({ id: 'spots-hit', type: 'circle', source: 'spots', paint: { 'circle-radius': 0, 'circle-opacity': 0 } })
   map.on('render', syncMarkers)
+  map.on('idle', syncMarkers) // an instant jump (reduced motion) can finish before the new tiles' features are queryable
 })
 map.on('moveend', () => state.tab === 'here' && renderList())
 
@@ -238,7 +239,7 @@ function renderList() {
       state.wallet.size && 'your cards',
     ].filter(Boolean)
     const other = state.tab === 'here' ? away.length : here.length
-    list.innerHTML = `<li class="empty"><p>${
+    list.innerHTML = `<li class="empty"><span class="empty-seal">${rosette(88, 'currentColor', { width: 0.6 })}</span><p>${
       state.tab === 'here' ? 'Nothing pinned in this part of the map' : 'No online or nationwide promos'
     }${active.length ? ` for ${active.join(' + ')}` : ''}.</p>${
       state.tab === 'here' ? '<p>Zoom out or pan to another city.</p>' : ''
@@ -265,8 +266,8 @@ function detail(ids: string[], where?: string) {
     el.innerHTML = `
       <button class="close" aria-label="Close">${icon(X, 18)}</button>
       <span class="detail-rosette">${rosette(220, 'currentColor', { cls: 'ring', width: 0.55 })}</span>
-      <span class="thread" aria-hidden="true"></span>
-      ${priceNum(one, 'detail-num')}
+      <div class="denom">${priceNum(one, 'detail-num')}</div>
+      <svg class="thread" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 100 2"><line x1="0" y1="1" x2="100" y2="1" /></svg>
       <h2 tabindex="-1">${esc(one.merchant || one.title)}</h2>
       ${one.merchant ? `<p class="detail-title">${esc(one.title)}</p>` : one.discount && !d ? `<p class="detail-title">${esc(one.discount)}</p>` : ''}
       <dl>
@@ -353,7 +354,7 @@ $('sheet').addEventListener('click', (e) => {
   const near = [...p.branches].sort((a, b) => (a.lat! - c.lat) ** 2 + (a.lon! - c.lng) ** 2 - ((b.lat! - c.lat) ** 2 + (b.lon! - c.lng) ** 2))[0]
   state.selected = near ? locKey(near.lat!, near.lon!) : p.id
   detail([p.id], near ? state.selected : undefined)
-  if (near) (reveal([near.lon!, near.lat!], 14), map.once('idle', () => markOn(state.selected)))
+  if (near) (reveal([near.lon!, near.lat!], 15), map.once('idle', () => markOn(state.selected)))
 })
 
 // ---------- sheet (phones) ----------
