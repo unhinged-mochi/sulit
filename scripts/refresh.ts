@@ -32,9 +32,11 @@ const manilaDay = (offsetDays = 0) => isoDate(Date.now() + offsetDays * 864e5)!
 /** Drop expired and far-future promos (a week's notice is useful, a month's is noise); keep open-ended ones. Dedupe by id. */
 export function finalize(promos: Promo[], today = manilaDay(), horizon = manilaDay(7)): Promo[] {
   const seen = new Set<string>()
-  return promos.filter(
-    (p) => (!p.validTo || p.validTo >= today) && (!p.validFrom || p.validFrom <= horizon) && !seen.has(p.id) && seen.add(p.id),
-  )
+  return promos.filter((p) => {
+    // "BPI", "RCBC Visa Infinite", "PNB JCB Platinum": the issuer or its card, never the place to go
+    if (p.merchant && new RegExp(`^${p.bank}\\b`, 'i').test(p.merchant)) p.merchant = undefined
+    return (!p.validTo || p.validTo >= today) && (!p.validFrom || p.validFrom <= horizon) && !seen.has(p.id) && seen.add(p.id)
+  })
 }
 
 async function main() {

@@ -52,6 +52,8 @@ test('finalize drops expired, far-future and duplicate promos, keeps open-ended 
     '2026-11-15',
   )
   assert.deepEqual(out.map((x) => x.id), ['b', 'c', 'soon'])
+  const [m] = finalize([{ id: 'm', bank: 'RCBC', merchant: 'RCBC Visa Infinite' } as Promo], '2026-11-08', '2026-11-15')
+  assert.equal(m.merchant, undefined)
 })
 
 test('overpassQuery escapes regex characters in merchant names', () => {
