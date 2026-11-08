@@ -117,7 +117,8 @@ export async function extractAll(promos: Promo[], cache: ExtractCache, checkpoin
 /** Source data wins; extraction only fills gaps. */
 function apply(p: Promo, e: Extracted | undefined) {
   if (!e) return
-  p.merchant ||= e.merchant ?? undefined
+  // the issuing bank is never the merchant ("Metrobank" from "Metrobank Card Exclusive")
+  if (e.merchant && !new RegExp(`^${p.bank}\\b`, 'i').test(e.merchant)) p.merchant ||= e.merchant
   p.discount ||= e.discount ?? undefined
   p.validFrom ||= e.validFrom ?? undefined
   p.validTo ||= e.validTo ?? undefined

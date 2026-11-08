@@ -5,7 +5,7 @@ import { regexExtract } from './extract.ts'
 import { overpassQuery } from './geocode.ts'
 import { finalize } from './refresh.ts'
 import { isoDate, toCategory, type Promo } from './schema.ts'
-import { parse as metrobank } from './sources/metrobank.ts'
+import { mentions, parse as metrobank } from './sources/metrobank.ts'
 
 test('isoDate reads dates as a Manila calendar day', () => {
   assert.equal(isoDate('2026-11-30T00:00:00+08:00'), '2026-11-30') // UTC would say the 29th
@@ -94,4 +94,10 @@ test('metrobank parser: branches, placeholder coordinates, expiry, credit-only',
   assert.deepEqual(p.cards, ['Titanium Mastercard'])
   assert.equal(p.branches[0].lat, 14.58)
   assert.equal(p.branches[1].lat, undefined) // placeholder dropped → geocoder takes over
+})
+
+test('metrobank: a branch only counts when the promo names its merchant', () => {
+  assert.equal(mentions('0% installment at Planet Sports', 'Mijo Comfort Food'), false)
+  assert.equal(mentions('20% OFF at Mijo', 'Mijo Comfort Food'), true)
+  assert.equal(mentions('10% OFF at Bread Broth & Beyond', 'Bread Broth & Beyond'), true)
 })
