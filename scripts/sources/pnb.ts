@@ -57,21 +57,25 @@ async function fetchPnb(): Promise<Promo[]> {
     if (!list.length) throw new Error('pnb: empty webpost-list')
     if (!apiKey) throw new Error('pnb: no x-api-key seen')
     const slugs = list.slice(0, MAX_DETAILS).filter((i) => !/winners?\b|congratulations/i.test(i.title)).map((i) => i.slug)
-    // ~1 s per detail call server-side; page.request runs in node with the context's cookies,
-    // so it isn't held to the browser's per-host connection cap
-    const details: Record<string, any> = {}
-    const headers = { accept: 'application/json', 'x-api-key': apiKey, referer: `${BASE}/promos` }
-    let i = 0
-    await Promise.all(
-      Array.from({ length: 16 }, async () => {
+    // fetched from inside the page: Akamai 403s Node's own HTTP client (page.request) from datacenter IPs — every
+    // GitHub Actions run — but passes the browser's fetch. ~1 s per call server-side; the site serves HTTP/2, so 16 in flight
+    const { details, fails } = await page.evaluate(async ([api, key, slugs]) => {
+      const details: Record<string, any> = {}
+      const fails: Record<string, number> = {}
+      let i = 0
+      await Promise.all(Array.from({ length: 16 }, async () => {
         while (i < slugs.length) {
           const s = slugs[i++]
-          const r = await page.request.get(`${API}/website-posts/show/${s}`, { headers, timeout: 30_000 }).catch(() => null)
-          if (r?.ok()) details[s] = (await r.json().catch(() => null))?.data
+          const r = await fetch(`${api}/website-posts/show/${s}`, { headers: { accept: 'application/json', 'x-api-key': key }, signal: AbortSignal.timeout(30_000) })
+            .catch((e: Error) => e.name)
+          if (typeof r !== 'string' && r.ok) details[s] = (await r.json().catch(() => null))?.data
+          else { const k = typeof r === 'string' ? r : String(r.status); fails[k] = (fails[k] ?? 0) + 1 }
         }
-      }),
-    )
-    if (!Object.keys(details).length) throw new Error('pnb: every detail request failed')
+      }))
+      return { details, fails }
+    }, [API, apiKey, slugs] as const)
+    if (Object.keys(fails).length) console.warn(`  pnb: ${slugs.length - Object.keys(details).length}/${slugs.length} details failed`, fails)
+    if (!Object.keys(details).length) throw new Error(`pnb: every detail request failed ${JSON.stringify(fails)}`)
     return parsePnb(list, details)
   })
 }
