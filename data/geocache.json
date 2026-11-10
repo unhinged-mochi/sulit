@@ -11610,6 +11610,189 @@
    "lat": 14.5567949,
    "lon": 121.0211226,
    "approx": true
+  },
+  "2nd Floor, South Wing Greenhills Mall, Greenhills Shopping Center, Ortigas Avenue, San Juan City, San Juan City": {
+   "lat": 14.6044363,
+   "lon": 121.0299469,
+   "approx": true
+  },
+  "World Trade Center, Pasay City": {
+   "lat": 14.550318,
+   "lon": 120.987602
+  },
+  "Dr, Ayala Malls Abreeza Davao": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Ayala Malls Alabang Town Center": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Ayala Malls Baymall": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Ayala Malls Cloverleaf (Kiosk)": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Ayala Malls Feliz": {
+   "lat": 14.6197802,
+   "lon": 121.0940314
+  },
+  "Dr, Ayala Malls Glorietta 2": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Ayala Malls Greenbelt 5": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Ayala Malls Marquee Pampanga": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Ayala Malls Nuvali Solenad 3": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Ayala Malls Serin Tagaytay": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Ayala Malls The 30th": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Ayala Malls Trinoma": {
+   "lat": 14.6531355,
+   "lon": 121.0336866
+  },
+  "Dr, Ayala Mall Up Town Center": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Ayala Malls Vertis North": {
+   "lat": 14.6517685,
+   "lon": 121.0357926
+  },
+  "Dr, Lucky Chinatown Mall": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Lucky Chinatown Mall (Kiosk)": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Ortigas Estancia": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Ortigas Greenhills Mall": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Promenade Greenhills": {
+   "lat": 14.6032122,
+   "lon": 121.0507453
+  },
+  "Dr, Robinsons Galleria": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Robinsons Galleria Cebu": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Robinsons Magnolia": {
+   "lat": 14.6145676,
+   "lon": 121.0380522
+  },
+  "Dr, Robinsons Opus": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Robinsons Place Manila-midtown Wing": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Shangri-la Mall": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, SM Aura Premier": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, SM Bacolod": {
+   "lat": 10.6722145,
+   "lon": 122.9443594
+  },
+  "Dr, SM City Baguio": {
+   "lat": 16.408943,
+   "lon": 120.599174
+  },
+  "Dr, SM City Southmall": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, SM City North Edsa": {
+   "lat": 14.6567916,
+   "lon": 121.0286329
+  },
+  "Dr, SM Fairview": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, SM Mall Of Asia": {
+   "lat": 14.5366958,
+   "lon": 120.9809002
+  },
+  "Dr, SM Manila": {
+   "lat": 14.632228,
+   "lon": 120.9575741
+  },
+  "Dr, SM Megamall": {
+   "lat": 14.5860923,
+   "lon": 121.0562464
+  },
+  "Dr, SM Seaside Cebu": {
+   "lat": 10.28127,
+   "lon": 123.8795782
+  },
+  "Dr, SM City Iloilo": {
+   "lat": 10.7140006,
+   "lon": 122.5520926
+  },
+  "Dr, SM City Cebu": {
+   "lat": 10.28127,
+   "lon": 123.8795782
+  },
+  "Dr, SM Grand Central": {
+   "lat": 14.5346266,
+   "lon": 120.9810631
+  },
+  "Dr, Uptown Mall Bgc": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Ayala Malls Fairview Terraces": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Ayala Malls Market! Market!": {
+   "lat": 14.6609672,
+   "lon": 120.9900212
+  },
+  "Dr, Venice Grand Canal Mall": {
+   "lat": 14.532654,
+   "lon": 121.0517895
+  },
+  "Harry Potter™: A Yule Ball Celebration, The Space at Solaire": null,
+  "561, Upper Ground, Shaw One Plaza Bldg, Shaw Blvd, Mandaluyong City, 1555 Metro Manila, Mandaluyong City": {
+   "lat": 14.5774392,
+   "lon": 121.0338973,
+   "approx": true
   }
  },
  "merchant": {
@@ -24568,6 +24751,271 @@
   },
   "KATSEYE: THE WILDWORLD TOUR": {
    "at": "2026-11-08T23:11:42.589Z",
+   "hits": []
+  },
+  "SM Home": {
+   "at": "2026-11-10T03:14:02.428Z",
+   "hits": []
+  },
+  "Tsim Sha Tsui Dimsum & Ramen Kamekichi": {
+   "at": "2026-11-10T03:15:34.924Z",
+   "hits": []
+  },
+  "7-Eleven": {
+   "at": "2026-11-10T03:16:24.334Z",
+   "hits": [
+    {
+     "name": "7-Eleven",
+     "address": "Pilar, 2nd District",
+     "lat": 14.4188049,
+     "lon": 121.0079733
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Ilaya Street, Barangay 245",
+     "lat": 14.607162,
+     "lon": 120.9671069
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Samat Street, Barangay 211",
+     "lat": 14.6308618,
+     "lon": 120.9809458
+    },
+    {
+     "name": "7-Eleven",
+     "address": "España Boulevard, Sampaloc",
+     "lat": 14.6113185,
+     "lon": 120.9942571
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Juan Luna Street, Divisoria",
+     "lat": 14.6066915,
+     "lon": 120.9699167
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Rizal Avenue, Santa Cruz",
+     "lat": 14.6022871,
+     "lon": 120.9817164
+    },
+    {
+     "name": "7-Eleven",
+     "address": "R. Papa Street, Barangay 410",
+     "lat": 14.6032901,
+     "lon": 120.988557
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Tayuman Street, Santa Cruz",
+     "lat": 14.6166971,
+     "lon": 120.9800954
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Mel Lopez Boulevard, Barangay 128",
+     "lat": 14.63288,
+     "lon": 120.9570496
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Roxas Boulevard, Barangay 1",
+     "lat": 14.5582258,
+     "lon": 120.9880948
+    },
+    {
+     "name": "7-Eleven",
+     "address": "F. B. Harrison Street, Barangay 2",
+     "lat": 14.5578096,
+     "lon": 120.9902886
+    },
+    {
+     "name": "7-Eleven",
+     "address": "J. Fajardo Street, Barangay 410",
+     "lat": 14.6089503,
+     "lon": 120.9965988
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Gonzales Street, Ermita",
+     "lat": 14.5818841,
+     "lon": 120.9862622
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Taft Avenue, Barangay 726",
+     "lat": 14.5631775,
+     "lon": 120.9945998
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Padre Faura Street, Barangay 668",
+     "lat": 14.5767385,
+     "lon": 120.9804487
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Leon Guinto Street, Barangay 727",
+     "lat": 14.5657718,
+     "lon": 120.9946019
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Maria Orosa Street, Ermita",
+     "lat": 14.5817069,
+     "lon": 120.9814709
+    },
+    {
+     "name": "7-Eleven",
+     "address": "1515, Roxas Boulevard Service Road",
+     "lat": 14.5736793,
+     "lon": 120.9811771
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Meisic Street, Divisoria",
+     "lat": 14.6039627,
+     "lon": 120.9727364
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Manila 1, Gonzalo Puyat Street",
+     "lat": 14.6006932,
+     "lon": 120.9800645
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Hermosa Street, Barangay 210",
+     "lat": 14.6319145,
+     "lon": 120.980271
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Fugoso Street, Santa Cruz",
+     "lat": 14.607758,
+     "lon": 120.9836957
+    },
+    {
+     "name": "7-Eleven",
+     "address": "A. H. Lacson Avenue, Barangay 410",
+     "lat": 14.6092508,
+     "lon": 120.9929393
+    },
+    {
+     "name": "7-Eleven",
+     "address": "1807, Leon Guinto Street",
+     "lat": 14.5740525,
+     "lon": 120.9903845
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Quirino Avenue Extension, Barangay 831",
+     "lat": 14.5834756,
+     "lon": 120.9959731
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Pedro Gil Street, Santa Ana Villas",
+     "lat": 14.5809098,
+     "lon": 121.0099317
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Pedro Gil Street, Barangay 696",
+     "lat": 14.5758875,
+     "lon": 120.9880283
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Tayuman Street, Barangay 336",
+     "lat": 14.6167266,
+     "lon": 120.9829601
+    },
+    {
+     "name": "7-Eleven",
+     "address": "926, A. H. Lacson Avenue",
+     "lat": 14.6102146,
+     "lon": 120.9925984
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Jorge Bocobo Street, Barangay 698",
+     "lat": 14.5716674,
+     "lon": 120.9859749
+    },
+    {
+     "name": "7-Eleven",
+     "address": "MJC Drive, Santa Cruz",
+     "lat": 14.6173386,
+     "lon": 120.9871258
+    },
+    {
+     "name": "7-Eleven",
+     "address": "West Zamora Street, Barangay 831",
+     "lat": 14.5839339,
+     "lon": 120.9986302
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Taft Avenue, Barangay 726",
+     "lat": 14.5664928,
+     "lon": 120.9935764
+    },
+    {
+     "name": "7-Eleven",
+     "address": "M. Adriatico Street, Agno",
+     "lat": 14.5644637,
+     "lon": 120.9902712
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Bambang Street, Barangay 257",
+     "lat": 14.611029,
+     "lon": 120.9803221
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Palmera Street, Barangay 410",
+     "lat": 14.6020997,
+     "lon": 120.9926593
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Pablo Ocampo Street, Barangay 726",
+     "lat": 14.5610038,
+     "lon": 120.993311
+    },
+    {
+     "name": "7-Eleven",
+     "address": "A. Mabini Street, Barangay 667",
+     "lat": 14.5784554,
+     "lon": 120.9809411
+    },
+    {
+     "name": "7-Eleven",
+     "address": "Teresa Street, 508",
+     "lat": 14.6001102,
+     "lon": 121.0125844
+    },
+    {
+     "name": "7-Eleven",
+     "address": "E. Quintos Sr. Street, Barangay 494",
+     "lat": 14.6135403,
+     "lon": 120.996758
+    }
+   ]
+  },
+  "Levi’s": {
+   "at": "2026-11-10T03:16:24.657Z",
+   "hits": []
+  },
+  "PAL's Year End Seat Sale": {
+   "at": "2026-11-10T03:16:25.658Z",
+   "hits": []
+  },
+  "PAL Fares": {
+   "at": "2026-11-10T03:16:27.030Z",
    "hits": []
   }
  }

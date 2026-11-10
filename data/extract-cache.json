@@ -33611,5 +33611,558 @@
   "branches": [],
   "at": "2026-11-08T23:09:56.288Z",
   "via": "llm"
+ },
+ "metrobank:I2rhZePxTXyCf_v346oxQA#ba598cff": {
+  "merchant": null,
+  "discount": "0% Installment deals",
+  "validFrom": "2026-11-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-10T03:10:48.786Z",
+  "via": "llm"
+ },
+ "bpi:shopee-promo#a663eea1": {
+  "merchant": "Shopee",
+  "discount": "Up to ₱8,000 off",
+  "validFrom": "2026-11-05",
+  "validTo": "2026-12-13",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-10T03:10:49.060Z",
+  "via": "llm"
+ },
+ "bpi:lazada-sale#0c34f062": {
+  "merchant": "Lazada",
+  "discount": "Up to ₱8,000 off",
+  "validFrom": "2026-11-10",
+  "validTo": "2026-11-13",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-10T03:10:51.355Z",
+  "via": "llm"
+ },
+ "bpi:swm-promo#a76e8e8b": {
+  "merchant": "SWM",
+  "discount": "25% off Nike Swim items",
+  "validFrom": "2026-11-01",
+  "validTo": "2027-04-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Greenhills Mall",
+    "address": "2nd Floor, South Wing Greenhills Mall, Greenhills Shopping Center, Ortigas Avenue, San Juan City",
+    "city": "San Juan City"
+   }
+  ],
+  "at": "2026-11-10T03:10:52.046Z",
+  "via": "llm"
+ },
+ "bpi:shopee-sale#099d0085": {
+  "merchant": "Shopee",
+  "discount": "Up to ₱8,000 off",
+  "validFrom": "2026-11-05",
+  "validTo": "2026-11-12",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-10T03:10:52.353Z",
+  "via": "llm"
+ },
+ "bpi:robinsons-warehouse-sale#6e335ad0": {
+  "merchant": "Robinsons",
+  "discount": "0% for 24 months",
+  "validFrom": "2026-11-20",
+  "validTo": "2026-11-22",
+  "online": false,
+  "branches": [
+   {
+    "name": "World Trade Center",
+    "address": "World Trade Center",
+    "city": "Pasay City"
+   }
+  ],
+  "at": "2026-11-10T03:10:52.599Z",
+  "via": "llm"
+ },
+ "bdo:204932#1d02a8a4": {
+  "merchant": "Lazada",
+  "discount": "Up to ₱2,000 savings",
+  "validFrom": "2026-11-10",
+  "validTo": "2026-11-12",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-10T03:10:53.689Z",
+  "via": "llm"
+ },
+ "bdo:205367#f7f2de00": {
+  "merchant": "SM Home",
+  "discount": "Up to 70% off",
+  "validFrom": "2026-11-13",
+  "validTo": "2026-11-15",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-10T03:10:54.169Z",
+  "via": "llm"
+ },
+ "bdo:204808#b5a5b178": {
+  "merchant": "SM Appliance Center",
+  "discount": "Up to 45% off",
+  "validFrom": "2026-11-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-10T03:10:54.211Z",
+  "via": "llm"
+ },
+ "bpi:zalora-sale#1a96933b": {
+  "merchant": "ZALORA",
+  "discount": "Up to ₱1,000 off",
+  "validFrom": "2026-11-10",
+  "validTo": "2026-11-12",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-10T03:10:54.634Z",
+  "via": "llm"
+ },
+ "bdo:204809#1b037725": {
+  "merchant": "Lazada",
+  "discount": "10% off up to ₱2,000",
+  "validFrom": "2026-11-10",
+  "validTo": "2026-11-13",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-10T03:10:55.236Z",
+  "via": "llm"
+ },
+ "eastwest:extra-10-savings-rustans-online-0#d5498c52": {
+  "merchant": "Rustan's",
+  "discount": "Extra 10% off",
+  "validFrom": "2026-11-11",
+  "validTo": "2026-11-13",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-10T03:10:56.080Z",
+  "via": "llm"
+ },
+ "eastwest:10-savings-tsim-sha-tsui-dimsum-ramen-kamekichi#fdbc4d72": {
+  "merchant": "Tsim Sha Tsui Dimsum & Ramen Kamekichi",
+  "discount": "10% off",
+  "validFrom": "2026-11-02",
+  "validTo": "2027-05-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-10T03:10:56.346Z",
+  "via": "llm"
+ },
+ "eastwest:shop-now-pay-later-0-installment-robinsons-stores#6c0a79c5": {
+  "merchant": "Robinsons Stores",
+  "discount": "0% for 24 months",
+  "validFrom": "2026-10-01",
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-10T03:10:56.830Z",
+  "via": "llm"
+ },
+ "eastwest:php-500-savings-shopee-1111-sale#fa7c2285": {
+  "merchant": "Shopee",
+  "discount": "Up to ₱500 off",
+  "validFrom": "2026-11-11",
+  "validTo": "2026-11-11",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-10T03:10:57.157Z",
+  "via": "llm"
+ },
+ "eastwest:php-5000-savings-huawei-matepad-air#035d1c24": {
+  "merchant": "Huawei",
+  "discount": "₱5,000 off",
+  "validFrom": "2026-11-05",
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-10T03:10:57.577Z",
+  "via": "llm"
+ },
+ "eastwest:philippine-airlines-year-end-seat-sale#6fb3a96f": {
+  "merchant": "Philippine Airlines",
+  "discount": "0% for 3 months",
+  "validFrom": "2026-11-09",
+  "validTo": "2026-11-15",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-10T03:10:58.291Z",
+  "via": "llm"
+ },
+ "eastwest:php-800-savings-lazada-1111#aa147e3a": {
+  "merchant": "Lazada",
+  "discount": "15% off up to ₱800",
+  "validFrom": "2026-11-10",
+  "validTo": "2026-11-11",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-10T03:10:58.417Z",
+  "via": "llm"
+ },
+ "rcbc:111126-laz#2b272b9f": {
+  "merchant": "Lazada",
+  "discount": "₱750 off",
+  "validFrom": "2026-11-10",
+  "validTo": "2026-11-16",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-10T03:10:59.696Z",
+  "via": "llm"
+ },
+ "rcbc:111126-shopee#dbda1e0e": {
+  "merchant": "Shopee",
+  "discount": "₱500 off",
+  "validFrom": "2026-11-11",
+  "validTo": "2026-11-12",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-10T03:10:59.863Z",
+  "via": "llm"
+ },
+ "rcbc:111126-rustans#8dbd3341": {
+  "merchant": "Rustan's",
+  "discount": "10% off",
+  "validFrom": "2026-11-11",
+  "validTo": "2026-11-13",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-10T03:11:00.869Z",
+  "via": "llm"
+ },
+ "rcbc:111126-lazupi#cdfc6790": {
+  "merchant": "Lazada",
+  "discount": "Up to ₱2,000 off",
+  "validFrom": "2026-11-10",
+  "validTo": "2026-11-13",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-10T03:11:01.049Z",
+  "via": "llm"
+ },
+ "rcbc:111126-tripcom#63c7f488": {
+  "merchant": null,
+  "discount": "Buy 1, Get 1",
+  "validFrom": "2026-11-09",
+  "validTo": "2026-11-14",
+  "at": "2026-11-10T03:11:01.223Z",
+  "via": "regex"
+ },
+ "rcbc:TaptoPay7eleven-1126#26c32c2d": {
+  "merchant": "7-Eleven",
+  "discount": "Raffle entry per purchase",
+  "validFrom": "2026-10-30",
+  "validTo": "2027-03-04",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-10T03:11:01.695Z",
+  "via": "llm"
+ },
+ "chinabank:save-up-to-60-percent-on-select-items-at-sm-appliance-center-2026-anniversary-sale#65a24ce0": {
+  "merchant": "SM Appliance Center",
+  "discount": "Up to 60% off",
+  "validFrom": "2026-11-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-10T03:11:02.659Z",
+  "via": "llm"
+ },
+ "chinabank:10-percent-off-on-your-purchases-at-levis#94608783": {
+  "merchant": "Levi's",
+  "discount": "10% off",
+  "validFrom": "2026-11-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-10T03:11:02.893Z",
+  "via": "llm"
+ },
+ "chinabank:up-to-60-percent-off-at-pals-year-end-seat-sale#b30b1290": {
+  "merchant": "Philippine Airlines",
+  "discount": "Up to 60% off base fares",
+  "validFrom": "2026-11-09",
+  "validTo": "2026-11-15",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-10T03:11:03.520Z",
+  "via": "llm"
+ },
+ "unionbank:9203#4d30f961": {
+  "merchant": "foodpanda",
+  "discount": "₱100 off",
+  "validFrom": "2026-08-28",
+  "validTo": "2026-12-27",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-10T03:11:04.569Z",
+  "via": "llm"
+ },
+ "unionbank:9207#f6a94c0c": {
+  "merchant": "Harry Potter™: A Yule Ball Celebration",
+  "discount": "10% off",
+  "validFrom": "2026-11-16",
+  "validTo": "2026-12-13",
+  "online": false,
+  "branches": [
+   {
+    "name": "The Space at Solaire",
+    "address": null,
+    "city": null
+   }
+  ],
+  "at": "2026-11-10T03:11:04.700Z",
+  "via": "llm"
+ },
+ "unionbank:9205#d4fa3946": {
+  "merchant": "Dr. Kong",
+  "discount": "15% off",
+  "validFrom": "2026-11-09",
+  "validTo": "2027-03-31",
+  "online": false,
+  "branches": [
+   {
+    "name": "Ayala Malls Abreeza Davao",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Ayala Malls Alabang Town Center",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Ayala Malls Baymall",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Ayala Malls Cloverleaf (Kiosk)",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Ayala Malls Feliz",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Ayala Malls Glorietta 2",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Ayala Malls Greenbelt 5",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Ayala Malls Marquee Pampanga",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Ayala Malls Nuvali Solenad 3",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Ayala Malls Serin Tagaytay",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Ayala Malls The 30th",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Ayala Malls Trinoma",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Ayala Mall Up Town Center",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Ayala Malls Vertis North",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Lucky Chinatown Mall",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Lucky Chinatown Mall (Kiosk)",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Ortigas Estancia",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Ortigas Greenhills Mall",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Promenade Greenhills",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Robinsons Galleria",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Robinsons Galleria Cebu",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Robinsons Magnolia",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Robinsons Opus",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Robinsons Place Manila-midtown Wing",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Shangri-la Mall",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "SM Aura Premier",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "SM Bacolod",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "SM City Baguio",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "SM City Southmall",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "SM City North Edsa",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "SM Fairview",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "SM Mall Of Asia",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "SM Manila",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "SM Megamall",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "SM Seaside Cebu",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "SM City Iloilo",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "SM City Cebu",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "SM Grand Central",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Uptown Mall Bgc",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Ayala Malls Fairview Terraces",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Ayala Malls Market! Market!",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Venice Grand Canal Mall",
+    "address": null,
+    "city": null
+   }
+  ],
+  "at": "2026-11-10T03:11:05.171Z",
+  "via": "llm"
+ },
+ "pnb:fly-with-philippine-airlines-and-enjoy-up-to-60-off-on-pal-fares-plus-get-up-to-3000-e-gift-card#7458f352": {
+  "merchant": "Philippine Airlines",
+  "discount": "Up to 60% off",
+  "validFrom": "2026-11-09",
+  "validTo": "2026-11-15",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-10T03:11:06.774Z",
+  "via": "llm"
+ },
+ "pnb:feast-more-with-50-off#8ce814b5": {
+  "merchant": "Jin Cai Unlimited Asian Grill and Hotpot",
+  "discount": "50% off",
+  "validFrom": "2026-11-01",
+  "validTo": "2026-12-15",
+  "online": false,
+  "branches": [
+   {
+    "name": "Jin Cai Unlimited Asian Grill and Hotpot",
+    "address": "561, Upper Ground, Shaw One Plaza Bldg, Shaw Blvd, Mandaluyong City, 1555 Metro Manila",
+    "city": "Mandaluyong City"
+   }
+  ],
+  "at": "2026-11-10T03:11:06.832Z",
+  "via": "llm"
  }
 }
