@@ -2,7 +2,7 @@ name: Refresh promos
 
 on:
   schedule:
-    - cron: '0 21 * * *' # 05:00 Manila, before people head out
+    - cron: '37 19 * * *' # 03:37 Manila: off the top of the hour, where GitHub delays schedules by hours; slack to land before 05:00
   workflow_dispatch:
     inputs:
       banks:
