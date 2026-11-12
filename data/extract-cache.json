@@ -34164,5 +34164,667 @@
   ],
   "at": "2026-11-10T03:11:06.832Z",
   "via": "llm"
+ },
+ "metrobank:bj4Y-fDhQ0q5OWlcR5zBLg#c1f079db": {
+  "merchant": "Samsung",
+  "discount": "7% off + 7% cashback",
+  "validFrom": "2026-11-12",
+  "validTo": "2026-12-20",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-12T01:44:04.807Z",
+  "via": "llm"
+ },
+ "metrobank:dXpWhuxQQ5Cdyvujns1L-g#679c5d0e": {
+  "merchant": "Watsons",
+  "discount": "₱100 cashback",
+  "validFrom": "2026-11-13",
+  "validTo": "2026-11-18",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-12T01:44:05.014Z",
+  "via": "llm"
+ },
+ "metrobank:ba2eNObfQI-LbW800e94aQ#7ab13cbf": {
+  "merchant": "The Loop",
+  "discount": "Up to ₱18,000 off",
+  "validFrom": "2026-10-02",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-12T01:44:05.259Z",
+  "via": "llm"
+ },
+ "metrobank:NxxhlnOPSpGLkDK1pHA9pw#be4656c3": {
+  "merchant": "La-Z-Boy",
+  "discount": "₱3,000 off",
+  "validFrom": "2026-11-01",
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-12T01:44:05.723Z",
+  "via": "llm"
+ },
+ "metrobank:HCBhPx1lTtq5hU6iiSC5OQ#025b995f": {
+  "merchant": "BLIMS",
+  "discount": "₱8,000 off",
+  "validFrom": "2026-11-01",
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-12T01:44:06.255Z",
+  "via": "llm"
+ },
+ "metrobank:IjOxGxiPQ2GBL5Vcn6v0Hw#eb4bf74d": {
+  "merchant": "Palacio de Memoria",
+  "discount": "Buy 3, Get 1 FREE",
+  "validFrom": "2026-09-01",
+  "validTo": "2027-08-31",
+  "online": false,
+  "branches": [
+   {
+    "name": "Palacio de Memoria",
+    "address": "95 Roxas Boulevard, Brgy. Tambo",
+    "city": "Paranaque City"
+   }
+  ],
+  "at": "2026-11-12T01:44:06.606Z",
+  "via": "llm"
+ },
+ "metrobank:EcNHwyiPS_avznzwoJOwmw#12cc3460": {
+  "merchant": "Power Mac Center",
+  "discount": "Up to ₱18,000 off",
+  "validFrom": "2026-10-02",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-12T01:44:06.620Z",
+  "via": "llm"
+ },
+ "metrobank:PACAj32_S8-4FEkwrWrUvA#79f44f5f": {
+  "merchant": "Ethos Skin Aesthetics",
+  "discount": "10% off",
+  "validFrom": "2026-09-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Ethos Skin Aesthetics",
+    "address": "G/F Unit 104 Parc Royale Bldg., Jade Drive, Ortigas Center",
+    "city": "Pasig City"
+   }
+  ],
+  "at": "2026-11-12T01:44:07.105Z",
+  "via": "llm"
+ },
+ "metrobank:BgkJ7xiPSW2yvAhR-ry6AQ#a33314cb": {
+  "merchant": "Shopee",
+  "discount": "Up to 7% off with 0% installment",
+  "validFrom": "2026-11-06",
+  "validTo": "2026-11-15",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-12T01:44:07.212Z",
+  "via": "llm"
+ },
+ "metrobank:MXdfkKIWRY2_eTikMtsv9Q#4a2ab980": {
+  "merchant": "Uniq",
+  "discount": "10% off",
+  "validFrom": "2026-09-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Uniq Kiosk SM North Annex",
+    "address": "",
+    "city": ""
+   },
+   {
+    "name": "Uniq Kiosk Festival",
+    "address": "",
+    "city": ""
+   }
+  ],
+  "at": "2026-11-12T01:44:07.281Z",
+  "via": "llm"
+ },
+ "metrobank:SMW6bs3QQNiYhyOBnMZIhw#e4503bed": {
+  "merchant": "8 Studio Reformer Pilates",
+  "discount": "20% off",
+  "validFrom": "2026-09-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "8 Studio Ortigas",
+    "address": "25AB The Glaston Tower, Ortigas Ave., Brgy. Ugong",
+    "city": "Pasig City"
+   },
+   {
+    "name": "8 Studio Makati",
+    "address": "3F Atrium of Makati, Makati Avenue",
+    "city": "Makati City"
+   },
+   {
+    "name": "8 Studio Marikina",
+    "address": "3F 9 Lilac Building, Lilac St., Concepcion Dos",
+    "city": "Marikina City"
+   }
+  ],
+  "at": "2026-11-12T01:44:07.814Z",
+  "via": "llm"
+ },
+ "metrobank:DFSE8t_eRiKe6bDvSAZ6dw#f2101036": {
+  "merchant": "Sputnik Aviation",
+  "discount": "Buy 1, Get 1",
+  "validFrom": "2026-09-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Sputnik Aviation's Airline Experience",
+    "address": "2/F Sparta Commune, 126 Pioneer Street, Highway Hills",
+    "city": "Mandaluyong City"
+   }
+  ],
+  "at": "2026-11-12T01:44:07.833Z",
+  "via": "llm"
+ },
+ "metrobank:cAs_ckspQ_6cKp3UuwKXqg#49402743": {
+  "merchant": "Posture Perfect Chiropractic",
+  "discount": "Up to 50% off",
+  "validFrom": "2026-09-01",
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-12T01:44:07.845Z",
+  "via": "llm"
+ },
+ "metrobank:SQeUvqmCTJGptPKYqy5F5w#cefcc51c": {
+  "merchant": "Lulou Wellness",
+  "discount": "45% off",
+  "validFrom": "2026-09-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Lulou Wellness San Juan",
+    "address": "3/F Santolan Town Plaza, Col. Bonny Serrano",
+    "city": "San Juan City"
+   },
+   {
+    "name": "Lulou Wellness Mandaluyong",
+    "address": "4F, The Podium, 12 ADB Ave, Ortigas Center",
+    "city": "Mandaluyong City"
+   }
+  ],
+  "at": "2026-11-12T01:44:08.636Z",
+  "via": "llm"
+ },
+ "bdo:205692#8688efe9": {
+  "merchant": "Agoda",
+  "discount": "12% or up to P5,000 off",
+  "validFrom": "2026-11-12",
+  "validTo": "2026-11-30",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-12T01:44:09.092Z",
+  "via": "llm"
+ },
+ "metrobank:OVm6R64XS2GI5ismsh2UUA#f32b5699": {
+  "merchant": "Chris Sports",
+  "discount": "20% off",
+  "validFrom": "2026-09-01",
+  "validTo": "2027-02-28",
+  "online": false,
+  "branches": [
+   {
+    "name": "Chris Sports – SM City North EDSA",
+    "address": "SM City North EDSA",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City Robinsons Place Manila",
+    "address": "SM City Robinsons Place Manila",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City Fairview",
+    "address": "SM City Fairview",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – Ever Gotesco Commonwealth",
+    "address": "Ever Gotesco Commonwealth",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – K Plaza",
+    "address": "K Plaza",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City Pampanga",
+    "address": "SM City Pampanga",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City Sucat",
+    "address": "SM City Sucat",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City Bicutan",
+    "address": "SM City Bicutan",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City Lucena",
+    "address": "SM City Lucena",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City Baguio",
+    "address": "SM City Baguio",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City Marilao",
+    "address": "SM City Marilao",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City Dasmarinas",
+    "address": "SM City Dasmarinas",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – Shangri-La Plaza",
+    "address": "Shangri-La Plaza",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City Batangas",
+    "address": "SM City Batangas",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City Sta. Rosa",
+    "address": "SM City Sta. Rosa",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City Clark",
+    "address": "SM City Clark",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – One Bonifacio High Street",
+    "address": "One Bonifacio High Street",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – Mall of Asia Bay",
+    "address": "Mall of Asia Bay",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – Ayala Malls Manila Bay",
+    "address": "Ayala Malls Manila Bay",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – Glorietta 3",
+    "address": "Glorietta 3",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM Megamall",
+    "address": "SM Megamall",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City Urdaneta",
+    "address": "SM City Urdaneta",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City Tarlac",
+    "address": "SM City Tarlac",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City Olongapo",
+    "address": "SM City Olongapo",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City Rosales",
+    "address": "SM City Rosales",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – Trinoma Mall",
+    "address": "Trinoma Mall",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City Laoag",
+    "address": "SM City Laoag",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City BF Paranaque",
+    "address": "SM City BF Paranaque",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – Greenhills Mall",
+    "address": "Greenhills Mall",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City Davao",
+    "address": "SM City Davao",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City Cabanatuan",
+    "address": "SM City Cabanatuan",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – Uptown Mall",
+    "address": "Uptown Mall",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – UP Town Center",
+    "address": "UP Town Center",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – Ayala Malls The 30th",
+    "address": "Ayala Malls The 30th",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – Ayala Center Cebu",
+    "address": "Ayala Center Cebu",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – Abreeza Mall",
+    "address": "Abreeza Mall",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City Lanang",
+    "address": "SM City Lanang",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM CDO Premier",
+    "address": "SM CDO Premier",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – Centrio Mall",
+    "address": "Centrio Mall",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM City Bacolod",
+    "address": "SM City Bacolod",
+    "city": null
+   },
+   {
+    "name": "Chris Sports – SM Seaside Cebu",
+    "address": "SM Seaside Cebu",
+    "city": null
+   }
+  ],
+  "at": "2026-11-12T01:44:10.897Z",
+  "via": "llm"
+ },
+ "rcbc:theholidayprelude#e90164fd": {
+  "merchant": null,
+  "discount": "0% for 36 months",
+  "validFrom": "2026-11-25",
+  "validTo": "2026-11-28",
+  "online": false,
+  "branches": [
+   {
+    "name": "The Holiday Prelude: An RCBC Private Sale",
+    "address": "14F, Yuchengco Tower 1, RCBC Plaza",
+    "city": "Makati City"
+   }
+  ],
+  "at": "2026-11-12T01:44:10.953Z",
+  "via": "llm"
+ },
+ "rcbc:sm3ds-gensan#f33f3272": {
+  "merchant": "SM Store",
+  "discount": "Extra 5% off",
+  "validFrom": "2026-11-12",
+  "validTo": "2026-11-15",
+  "online": false,
+  "branches": [
+   {
+    "name": "SM Store General Santos",
+    "address": "",
+    "city": "General Santos"
+   }
+  ],
+  "at": "2026-11-12T01:44:11.248Z",
+  "via": "llm"
+ },
+ "bpi:our-home-promo#6bb63f4a": {
+  "merchant": "Our Home",
+  "discount": "10% off regular items",
+  "validFrom": "2026-11-15",
+  "validTo": "2026-12-14",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-12T01:44:11.587Z",
+  "via": "llm"
+ },
+ "rcbc:WNS-1026#3a6256d6": {
+  "merchant": "Watsons",
+  "discount": "₱100 cashback",
+  "validFrom": "2026-11-13",
+  "validTo": "2026-11-18",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-12T01:44:12.142Z",
+  "via": "llm"
+ },
+ "rcbc:5cb-RDS1126#b6a8538e": {
+  "merchant": "Robinsons Department Store",
+  "discount": "5% cashback",
+  "validFrom": "2026-11-10",
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-12T01:44:12.156Z",
+  "via": "llm"
+ },
+ "securitybank:sm-store-3day-sale-3#76286a01": {
+  "merchant": "SM Store",
+  "discount": "10% off or up to PHP 2,000 off",
+  "validFrom": "2026-11-12",
+  "validTo": "2026-11-15",
+  "online": false,
+  "branches": [
+   {
+    "name": "SM Store General Santos",
+    "address": "",
+    "city": "General Santos"
+   }
+  ],
+  "at": "2026-11-12T01:44:12.408Z",
+  "via": "llm"
+ },
+ "securitybank:ana-seat-sale-3#e907935c": {
+  "merchant": "ANA (All Nippon Airways)",
+  "discount": "Economy fares from USD 250",
+  "validFrom": "2026-11-11",
+  "validTo": "2026-11-17",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-12T01:44:13.068Z",
+  "via": "llm"
+ },
+ "chinabank:enjoy-the-most-rewarding-deals-this-1111#1f23e0bb": {
+  "merchant": null,
+  "discount": "Up to 25% off",
+  "validFrom": "2026-11-10",
+  "validTo": "2026-11-15",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-12T01:44:13.150Z",
+  "via": "llm"
+ },
+ "securitybank:landers-3#8b075137": {
+  "merchant": null,
+  "discount": null,
+  "validFrom": null,
+  "validTo": null,
+  "online": false,
+  "branches": [],
+  "at": "2026-11-12T01:44:13.626Z",
+  "via": "llm"
+ },
+ "securitybank:convert-to-chargelight-evoucher-promo#e51bc48a": {
+  "merchant": null,
+  "discount": "Pluxee Gift code up to PHP 1,000",
+  "validFrom": "2026-11-12",
+  "validTo": "2027-02-10",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-12T01:44:13.634Z",
+  "via": "llm"
+ },
+ "securitybank:back-to-back-perks-with-convert-to-chargelight#f085c632": {
+  "merchant": null,
+  "discount": "Lower add-on rate + Pluxee gift code",
+  "validFrom": "2026-11-12",
+  "validTo": "2027-02-10",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-12T01:44:13.635Z",
+  "via": "llm"
+ },
+ "securitybank:klook-exclusive-2#a1afa8a6": {
+  "merchant": "Klook",
+  "discount": "10% off",
+  "validFrom": "2026-11-16",
+  "validTo": "2026-11-30",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-12T01:44:14.194Z",
+  "via": "llm"
+ },
+ "pnb:enjoy-p-600-off-at-zalora#e3642c6e": {
+  "merchant": "Zalora",
+  "discount": "₱600 off",
+  "validFrom": "2026-11-11",
+  "validTo": "2026-11-13",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-12T01:44:14.269Z",
+  "via": "llm"
+ },
+ "pnb:travel-in-style-with-rimowa#17b7ada9": {
+  "merchant": "RIMOWA",
+  "discount": "Win RIMOWA luggage",
+  "validFrom": "2026-11-05",
+  "validTo": "2027-01-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-12T01:44:14.472Z",
+  "via": "llm"
+ },
+ "pnb:shop-save-on-lazada-this-november-with-pnb-diamond-unionpay-credit-card#55519bfc": {
+  "merchant": "Lazada",
+  "discount": "10% off capped at ₱2,000",
+  "validFrom": "2026-11-10",
+  "validTo": "2026-11-13",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-12T01:44:14.671Z",
+  "via": "llm"
+ },
+ "pnb:enjoy-exclusive-deals-with-pnb-at-rustanscom#4056014c": {
+  "merchant": "Rustan's",
+  "discount": "Extra 10% off",
+  "validFrom": "2026-11-11",
+  "validTo": "2026-11-13",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-12T01:44:14.677Z",
+  "via": "llm"
+ },
+ "pnb:katseye-the-wildworld-tour#590b563c": {
+  "merchant": "KATSEYE: THE WILDWORLD TOUR",
+  "discount": "Early access to presale tickets",
+  "validFrom": "2026-11-11",
+  "validTo": "2026-11-12",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-12T01:44:15.337Z",
+  "via": "llm"
+ },
+ "pnb:get-mastercard-presale-tickets-for-beabadoobee-the-powerlines-tour-with-your-pnb-mastercard#a7057594": {
+  "merchant": "Mastercard",
+  "discount": "Presale ticket access",
+  "validFrom": "2026-10-13",
+  "validTo": "2026-10-13",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-12T01:44:15.674Z",
+  "via": "llm"
+ },
+ "pnb:book-your-exclusive-event-at-caviar-bar-1#b6ea7a8c": {
+  "merchant": "Caviar Bar",
+  "discount": "25% off events",
+  "validFrom": "2026-07-05",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Caviar Bar",
+    "address": "2nd floor, Alegria Alta Bldg., 2294 Chino Roces Avenue Extension, Magallanes",
+    "city": "Makati City"
+   }
+  ],
+  "at": "2026-11-12T01:44:15.960Z",
+  "via": "llm"
+ },
+ "pnb:make-your-visit-to-singapore-even-sweeter-with-the-museum-of-ice-cream#3b16e57f": {
+  "merchant": "Museum of Ice Cream",
+  "discount": "15% off tickets",
+  "validFrom": null,
+  "validTo": "2027-03-31",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-12T01:44:15.987Z",
+  "via": "llm"
+ },
+ "pnb:book-your-exclusive-event-at-caviar-bar#69775a0c": {
+  "merchant": "Caviar Bar",
+  "discount": "25% off events",
+  "validFrom": "2026-07-05",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Caviar Bar",
+    "address": "2nd floor, Alegria Alta Bldg., 2294 Chino Roces Avenue Extension, Magallanes",
+    "city": "Makati City"
+   }
+  ],
+  "at": "2026-11-12T01:44:16.345Z",
+  "via": "llm"
  }
 }
