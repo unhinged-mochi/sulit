@@ -34826,5 +34826,266 @@
   ],
   "at": "2026-11-12T01:44:16.345Z",
   "via": "llm"
+ },
+ "metrobank:BI0MlDw_RB2SyrHm4b-_hA#d769153a": {
+  "merchant": "Abenson",
+  "discount": "0% for 36 months + free gift",
+  "validFrom": "2026-11-10",
+  "validTo": "2027-01-10",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-13T00:45:15.126Z",
+  "via": "llm"
+ },
+ "metrobank:AhR-tIcHSHinZ9CA3Kxpzg#c24888a8": {
+  "merchant": "@Tokyo PH",
+  "discount": "₱500 cashback",
+  "validFrom": "2026-11-01",
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-13T00:45:15.347Z",
+  "via": "llm"
+ },
+ "metrobank:bOZnhKq7RwqEc-9z5MTjBg#f5fe29ce": {
+  "merchant": "Vault",
+  "discount": "Buy 1 Get 1 on select drinks",
+  "validFrom": "2026-10-01",
+  "validTo": "2027-03-31",
+  "online": false,
+  "branches": [
+   {
+    "name": "Tittos Latin BBQ & Brew Kapitolyo",
+    "address": null,
+    "city": "Kapitolyo"
+   },
+   {
+    "name": "Tittos Latin BBQ & Brew Greenhills",
+    "address": null,
+    "city": "Greenhills"
+   }
+  ],
+  "at": "2026-11-13T00:45:15.754Z",
+  "via": "llm"
+ },
+ "metrobank:C1n4P8AERfiicf9KQoydaw#5d4cddee": {
+  "merchant": "Suroy Wear",
+  "discount": "20% off",
+  "validFrom": "2026-11-01",
+  "validTo": "2027-04-30",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-13T00:45:16.051Z",
+  "via": "llm"
+ },
+ "metrobank:dw6jN-v4S22sQ9eL97gWEg#ac44a142": {
+  "merchant": "Grab",
+  "discount": "₱100-₱300 off",
+  "validFrom": "2026-10-23",
+  "validTo": "2026-12-25",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-13T00:45:16.268Z",
+  "via": "llm"
+ },
+ "metrobank:Qrm-Mn74SHqyK8ljNkMJeg#97276d4d": {
+  "merchant": "Magwai",
+  "discount": "10% off",
+  "validFrom": "2026-09-01",
+  "validTo": "2027-08-31",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-13T00:45:16.694Z",
+  "via": "llm"
+ },
+ "metrobank:Wl0zj-5zQnyGa2KeJsIWlg#3329222a": {
+  "merchant": "Mabini Freediving Club",
+  "discount": "Up to 20% off",
+  "validFrom": "2026-09-01",
+  "validTo": "2027-08-31",
+  "online": false,
+  "branches": [
+   {
+    "name": "Scuba Studio",
+    "address": "P. Guevarra St.",
+    "city": "San Juan City"
+   },
+   {
+    "name": "Blue World",
+    "address": "330 El Grande Ave., Subdv.",
+    "city": "Parañaque City"
+   }
+  ],
+  "at": "2026-11-13T00:45:17.068Z",
+  "via": "llm"
+ },
+ "metrobank:WU5hefZvQjuvBAzifi_pmw#a3daff96": {
+  "merchant": "Picture City",
+  "discount": "Free strip prints or framed print",
+  "validFrom": "2026-09-01",
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-13T00:45:17.191Z",
+  "via": "llm"
+ },
+ "metrobank:bNX00widQnKsGQ52VEMoWQ#cb0c9141": {
+  "merchant": "Eluvo Health",
+  "discount": "₱1,000 off",
+  "validFrom": "2026-09-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Eluvo Health",
+    "address": "2/F Cogon Building, Parqal, ASEANA City",
+    "city": "Parañaque"
+   }
+  ],
+  "at": "2026-11-13T00:45:17.707Z",
+  "via": "llm"
+ },
+ "metrobank:S4J6nGkDSpyaBoIfcBIHrA#ad10ee50": {
+  "merchant": "Carve Philippines",
+  "discount": "10% off",
+  "validFrom": "2026-09-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Carve Philippines",
+    "address": "2/F Downtown Center Building, 516 Quintin Paredes Street, Binondo",
+    "city": "Manila"
+   }
+  ],
+  "at": "2026-11-13T00:45:18.094Z",
+  "via": "llm"
+ },
+ "metrobank:KiSl_lVeTteLHF5LOeDpRA#73bfe70a": {
+  "merchant": "Metrobank",
+  "discount": "Up to ₱1,000 cashback",
+  "validFrom": null,
+  "validTo": null,
+  "online": false,
+  "branches": [],
+  "at": "2026-11-13T00:45:18.805Z",
+  "via": "llm"
+ },
+ "bpi:the-notebook-the-musical-promo#9f52a733": {
+  "merchant": "The Notebook: The Musical",
+  "discount": "10% off",
+  "validFrom": "2026-11-16",
+  "validTo": "2026-11-18",
+  "online": false,
+  "branches": [
+   {
+    "name": "Samsung Performing Arts Theater",
+    "address": "Circuit Makati",
+    "city": "Makati City"
+   }
+  ],
+  "at": "2026-11-13T00:45:21.883Z",
+  "via": "llm"
+ },
+ "bpi:visa-holiday-shop-anywhere#95139517": {
+  "merchant": null,
+  "discount": "Up to PHP 10,500 free eGCs",
+  "validFrom": "2026-11-09",
+  "validTo": "2027-02-08",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-13T00:45:22.268Z",
+  "via": "llm"
+ },
+ "bpi:faqs#54442dcc": {
+  "merchant": null,
+  "discount": "Up to ₱5,000 eGCs",
+  "validFrom": "2026-11-09",
+  "validTo": "2027-02-08",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-13T00:45:23.042Z",
+  "via": "llm"
+ },
+ "bdo:205956#be061f05": {
+  "merchant": "Toyota Otis",
+  "discount": "0% for 6 months",
+  "validFrom": "2026-10-05",
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-13T00:45:23.311Z",
+  "via": "llm"
+ },
+ "bdo:205693#7e33d182": {
+  "merchant": "Lazada",
+  "discount": "Up to ₱600 off",
+  "validFrom": "2026-11-15",
+  "validTo": "2026-12-30",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-13T00:45:23.833Z",
+  "via": "llm"
+ },
+ "unionbank:9214#81318049": {
+  "merchant": "Bun Run",
+  "discount": "₱300 off",
+  "validFrom": "2026-11-02",
+  "validTo": "2027-04-29",
+  "online": false,
+  "branches": [
+   {
+    "name": "Bun Run San Juan (A. Mabini)",
+    "address": "A. Mabini",
+    "city": "San Juan"
+   },
+   {
+    "name": "Bun Run Makati (Rada)",
+    "address": "Rada",
+    "city": "Makati"
+   }
+  ],
+  "at": "2026-11-13T00:45:24.859Z",
+  "via": "llm"
+ },
+ "eastwest:flash-sale-7-savings-samsung-galaxy-z-fold8-series-and-more#5be4efc8": {
+  "merchant": "Samsung",
+  "discount": "7% off on 0% installment",
+  "validFrom": "2026-11-12",
+  "validTo": "2026-11-15",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-13T00:45:25.211Z",
+  "via": "llm"
+ },
+ "metrobank:Lez8gXJKTdi9s6FBo8zS6Q#b54451dd": {
+  "merchant": "Karat World",
+  "discount": "50% off",
+  "validFrom": null,
+  "validTo": null,
+  "online": false,
+  "branches": [],
+  "at": "2026-11-13T00:45:25.434Z",
+  "via": "llm"
+ },
+ "rcbc:spendanywhere-H2026#5976e6fb": {
+  "merchant": null,
+  "discount": "Up to ₱28,000 cashback",
+  "validFrom": "2026-10-15",
+  "validTo": "2027-01-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-13T00:45:25.590Z",
+  "via": "llm"
+ },
+ "securitybank:ace-hardware-christmas-solution-sale#7213943c": {
+  "merchant": "ACE Hardware",
+  "discount": "Extra 10% off",
+  "validFrom": "2026-11-13",
+  "validTo": "2026-11-15",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-13T00:45:26.054Z",
+  "via": "llm"
  }
 }

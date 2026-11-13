@@ -11994,6 +11994,62 @@
    "lat": 14.5270538,
    "lon": 121.0744942,
    "approx": true
+  },
+  "UNIT 101 & 201, ILAND BAY PAZA, DIOSDADO MACAPAGAL AVENUE, MOAX COMPLEX, PASAY CITY, Manila": {
+   "lat": 14.5904492,
+   "lon": 120.9803621,
+   "approx": true
+  },
+  "UNIT 4B PILAR VILLAGE, ALMANZA UNO, LAS PINAS CITY., Manila": {
+   "lat": 14.43321,
+   "lon": 121.017565
+  },
+  "136 MAGINHAWA ST, BRGY. SIKATUNA VILLAGE, QUEZON CITY., Manila": {
+   "lat": 14.5904492,
+   "lon": 120.9803621,
+   "approx": true
+  },
+  "Brgy. 8 (Pob.), Bacolod City, Bacolod City": {
+   "lat": 10.6428793,
+   "lon": 122.9302116,
+   "approx": true
+  },
+  "Vault, Tittos Latin BBQ & Brew Kapitolyo, Kapitolyo": {
+   "lat": 14.5712584,
+   "lon": 121.0592668,
+   "approx": true
+  },
+  "Vault, Tittos Latin BBQ & Brew Greenhills, Greenhills": {
+   "lat": 14.6017382,
+   "lon": 121.0499203,
+   "approx": true
+  },
+  "P. Guevarra St., San Juan City": {
+   "lat": 14.5934713,
+   "lon": 121.0328587
+  },
+  "330 El Grande Ave., Subdv., Parañaque City": {
+   "lat": 14.5008116,
+   "lon": 120.9915327,
+   "approx": true
+  },
+  "2/F Cogon Building, Parqal, ASEANA City, Parañaque": {
+   "lat": 14.5008116,
+   "lon": 120.9915327,
+   "approx": true
+  },
+  "2/F Downtown Center Building, 516 Quintin Paredes Street, Binondo, Manila": {
+   "lat": 14.5904492,
+   "lon": 120.9803621,
+   "approx": true
+  },
+  "A. Mabini, San Juan": {
+   "lat": 14.5968391,
+   "lon": 121.039262
+  },
+  "Rada, Makati": {
+   "lat": 14.5542044,
+   "lon": 121.0172483
   }
  },
  "merchant": {
@@ -25509,6 +25565,33 @@
      "lon": 120.9820432
     }
    ]
+  },
+  "@Tokyo PH": {
+   "at": "2026-11-13T00:46:43.633Z",
+   "hits": []
+  },
+  "Suroy Wear": {
+   "at": "2026-11-13T00:47:32.071Z",
+   "hits": []
+  },
+  "Magwai": {
+   "at": "2026-11-13T00:49:04.594Z",
+   "hits": []
+  },
+  "Toyota Otis": {
+   "at": "2026-11-13T00:49:05.255Z",
+   "hits": [
+    {
+     "name": "Toyota Otis",
+     "address": "Paz Mendoza Guazon Avenue, Barangay 831",
+     "lat": 14.5898852,
+     "lon": 120.9981916
+    }
+   ]
+  },
+  "ACE Hardware Christmas Solution Sale": {
+   "at": "2026-11-13T00:49:06.428Z",
+   "hits": []
   }
  }
 }
