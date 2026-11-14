@@ -35173,5 +35173,87 @@
   "branches": [],
   "at": "2026-11-14T00:31:59.690Z",
   "via": "llm"
+ },
+ "rcbc:special-stay-and-dining-offers-at-astoria-palawan-3893#93b0ba1d": {
+  "merchant": "Astoria Palawan",
+  "discount": "10% off dining",
+  "validFrom": "2026-11-15",
+  "validTo": "2027-08-24",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-14T23:26:47.554Z",
+  "via": "llm"
+ },
+ "rcbc:special-stay-and-dining-offers-at-astoria-current-3892#a8a27e28": {
+  "merchant": "Astoria Current",
+  "discount": "₱7,000 overnight stay with breakfast",
+  "validFrom": "2026-11-15",
+  "validTo": "2027-08-24",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-14T23:26:47.795Z",
+  "via": "llm"
+ },
+ "rcbc:special-stay-and-dining-offers-at-astoria-plaza-3891#20213525": {
+  "merchant": "Astoria Plaza",
+  "discount": "10% off dining",
+  "validFrom": "2026-11-15",
+  "validTo": "2027-08-24",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-14T23:26:47.871Z",
+  "via": "llm"
+ },
+ "rcbc:special-stay-and-dining-offers-at-astoria-boracay-3890#9aa17ac0": {
+  "merchant": "Astoria Boracay",
+  "discount": "₱7,000 overnight stay with breakfast",
+  "validFrom": "2026-11-15",
+  "validTo": "2027-08-24",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-14T23:26:48.302Z",
+  "via": "llm"
+ },
+ "rcbc:10-off-at-astoria-gourmet-take-aways-3889#71c18891": {
+  "merchant": "Astoria Gourmet Take-aways",
+  "discount": "10% off",
+  "validFrom": "2026-11-15",
+  "validTo": "2027-08-24",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-14T23:26:48.966Z",
+  "via": "llm"
+ },
+ "rcbc:10-off-at-chardonnay-events-hall-by-astoria-3887#5ea04bec": {
+  "merchant": "Chardonnay Events Hall By Astoria",
+  "discount": "10% off social packages",
+  "validFrom": "2026-11-15",
+  "validTo": "2027-08-24",
+  "online": false,
+  "branches": [
+   {
+    "name": "Chardonnay Events Hall By Astoria",
+    "address": "352 Capt. Henry P. Javier, Pasig, 1600 Metro Manila",
+    "city": "Pasig"
+   }
+  ],
+  "at": "2026-11-14T23:26:49.282Z",
+  "via": "llm"
+ },
+ "rcbc:10-off-at-mangrove-conference-and-convention-center-by-astoria-3888#c681ef0f": {
+  "merchant": "Mangrove Conference and Convention Center By Astoria",
+  "discount": "10% off",
+  "validFrom": "2026-11-15",
+  "validTo": "2027-08-24",
+  "online": false,
+  "branches": [
+   {
+    "name": "Mangrove Conference & Convention Center By Astoria",
+    "address": "Km. 62, North National Highway, Puerto Princesa, 5300 Palawan",
+    "city": "Puerto Princesa"
+   }
+  ],
+  "at": "2026-11-14T23:26:49.314Z",
+  "via": "llm"
  }
 }
