@@ -35255,5 +35255,15 @@
   ],
   "at": "2026-11-14T23:26:49.314Z",
   "via": "llm"
+ },
+ "bdo:206071#da3b53cf": {
+  "merchant": "Shopee",
+  "discount": "P300 off + free VIP",
+  "validFrom": "2026-11-16",
+  "validTo": "2026-12-21",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-17T02:40:15.523Z",
+  "via": "llm"
  }
 }
