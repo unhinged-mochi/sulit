@@ -35265,5 +35265,15 @@
   "branches": [],
   "at": "2026-11-17T02:40:15.523Z",
   "via": "llm"
+ },
+ "bdo:206021#b5f8329f": {
+  "merchant": null,
+  "discount": "0% for 24 months",
+  "validFrom": "2026-08-15",
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-19T01:31:25.020Z",
+  "via": "llm"
  }
 }
