@@ -35275,5 +35275,270 @@
   "branches": [],
   "at": "2026-11-19T01:31:25.020Z",
   "via": "llm"
+ },
+ "metrobank:eY_ip3b6TVeueTLNW6Pkpg#05f95346": {
+  "merchant": "Levoit",
+  "discount": "0% for 3 months",
+  "validFrom": "2026-11-27",
+  "validTo": "2026-11-29",
+  "online": false,
+  "branches": [
+   {
+    "name": "Levoit booth - Manila Mama and Baby Fair",
+    "address": "Megatrade Hall 3, SM Megamall, EDSA corner Doña Julia Vargas Avenue, Ortigas Center, 1555",
+    "city": "Mandaluyong City"
+   }
+  ],
+  "at": "2026-11-20T01:33:25.365Z",
+  "via": "llm"
+ },
+ "metrobank:KmrIpsi2SxSd09UPdqQNrA#27333ced": {
+  "merchant": "Qatar Airways",
+  "discount": "Up to 10% off flights",
+  "validFrom": "2026-11-01",
+  "validTo": "2027-04-30",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-20T01:33:25.475Z",
+  "via": "llm"
+ },
+ "metrobank:Y37Xo-0HRQefLoqdrbI2_A#0319682e": {
+  "merchant": "Anytime Fitness",
+  "discount": "10% off",
+  "validFrom": "2026-05-15",
+  "validTo": "2027-05-14",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-20T01:33:26.037Z",
+  "via": "llm"
+ },
+ "metrobank:K4W-7ZXeRP2rEFzcdTx4kg#eae6e20c": {
+  "merchant": "Philips Personal Care",
+  "discount": "0% for 3 months",
+  "validFrom": "2026-11-27",
+  "validTo": "2026-11-29",
+  "online": false,
+  "branches": [
+   {
+    "name": "Philips Personal Care booth, Manila Mama and Baby Fair",
+    "address": "Megatrade Hall 3, SM Megamall, EDSA corner Doña Julia Vargas Avenue, Ortigas Center, 1555",
+    "city": "Mandaluyong City"
+   }
+  ],
+  "at": "2026-11-20T01:33:26.686Z",
+  "via": "llm"
+ },
+ "bdo:206087#8f66daf2": {
+  "merchant": "SM Appliance Center",
+  "discount": "₱500 off ₱35,000 spend",
+  "validFrom": "2026-11-15",
+  "validTo": "2027-01-15",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-20T01:33:27.323Z",
+  "via": "llm"
+ },
+ "hsbc:337#ac48ebe6": {
+  "merchant": null,
+  "discount": "Up to 90% off",
+  "validFrom": "2026-11-20",
+  "validTo": "2026-11-29",
+  "online": false,
+  "branches": [
+   {
+    "name": "HSBC Head Office - Boracay Room",
+    "address": "Ground Floor, 3058 5th Avenue West, Bonifacio Global City",
+    "city": "Taguig City"
+   }
+  ],
+  "at": "2026-11-20T01:33:27.788Z",
+  "via": "llm"
+ },
+ "metrobank:bL3rcbrYQCmMPG5s32ePAw#5c7ca91e": {
+  "merchant": "Calvin Klein",
+  "discount": "Up to 25% off",
+  "validFrom": "2026-11-13",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Calvin Klein Uptown Mall",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Calvin Klein Newport Mall",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Calvin Klein Alabang Town Center",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Calvin Klein Bonifacio High Street",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Calvin Klein Central Square",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Calvin Klein Century City Mall",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Calvin Klein Greenbelt 5",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Calvin Klein Greenhills",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Calvin Klein Robinsons Magnolia",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Calvin Klein SM Mall of Asia",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Calvin Klein SM Megamall",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Calvin Klein Okada Manila",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Calvin Klein Robinsons Place Manila",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Calvin Klein Rockwell Power Plant Mall",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Calvin Klein Rustan's Makati (Men's and Women's)",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Calvin Klein Rustan's Shangri-La",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Calvin Klein Shangri-La Plaza",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Calvin Klein Trinoma",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Calvin Klein Ayala Center Cebu",
+    "address": null,
+    "city": null
+   }
+  ],
+  "at": "2026-11-20T01:33:28.253Z",
+  "via": "llm"
+ },
+ "chinabank:20-percent-off-on-buffet-at-s-kitchen-the-lounge-and-oori-korean-restaurant-sheraton-manila#624ff2f2": {
+  "merchant": "Sheraton Manila Hotel",
+  "discount": "Up to 50% off dining",
+  "validFrom": null,
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-20T01:33:28.473Z",
+  "via": "llm"
+ },
+ "chinabank:20-percent-off-on-select-treatments-at-amorea-skin#89d30696": {
+  "merchant": "Amorea Skin",
+  "discount": "20% off select treatments",
+  "validFrom": null,
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-20T01:33:29.360Z",
+  "via": "llm"
+ },
+ "pnb:get-healthier-hair-with-svenson#8446f92b": {
+  "merchant": "Svenson",
+  "discount": "0% for 12 months",
+  "validFrom": null,
+  "validTo": null,
+  "online": false,
+  "branches": [
+   {
+    "name": "Face and Body Rejuvenation Center - Binondo",
+    "address": null,
+    "city": "Manila"
+   },
+   {
+    "name": "Face and Body Rejuvenation Center - Cebu",
+    "address": null,
+    "city": "Cebu"
+   },
+   {
+    "name": "Face and Body Rejuvenation Center - BGC",
+    "address": null,
+    "city": "Taguig"
+   },
+   {
+    "name": "Face and Body Rejuvenation Center - Makati",
+    "address": null,
+    "city": "Makati"
+   },
+   {
+    "name": "Tricholab - Alabang",
+    "address": null,
+    "city": "Muntinlupa"
+   },
+   {
+    "name": "Tricholab - Angeles",
+    "address": null,
+    "city": "Pampanga"
+   },
+   {
+    "name": "Tricholab - Greenhills",
+    "address": null,
+    "city": "San Juan"
+   },
+   {
+    "name": "Tricholab - San Fernando",
+    "address": null,
+    "city": "Pampanga"
+   },
+   {
+    "name": "Tricholab - West Avenue",
+    "address": null,
+    "city": "Quezon City"
+   },
+   {
+    "name": "Trichogen - Lipa",
+    "address": null,
+    "city": "Batangas"
+   }
+  ],
+  "at": "2026-11-20T01:33:29.687Z",
+  "via": "llm"
  }
 }
