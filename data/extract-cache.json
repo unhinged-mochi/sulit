@@ -35540,5 +35540,360 @@
   ],
   "at": "2026-11-20T01:33:29.687Z",
   "via": "llm"
+ },
+ "hsbc:339#d436a2ef": {
+  "merchant": "Caltex",
+  "discount": "Win PHP50,000 StarCash",
+  "validFrom": "2026-11-19",
+  "validTo": "2027-03-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-21T01:00:55.832Z",
+  "via": "llm"
+ },
+ "eastwest:50-savings-thinking-tools-digital-expo-2026-davao-edition#f91ae38d": {
+  "merchant": "Thinking Tools Digital Expo 2026 Davao Edition",
+  "discount": "Up to 50% off",
+  "validFrom": "2026-11-26",
+  "validTo": "2026-12-02",
+  "online": false,
+  "branches": [
+   {
+    "name": "Thinking Tools Digital Expo 2026 Davao Edition",
+    "address": "SM City Ecoland",
+    "city": "Davao City"
+   }
+  ],
+  "at": "2026-11-21T01:00:56.008Z",
+  "via": "llm"
+ },
+ "eastwest:guaranteed-approval-and-5-rebate-pa#fa2b9e50": {
+  "merchant": "EastWest Bank",
+  "discount": "Up to 5% rebate p.a.",
+  "validFrom": "2026-11-25",
+  "validTo": "2027-02-28",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-21T01:00:56.545Z",
+  "via": "llm"
+ },
+ "rcbc:aasaq32026#17e9d292": {
+  "merchant": "AirAsia Credit Card",
+  "discount": "Up to ₱5,000 cash rebate",
+  "validFrom": "2026-08-17",
+  "validTo": "2026-10-15",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-21T01:00:57.327Z",
+  "via": "llm"
+ },
+ "chinabank:enjoy-20-off-at-the-black-pig#8dae439e": {
+  "merchant": "The Black Pig",
+  "discount": "20% off",
+  "validFrom": "2026-09-08",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "The Black Pig",
+    "address": "2F Commercenter Bldg., East Asia Drive, Alabang",
+    "city": "Muntinlupa"
+   }
+  ],
+  "at": "2026-11-21T01:00:57.759Z",
+  "via": "llm"
+ },
+ "chinabank:enjoy-15-percent-off-on-total-food-bill-at-ma-cherrie-cafe-lounge#cebc0d34": {
+  "merchant": "Ma Chérrie Café & Lounge",
+  "discount": "15% off total food bill",
+  "validFrom": "2026-09-15",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Ma Chérrie Café & Lounge",
+    "address": "Lot 4 Block 2, C. Buenviaje Street, Brgy. Santo Niño",
+    "city": "Marikina City"
+   }
+  ],
+  "at": "2026-11-21T01:00:58.193Z",
+  "via": "llm"
+ },
+ "chinabank:enjoy-20-percent-off-at-ono-aloha-kitchen#d3d74d59": {
+  "merchant": "Ono Aloha Kitchen",
+  "discount": "20% off",
+  "validFrom": "2026-09-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Molito",
+    "address": "Molito Lifestyle Center",
+    "city": "Muntinlupa City"
+   },
+   {
+    "name": "Greenhills",
+    "address": "GF, East Wing, GH Mall",
+    "city": "San Juan City"
+   },
+   {
+    "name": "Pioneer",
+    "address": "GF, RFM Corporate Center, Pioneer St",
+    "city": "Mandaluyong City"
+   },
+   {
+    "name": "Mitsukoshi Mall",
+    "address": "Basement 1, Mitsukoshi Mall, BGC",
+    "city": "Taguig City"
+   },
+   {
+    "name": "Food District",
+    "address": "LG, One Bonifacio High Street",
+    "city": "Taguig City"
+   },
+   {
+    "name": "Public Eatery",
+    "address": "4F, Public Eatery, Robinsons Magnolia",
+    "city": "Quezon City"
+   },
+   {
+    "name": "The Grid",
+    "address": "R2 Level, Powerplant Mall",
+    "city": "Makati City"
+   },
+   {
+    "name": "Eastwood",
+    "address": "Al Fresco, Eastwood Citywalk",
+    "city": "Quezon City"
+   },
+   {
+    "name": "SM Megamall",
+    "address": "2F, Mega Atrium, SM Megamall",
+    "city": "Mandaluyong City"
+   }
+  ],
+  "at": "2026-11-21T01:00:58.419Z",
+  "via": "llm"
+ },
+ "chinabank:enjoy-up-to-50-percent-off-at-sheraton-manila-hotel#ea592be4": {
+  "merchant": "Sheraton Manila Hotel",
+  "discount": "Up to 50% off dining & wellness",
+  "validFrom": "2026-09-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-21T01:00:58.503Z",
+  "via": "llm"
+ },
+ "chinabank:enjoy-10-off-at-gant#cf538638": {
+  "merchant": "GANT",
+  "discount": "10% off",
+  "validFrom": "2026-11-01",
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [
+   {
+    "name": "GANT SM Megamall",
+    "address": "SM Megamall",
+    "city": "Mandaluyong"
+   },
+   {
+    "name": "GANT Shangri-La Plaza",
+    "address": "Shangri-La Plaza Mall",
+    "city": "Mandaluyong"
+   }
+  ],
+  "at": "2026-11-21T01:00:59.198Z",
+  "via": "llm"
+ },
+ "chinabank:pay-only-p695-per-class-at-lulou-wellness#8ca81b50": {
+  "merchant": "Lulou Wellness",
+  "discount": "₱695 per class",
+  "validFrom": "2026-09-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Lulou Wellness San Juan",
+    "address": "3F Santolan Town Plaza, Col. Bonny Serrano",
+    "city": "San Juan City"
+   },
+   {
+    "name": "Lulou Wellness Mandaluyong",
+    "address": "4F, The Podium, 12 ADB Ave, Ortigas Center",
+    "city": "Mandaluyong City"
+   }
+  ],
+  "at": "2026-11-21T01:00:59.520Z",
+  "via": "llm"
+ },
+ "chinabank:exclusive-15-percent-off-on-all-services-at-miss-derm-beauty-lounge#b4fd601a": {
+  "merchant": "Miss Derm Beauty Lounge",
+  "discount": "15% off",
+  "validFrom": "2026-09-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Miss Derm Beauty Lounge Makati",
+    "address": "Centuria Medical, Kalayaan Ave",
+    "city": "Makati City"
+   },
+   {
+    "name": "Miss Derm Beauty Lounge Quezon City",
+    "address": "20 Shorthorn St., Bahay Toro, Project 8",
+    "city": "Quezon City"
+   },
+   {
+    "name": "Miss Derm Beauty Lounge Las Piñas",
+    "address": "Unit 304 Aurora Bldg, Alabang Zapote Rd, Almanza 1",
+    "city": "Las Piñas"
+   }
+  ],
+  "at": "2026-11-21T01:00:59.549Z",
+  "via": "llm"
+ },
+ "chinabank:enjoy-10-percent-off-at-ethos-skin-aesthetics#59f410e6": {
+  "merchant": "Ethos Skin Aesthetics",
+  "discount": "10% off or Free Pico Laser",
+  "validFrom": "2026-09-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Ethos Skin Aesthetics",
+    "address": "Unit 104 Parc Royale Bldg. Jade Drive, Ortigas Center",
+    "city": "Pasig City"
+   }
+  ],
+  "at": "2026-11-21T01:01:00.010Z",
+  "via": "llm"
+ },
+ "unionbank:9219#d2d38695": {
+  "merchant": "Botejyu",
+  "discount": "Up to 50% off",
+  "validFrom": "2026-11-09",
+  "validTo": "2026-12-09",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-21T01:01:00.165Z",
+  "via": "llm"
+ },
+ "securitybank:apple-products-3#35d635ef": {
+  "merchant": null,
+  "discount": "Up to ₱35,000 off Apple devices",
+  "validFrom": null,
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-21T01:01:00.299Z",
+  "via": "llm"
+ },
+ "securitybank:sm-store-3#0d018803": {
+  "merchant": "SM Store",
+  "discount": "0% for 6 months",
+  "validFrom": "2026-10-01",
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-21T01:01:00.697Z",
+  "via": "llm"
+ },
+ "pnb:tap-to-premyo-get-a-chance-to-win-gadgets-with-your-pnb-visa-credit-card-at-7-eleven#5cee7bbf": {
+  "merchant": "7-Eleven",
+  "discount": "Chance to win gadgets",
+  "validFrom": "2026-10-30",
+  "validTo": "2027-03-04",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-21T01:01:00.907Z",
+  "via": "llm"
+ },
+ "chinabank:enjoy-20-percent-off-at-8-studio-reformer-pilates#46749ee8": {
+  "merchant": "8 Studio Reformer Pilates",
+  "discount": "20% off",
+  "validFrom": "2026-09-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "8 Studio Ortigas",
+    "address": "25AB The Glaston Tower, Ortigas Ave., Brgy. Ugong",
+    "city": "Pasig City"
+   },
+   {
+    "name": "8 Studio Makati",
+    "address": "3F Atrium of Makati, Makati Avenue",
+    "city": "Makati City"
+   },
+   {
+    "name": "8 Studio Marikina",
+    "address": "3F 9 Lilac Building, Lilac St. Concepcion Dos",
+    "city": "Marikina City"
+   }
+  ],
+  "at": "2026-11-21T01:01:01.070Z",
+  "via": "llm"
+ },
+ "pnb:plan-your-next-getaway-with-swiss-belhotel-international-and-enjoy-exceptional-comfort-in-destinations-around-the-world#38fb50dc": {
+  "merchant": "Swiss-Belhotel International",
+  "discount": "25% off 2-night stay",
+  "validFrom": null,
+  "validTo": "2027-01-04",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-21T01:01:01.334Z",
+  "via": "llm"
+ },
+ "pnb:this-holiday-enjoy-p2000-discount-at-rustans#e5c17d5e": {
+  "merchant": "Rustan's",
+  "discount": "₱2,000 off",
+  "validFrom": "2026-11-13",
+  "validTo": "2026-12-14",
+  "online": false,
+  "branches": [
+   {
+    "name": "Rustan's Makati",
+    "address": null,
+    "city": "Makati"
+   },
+   {
+    "name": "Rustan's Shangri-La",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "Rustan's Cubao",
+    "address": null,
+    "city": "Quezon City"
+   },
+   {
+    "name": "Rustan's Cebu",
+    "address": null,
+    "city": "Cebu"
+   },
+   {
+    "name": "Rustan's Alabang",
+    "address": null,
+    "city": "Muntinlupa"
+   },
+   {
+    "name": "Rustan's Nustar Cebu",
+    "address": null,
+    "city": "Cebu"
+   },
+   {
+    "name": "Rustan's Adora-Greenbelt",
+    "address": null,
+    "city": "Makati"
+   },
+   {
+    "name": "Rustan's Adora-Shangrila",
+    "address": null,
+    "city": null
+   }
+  ],
+  "at": "2026-11-21T01:01:02.173Z",
+  "via": "llm"
  }
 }
