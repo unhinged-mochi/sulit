@@ -35895,5 +35895,529 @@
   ],
   "at": "2026-11-21T01:01:02.173Z",
   "via": "llm"
+ },
+ "metrobank:Qr8xMwXkRzukqTjTrxPRtA#6b7a2c35": {
+  "merchant": "Rhinoshield",
+  "discount": "10% off",
+  "validFrom": "2026-09-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Rhinoshield Kiosk SM North Annex",
+    "address": "SM North Annex",
+    "city": "Quezon City"
+   },
+   {
+    "name": "Rhinoshield Kiosk Ayala Mall Terraces Fairview",
+    "address": "Ayala Mall Terraces Fairview",
+    "city": "Quezon City"
+   }
+  ],
+  "at": "2026-11-24T04:29:46.830Z",
+  "via": "llm"
+ },
+ "metrobank:EfnGgiZ9RTy4M4ye7vIJEw#e0205719": {
+  "merchant": "Unit 605 Coffee",
+  "discount": "Up to 30% off",
+  "validFrom": "2026-11-03",
+  "validTo": "2027-01-31",
+  "online": false,
+  "branches": [
+   {
+    "name": "P. Ocampo",
+    "address": "1042 The Second House, GF, P. Ocampo St., Brgy. 755 Malate",
+    "city": "Manila"
+   },
+   {
+    "name": "SM Sucat",
+    "address": "Bldg. B., Dr. A. Santos Ave., Sucat",
+    "city": "Paranaque City"
+   },
+   {
+    "name": "La Union",
+    "address": "161 West MacArthur Highway, Urbiztondo, San Juan City",
+    "city": "La Union"
+   }
+  ],
+  "at": "2026-11-24T04:29:46.925Z",
+  "via": "llm"
+ },
+ "metrobank:BxzEFd8gQIi2_BvmCnVzfQ#662aca7f": {
+  "merchant": "Next Drink PH",
+  "discount": "10% off",
+  "validFrom": "2026-11-03",
+  "validTo": "2027-04-30",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-24T04:29:47.339Z",
+  "via": "llm"
+ },
+ "metrobank:bSPX3Fl8S8WrR1CZ4PF_ng#207dc9bc": {
+  "merchant": "Alley",
+  "discount": "Up to 50% off",
+  "validFrom": "2026-11-01",
+  "validTo": "2027-01-31",
+  "online": false,
+  "branches": [
+   {
+    "name": "Alley, Two Maridien",
+    "address": "",
+    "city": ""
+   },
+   {
+    "name": "Alley, Uptown BGC",
+    "address": "",
+    "city": ""
+   },
+   {
+    "name": "Alley, Eastwood",
+    "address": "",
+    "city": ""
+   }
+  ],
+  "at": "2026-11-24T04:29:47.342Z",
+  "via": "llm"
+ },
+ "metrobank:e5nBw3dAS4iR_VA-WpaFRg#5b2f075b": {
+  "merchant": "Suzhou Dimsum",
+  "discount": "30% off",
+  "validFrom": "2026-11-01",
+  "validTo": "2027-01-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-24T04:29:47.993Z",
+  "via": "llm"
+ },
+ "metrobank:Myeyo7YSQA2QBZiE7Va3gw#065e0e86": {
+  "merchant": "Karabella Café",
+  "discount": "30% off",
+  "validFrom": "2026-11-01",
+  "validTo": "2027-01-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-24T04:29:47.993Z",
+  "via": "llm"
+ },
+ "metrobank:S1ZteIB3S3yexgsQSWPxtg#9d3b162d": {
+  "merchant": "Czarina's All Day Filipino Dining",
+  "discount": "50% off",
+  "validFrom": "2026-11-01",
+  "validTo": "2027-01-31",
+  "online": false,
+  "branches": [
+   {
+    "name": "Czarina's All Day Filipino Dining",
+    "address": "15 Bacolod Street, San Roque",
+    "city": "Marikina City"
+   }
+  ],
+  "at": "2026-11-24T04:29:48.373Z",
+  "via": "llm"
+ },
+ "metrobank:ebiw7i1BSvG2uWagxwEHAg#ea00d309": {
+  "merchant": "United Colors of Benetton",
+  "discount": "15% off",
+  "validFrom": "2026-11-01",
+  "validTo": "2027-01-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-24T04:29:49.301Z",
+  "via": "llm"
+ },
+ "metrobank:PUAQuDnOSnWQAZZHvrs3Pw#ea00d309": {
+  "merchant": null,
+  "discount": null,
+  "validFrom": "2026-09-01",
+  "validTo": "2026-09-30",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-24T04:29:49.541Z",
+  "via": "llm"
+ },
+ "metrobank:Di2mzCzzThqTpVxBAACK4w#6cd47e46": {
+  "merchant": "Fairtech Solar Corp",
+  "discount": "Up to 6 free panels",
+  "validFrom": "2026-09-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Fairtech Solar Corp",
+    "address": "L3002 Candido St, Mapulang Lupa",
+    "city": "Valenzuela City"
+   }
+  ],
+  "at": "2026-11-24T04:29:50.279Z",
+  "via": "llm"
+ },
+ "metrobank:T9ZrKVbISgOg5YFiQiMfPQ#3e2980f8": {
+  "merchant": "Linden Teak Furniture Philippines",
+  "discount": "30% off",
+  "validFrom": "2026-08-01",
+  "validTo": "2027-01-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-24T04:29:50.544Z",
+  "via": "llm"
+ },
+ "metrobank:FVThBo49SQCS3vIj_Q_rEg#621ae9b2": {
+  "merchant": "Bibs Manila",
+  "discount": "10% off",
+  "validFrom": "2026-09-01",
+  "validTo": "2026-11-30",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-24T04:29:50.960Z",
+  "via": "llm"
+ },
+ "metrobank:TLKJL2BoR02efdi1ePgJnw#d03d3bc4": {
+  "merchant": null,
+  "discount": "Up to ₱200 cashback",
+  "validFrom": "2026-11-12",
+  "validTo": "2027-01-31",
+  "online": false,
+  "branches": [
+   {
+    "name": "BERSHKA ALABANG TOWN CENTER",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "BERSHKA AYALA CENTER CEBU",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "BERSHKA GLORIETTA 2",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "BERSHKA SHANGRILA",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "BERSHKA SM AURA",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "BERSHKA SM MEGAMALL",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "BERSHKA SM MOA",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "BERSHKA SM NORTH EDSA",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "MASSIMO DUTTI CENTRAL SQUARE",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "MASSIMO DUTTI GREENBELT 5",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "MASSIMO DUTTI ROCKWELL",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "MASSIMO DUTTI SM MOA",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "OYSHO SM MOA",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "OYSHO GREENBELT",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "PULL & BEAR ALABANG TOWN CENTER",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "PULL & BEAR AYALA CENTER CEBU",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "PULL & BEAR GLORIETTA",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "PULL & BEAR SM MEGAMALL",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "PULL & BEAR SM MOA",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "PULL & BEAR TRINOMA",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "STRADIVARIUS ALABANG TOWN CENTER",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "STRADIVARIUS AYALA CENTER CEBU",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "STRADIVARIUS GLORIETTA",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "STRADIVARIUS SM AURA",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "STRADIVARIUS SM MEGAMALL",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "ZARA ALABANG TOWN CENTER",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "ZARA AYALA CENTER CEBU",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "ZARA GLORIETTA 3",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "ZARA GREENBELT 5",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "ZARA ONE BHS TAGUIG",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "ZARA ROCKWELL",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "ZARA SHANGRI-LA",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "ZARA SM MEGAMALL",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "ZARA SM MOA",
+    "address": null,
+    "city": null
+   },
+   {
+    "name": "ZARA TRINOMA",
+    "address": null,
+    "city": null
+   }
+  ],
+  "at": "2026-11-24T04:29:51.231Z",
+  "via": "llm"
+ },
+ "metrobank:ZXnOA0AkRsyES6tr8tWJlQ#9b8311be": {
+  "merchant": "Carry-on Baby",
+  "discount": "20% off",
+  "validFrom": "2026-09-01",
+  "validTo": "2027-03-31",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-24T04:29:51.410Z",
+  "via": "llm"
+ },
+ "bpi:capital-promo#b6953ee1": {
+  "merchant": "Capital",
+  "discount": "15% off",
+  "validFrom": "2026-11-01",
+  "validTo": "2027-04-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Festival Mall",
+    "address": "Level 2, Festival Mall, Alabang, Muntinlupa City",
+    "city": "Muntinlupa City"
+   },
+   {
+    "name": "SM City San Lazaro",
+    "address": "Level 2, SM City San Lazaro, Felix Huertas Street corner Lacson Avenue, Santa Cruz, Manila",
+    "city": "Manila"
+   },
+   {
+    "name": "SM Megamall",
+    "address": "Level 3, Atrium, SM Megamall, EDSA corner Doña Julia Vargas Avenue, Ortigas Center, Mandaluyong City",
+    "city": "Mandaluyong City"
+   },
+   {
+    "name": "SM Aura",
+    "address": "Level 2, SM Aura, 26th Street corner McKinley Parkway, Bonifacio Global City, Taguig City",
+    "city": "Taguig City"
+   },
+   {
+    "name": "SM City J Mall",
+    "address": "Level 2, SM City J Mall, 165 A.S. Fortuna Street, Mandaue City, Cebu",
+    "city": "Mandaue City"
+   },
+   {
+    "name": "SM City Clark",
+    "address": "Level 1, SM City Clark, Manuel A. Roxas Highway, Clark Freeport Zone, Angeles City, Pampanga",
+    "city": "Angeles City"
+   },
+   {
+    "name": "SM City Dasmariñas",
+    "address": "Level 2, SM City Dasmariñas, Governor's Drive corner Aguinaldo Highway, Dasmariñas City, Cavite",
+    "city": "Dasmariñas City"
+   }
+  ],
+  "at": "2026-11-24T04:29:53.437Z",
+  "via": "llm"
+ },
+ "eastwest:get-free-dove-beauty-bar-puregold#2cf8b670": {
+  "merchant": "Puregold",
+  "discount": "Free Dove Beauty Bar",
+  "validFrom": "2026-11-15",
+  "validTo": "2026-12-14",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-24T04:29:53.517Z",
+  "via": "llm"
+ },
+ "bpi:montesa-medical-group-promo#e3aa2dc0": {
+  "merchant": "Montesa Medical Group",
+  "discount": "50% off slimming treatments",
+  "validFrom": "2026-11-01",
+  "validTo": "2027-05-31",
+  "online": false,
+  "branches": [
+   {
+    "name": "Ayala",
+    "address": "3/F Ayala Malls Circuit",
+    "city": "Makati City"
+   },
+   {
+    "name": "Manila Hotel",
+    "address": "1 Rizal Park, Ermita",
+    "city": "Manila"
+   },
+   {
+    "name": "SM North EDSA Link",
+    "address": "3/F North Link Bldg, SM City North EDSA",
+    "city": "Quezon City"
+   },
+   {
+    "name": "Tomas Morato",
+    "address": "L/G2 CTTM Square Bldg., Tomas Morato cor. Timog Ave.",
+    "city": "Quezon City"
+   }
+  ],
+  "at": "2026-11-24T04:29:53.533Z",
+  "via": "llm"
+ },
+ "bpi:lazada-payday-sale-promo#f6a8d845": {
+  "merchant": "Lazada",
+  "discount": "₱500 off",
+  "validFrom": "2026-11-28",
+  "validTo": "2026-11-30",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-24T04:29:54.833Z",
+  "via": "llm"
+ },
+ "eastwest:secure-your-first-eastwest-credit-card#3489296c": {
+  "merchant": "EastWest Bank",
+  "discount": "5% rebate p.a.",
+  "validFrom": "2026-11-25",
+  "validTo": "2027-02-28",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-24T04:29:54.985Z",
+  "via": "llm"
+ },
+ "chinabank:anas-hello-blue-sale-november-2026#7cf1ac1f": {
+  "merchant": "ANA",
+  "discount": "0% installment up to 12 months",
+  "validFrom": null,
+  "validTo": "2026-11-17",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-24T04:29:55.141Z",
+  "via": "llm"
+ },
+ "unionbank:9225#5be2fa36": {
+  "merchant": "Shi Lin",
+  "discount": "Free 6-pc Xiao Long Bao",
+  "validFrom": "2026-11-01",
+  "validTo": "2027-01-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-24T04:29:55.741Z",
+  "via": "llm"
+ },
+ "chinabank:enjoy-exclusive-accommodation-rates-at-tryp-by-wyndham#f601fe12": {
+  "merchant": "Tryp by Wyndham Mall of Asia - Manila",
+  "discount": "Exclusive room rates",
+  "validFrom": "2026-11-01",
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [
+   {
+    "name": "Tryp by Wyndham Mall of Asia - Manila",
+    "address": "Seaside Boulevard cor. J.W. Diokno Blvd., Mall of Asia Complex",
+    "city": "Pasay City"
+   }
+  ],
+  "at": "2026-11-24T04:29:55.912Z",
+  "via": "llm"
+ },
+ "pnb:enjoy-extra-savings-this-black-friday-with-your-pnb-card-at-rustanscom#a9d0dc35": {
+  "merchant": "Rustan's",
+  "discount": "10% off",
+  "validFrom": "2026-11-27",
+  "validTo": "2026-11-30",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-24T04:29:56.082Z",
+  "via": "llm"
  }
 }
