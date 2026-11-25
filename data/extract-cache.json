@@ -36419,5 +36419,217 @@
   "branches": [],
   "at": "2026-11-24T04:29:56.082Z",
   "via": "llm"
+ },
+ "metrobank:T3Y5p21JTCigJ7pJge29gQ#4b82182b": {
+  "merchant": "Chancellor Hotel Boracay",
+  "discount": "20% off",
+  "validFrom": "2026-11-03",
+  "validTo": "2027-04-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Chancellor Hotel Boracay",
+    "address": "Newcoast Drive, Boracay Newcoast, Barangay Yapak, Boracay Island, Malay, Aklan",
+    "city": "Malay, Aklan"
+   }
+  ],
+  "at": "2026-11-25T03:13:51.311Z",
+  "via": "llm"
+ },
+ "metrobank:Iq0hKk3_SiKTOUde81LXKQ#33af6588": {
+  "merchant": "Hue Hotels & Resorts Boracay",
+  "discount": "40% off",
+  "validFrom": "2026-11-03",
+  "validTo": "2027-04-30",
+  "online": true,
+  "branches": [
+   {
+    "name": "Hue Hotels & Resorts Boracay",
+    "address": "Station 2, Main Road, Boracay Island, Malay, Aklan",
+    "city": "Malay, Aklan"
+   }
+  ],
+  "at": "2026-11-25T03:13:51.389Z",
+  "via": "llm"
+ },
+ "metrobank:HRmp9LLSS5uuZcwCU0rtfA#fe75cae0": {
+  "merchant": "Pinnacle Resorts & Villas Boracay",
+  "discount": "60% off rooms",
+  "validFrom": "2026-11-03",
+  "validTo": "2027-04-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Pinnacle Resorts & Villas Boracay",
+    "address": "Station 1, Sitio Pinaungon, Brgy. Balabag, Boracay Island, Malay, Aklan 5608",
+    "city": "Malay, Aklan"
+   }
+  ],
+  "at": "2026-11-25T03:13:51.422Z",
+  "via": "llm"
+ },
+ "metrobank:C18a6vhbR_uka3veoXtETQ#d0614438": {
+  "merchant": "Amazon.com",
+  "discount": "USD 30 off",
+  "validFrom": "2026-11-27",
+  "validTo": "2026-12-01",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-25T03:13:52.260Z",
+  "via": "llm"
+ },
+ "metrobank:ca4WIhzXT0mVT1AKYt1PcQ#29735b99": {
+  "merchant": "Azalea Hotels & Residences Boracay",
+  "discount": "Up to 55% off rooms",
+  "validFrom": "2026-11-03",
+  "validTo": "2027-04-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Azalea Hotels & Residences Boracay",
+    "address": "7 Station 2, Sitio Manggayad, Brgy. Balabag, Boracay Island, Malay, Aklan",
+    "city": "Malay, Aklan"
+   }
+  ],
+  "at": "2026-11-25T03:13:52.476Z",
+  "via": "llm"
+ },
+ "bpi:linden-teak-promo#492b04a2": {
+  "merchant": "Linden Teak",
+  "discount": "30% off",
+  "validFrom": "2026-03-01",
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-25T03:13:53.010Z",
+  "via": "llm"
+ },
+ "bdo:206483#5dc19114": {
+  "merchant": "SM Store",
+  "discount": "₱300 off",
+  "validFrom": "2026-11-02",
+  "validTo": "2026-12-28",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-25T03:13:54.233Z",
+  "via": "llm"
+ },
+ "bpi:gap-promo#20660e53": {
+  "merchant": "GAP",
+  "discount": "Up to 45% off",
+  "validFrom": "2026-11-24",
+  "validTo": "2027-02-28",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-25T03:13:54.360Z",
+  "via": "llm"
+ },
+ "bdo:185927#615a8d65": {
+  "merchant": null,
+  "discount": "0.85% monthly add-on rate",
+  "validFrom": "2026-06-15",
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-25T03:13:54.757Z",
+  "via": "llm"
+ },
+ "bpi:jewelmer-promo#62132273": {
+  "merchant": "Jewelmer",
+  "discount": "5% off",
+  "validFrom": "2026-11-15",
+  "validTo": "2027-02-28",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-25T03:13:55.497Z",
+  "via": "llm"
+ },
+ "bdo:186003#e4390ab2": {
+  "merchant": null,
+  "discount": "Pay 4 months later",
+  "validFrom": "2026-06-15",
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-25T03:13:56.138Z",
+  "via": "llm"
+ },
+ "bdo:206417#49b7fc39": {
+  "merchant": "SM Store",
+  "discount": "10% off",
+  "validFrom": "2026-11-27",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "SM Store Nuvali",
+    "address": "",
+    "city": ""
+   }
+  ],
+  "at": "2026-11-25T03:13:57.350Z",
+  "via": "llm"
+ },
+ "rcbc:THPPMCTheLoop-1126#58be5a2c": {
+  "merchant": null,
+  "discount": "Up to ₱35,500 off Apple devices",
+  "validFrom": "2026-11-25",
+  "validTo": "2026-11-28",
+  "online": false,
+  "branches": [
+   {
+    "name": "The Holiday Prelude: An RCBC Private Sale (Power Mac Center, The Loop and Rulls booths)",
+    "address": "14/F Yuchengco Tower, RCBC Plaza",
+    "city": "Makati"
+   }
+  ],
+  "at": "2026-11-25T03:13:57.831Z",
+  "via": "llm"
+ },
+ "rcbc:special-rate-on-all-accor-explorer-membership-4070#37112030": {
+  "merchant": "ALL Accor+",
+  "discount": "₱1,800 off membership",
+  "validFrom": "2026-11-15",
+  "validTo": "2026-12-31",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-25T03:13:58.200Z",
+  "via": "llm"
+ },
+ "rcbc:300MCMSMStore-1126#136d27b8": {
+  "merchant": "SM Store",
+  "discount": "₱300 off",
+  "validFrom": "2026-11-02",
+  "validTo": "2026-12-28",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-25T03:13:58.358Z",
+  "via": "llm"
+ },
+ "chinabank:enjoy-up-to-25-percent-off-at-sm-appliance-center#4e945c7e": {
+  "merchant": "SM Appliance Center",
+  "discount": "Up to 25% off",
+  "validFrom": "2026-11-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-25T03:13:59.361Z",
+  "via": "llm"
+ },
+ "chinabank:enjoy-up-to-20-percent-off-at-inflatable-island#50b3a645": {
+  "merchant": "Inflatable Island",
+  "discount": "Up to 20% off",
+  "validFrom": "2026-09-01",
+  "validTo": "2026-12-01",
+  "online": false,
+  "branches": [
+   {
+    "name": "Inflatable Island Beach Club",
+    "address": "Bugallon Road",
+    "city": "Olongapo City"
+   }
+  ],
+  "at": "2026-11-25T03:14:00.020Z",
+  "via": "llm"
  }
 }
