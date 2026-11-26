@@ -36631,5 +36631,294 @@
   ],
   "at": "2026-11-25T03:14:00.020Z",
   "via": "llm"
+ },
+ "metrobank:KmCJUJJKQvmOdV-BFRbvsw#8aa1a2b8": {
+  "merchant": "Uniqlo",
+  "discount": "₱500 cashback",
+  "validFrom": "2026-11-25",
+  "validTo": "2026-12-20",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-26T02:30:11.124Z",
+  "via": "llm"
+ },
+ "metrobank:XfI6mdgySAKeSab8bWRkiQ#119fa5f7": {
+  "merchant": null,
+  "discount": "Up to 60% off",
+  "validFrom": "2026-11-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-26T02:30:11.691Z",
+  "via": "llm"
+ },
+ "metrobank:LDY1JZlgTneVaHJKIbNxGg#331061ea": {
+  "merchant": "Charles Tyrwhitt",
+  "discount": "10% off",
+  "validFrom": "2026-11-01",
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [
+   {
+    "name": "Charles Tyrwhitt, SM Aura",
+    "address": "SM Aura",
+    "city": "Taguig"
+   },
+   {
+    "name": "Charles Tyrwhitt, SM Megamall",
+    "address": "SM Megamall",
+    "city": "Mandaluyong"
+   },
+   {
+    "name": "Charles Tyrwhitt, Robinsons Magnolia",
+    "address": "Robinsons Magnolia",
+    "city": "Quezon City"
+   },
+   {
+    "name": "Charles Tyrwhitt, Shangri-La Plaza",
+    "address": "Shangri-La Plaza",
+    "city": "Mandaluyong"
+   },
+   {
+    "name": "Charles Tyrwhitt, Trinoma",
+    "address": "Trinoma",
+    "city": "Quezon City"
+   },
+   {
+    "name": "Charles Tyrwhitt, One Bonifacio High Street",
+    "address": "One Bonifacio High Street",
+    "city": "Taguig"
+   },
+   {
+    "name": "Charles Tyrwhitt, Glorietta 4",
+    "address": "Glorietta 4",
+    "city": "Makati"
+   },
+   {
+    "name": "Charles Tyrwhitt, Power Plant Mall",
+    "address": "Power Plant Mall",
+    "city": "Makati"
+   },
+   {
+    "name": "Charles Tyrwhitt, Newport Mall",
+    "address": "Newport Mall",
+    "city": "Pasay"
+   },
+   {
+    "name": "Charles Tyrwhitt, SM MOA",
+    "address": "SM MOA",
+    "city": "Pasay"
+   },
+   {
+    "name": "Charles Tyrwhitt, North Edsa",
+    "address": "North Edsa",
+    "city": "Quezon City"
+   },
+   {
+    "name": "Charles Tyrwhitt, Vertis North",
+    "address": "Vertis North",
+    "city": "Quezon City"
+   },
+   {
+    "name": "Charles Tyrwhitt, Estancia",
+    "address": "Estancia",
+    "city": "Pasig"
+   },
+   {
+    "name": "Charles Tyrwhitt, Greenbelt 5",
+    "address": "Greenbelt 5",
+    "city": "Makati"
+   }
+  ],
+  "at": "2026-11-26T02:30:11.849Z",
+  "via": "llm"
+ },
+ "metrobank:ROOvjwe1SkSCvXcORwsabA#df9b73ae": {
+  "merchant": "Club Haven Boracay Inc.",
+  "discount": "Up to 45% off",
+  "validFrom": "2026-11-03",
+  "validTo": "2027-04-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Boracay Haven Suites",
+    "address": "Main Road, Station 1, Boracay Island",
+    "city": "Malay, Aklan"
+   },
+   {
+    "name": "Boracay Haven Resort",
+    "address": "Station 2, Boracay Island",
+    "city": "Malay, Aklan"
+   }
+  ],
+  "at": "2026-11-26T02:30:11.901Z",
+  "via": "llm"
+ },
+ "bdo:206484#42040b84": {
+  "merchant": "Lazada",
+  "discount": "Up to P2,000 off",
+  "validFrom": "2026-11-29",
+  "validTo": "2026-11-30",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-26T02:30:12.473Z",
+  "via": "llm"
+ },
+ "bdo:206516#1e5e6ea5": {
+  "merchant": null,
+  "discount": "Up to 70% off",
+  "validFrom": "2026-11-21",
+  "validTo": "2027-01-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-26T02:30:12.908Z",
+  "via": "llm"
+ },
+ "bdo:206450#63133c8f": {
+  "merchant": "Pinduoduo",
+  "discount": "10% off",
+  "validFrom": null,
+  "validTo": "2026-12-31",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-26T02:30:13.053Z",
+  "via": "llm"
+ },
+ "bdo:206483#1c0fdcc3": {
+  "merchant": "SM Store",
+  "discount": "P300 off",
+  "validFrom": "2026-11-02",
+  "validTo": "2026-12-28",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-26T02:30:13.203Z",
+  "via": "llm"
+ },
+ "securitybank:four-points-by-sheraton-boracay#bf59e808": {
+  "merchant": "Four Points by Sheraton Boracay",
+  "discount": "20% off rooms",
+  "validFrom": "2026-06-15",
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [
+   {
+    "name": "Four Points by Sheraton Boracay",
+    "address": "Station 1, Boracay Island, Malay, Aklan",
+    "city": "Malay, Aklan"
+   }
+  ],
+  "at": "2026-11-26T02:30:13.530Z",
+  "via": "llm"
+ },
+ "securitybank:la-z-boy-holiday-promo#2047955c": {
+  "merchant": "La-Z-Boy",
+  "discount": "₱5,000 off",
+  "validFrom": null,
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-26T02:30:13.715Z",
+  "via": "llm"
+ },
+ "securitybank:save-n-earn-promo#f5eb08a9": {
+  "merchant": "Save n' Earn",
+  "discount": "Up to 70% off",
+  "validFrom": "2026-11-26",
+  "validTo": "2026-11-28",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-26T02:30:13.835Z",
+  "via": "llm"
+ },
+ "securitybank:blims-furniture#05c49be5": {
+  "merchant": "BLIMS Furniture",
+  "discount": "₱6,000 off",
+  "validFrom": null,
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-26T02:30:13.977Z",
+  "via": "llm"
+ },
+ "securitybank:power-mac-center-2#fe187c85": {
+  "merchant": "Power Mac Center",
+  "discount": "Up to ₱35,000 off Apple products",
+  "validFrom": null,
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-26T02:30:14.275Z",
+  "via": "llm"
+ },
+ "eastwest:save-php-200-waltermartcom#c1f8f20c": {
+  "merchant": "WalterMart",
+  "discount": "₱200 off",
+  "validFrom": "2026-12-01",
+  "validTo": "2027-06-01",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-26T02:30:14.337Z",
+  "via": "llm"
+ },
+ "pnb:your-samsung-upgrade-just-got-better#ae69d60c": {
+  "merchant": "Samsung",
+  "discount": "11% off",
+  "validFrom": "2026-11-26",
+  "validTo": "2026-12-27",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-26T02:30:14.499Z",
+  "via": "llm"
+ },
+ "pnb:rustans-holiday-promo#1a77c914": {
+  "merchant": "Rustan's",
+  "discount": "₱2,000 off",
+  "validFrom": null,
+  "validTo": null,
+  "online": false,
+  "branches": [
+   {
+    "name": "Rustan's Makati",
+    "address": null,
+    "city": "Makati"
+   },
+   {
+    "name": "Rustan's Shangri-La",
+    "address": null,
+    "city": "Mandaluyong"
+   },
+   {
+    "name": "Rustan's Cubao",
+    "address": null,
+    "city": "Quezon City"
+   },
+   {
+    "name": "Rustan's Cebu",
+    "address": null,
+    "city": "Cebu"
+   },
+   {
+    "name": "Rustan's Alabang",
+    "address": null,
+    "city": "Muntinlupa"
+   },
+   {
+    "name": "Rustan's Nustar Cebu",
+    "address": null,
+    "city": "Cebu"
+   },
+   {
+    "name": "Rustan's Adora-Greenbelt",
+    "address": null,
+    "city": "Makati"
+   },
+   {
+    "name": "Rustan's Adora-Shangrila",
+    "address": null,
+    "city": "Mandaluyong"
+   }
+  ],
+  "at": "2026-11-26T02:30:15.388Z",
+  "via": "llm"
  }
 }
