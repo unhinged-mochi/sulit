@@ -36920,5 +36920,281 @@
   ],
   "at": "2026-11-26T02:30:15.388Z",
   "via": "llm"
+ },
+ "metrobank:ebiw7i1BSvG2uWagxwEHAg#36f491ff": {
+  "merchant": "United Colors of Benetton",
+  "discount": "15% off",
+  "validFrom": "2026-11-01",
+  "validTo": "2027-01-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-27T02:27:29.989Z",
+  "via": "llm"
+ },
+ "bdo:206451#433d112d": {
+  "merchant": null,
+  "discount": "Up to 15% off dining",
+  "validFrom": null,
+  "validTo": null,
+  "online": true,
+  "branches": [],
+  "at": "2026-11-27T02:27:30.301Z",
+  "via": "llm"
+ },
+ "bdo:206549#23a97d65": {
+  "merchant": "Brasserie on 3, Conrad Manila",
+  "discount": "50% off",
+  "validFrom": "2026-12-01",
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [
+   {
+    "name": "Brasserie on 3, Conrad Manila",
+    "address": "Seaside Boulevard corner Coral Way, Mall of Asia Complex",
+    "city": "Pasay"
+   }
+  ],
+  "at": "2026-11-27T02:27:30.461Z",
+  "via": "llm"
+ },
+ "bdo:206582#93b6c9c6": {
+  "merchant": "SM Store",
+  "discount": "10% off",
+  "validFrom": "2026-11-27",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-27T02:27:30.985Z",
+  "via": "llm"
+ },
+ "bpi:old-navy-promo#ddaa2dd5": {
+  "merchant": "Old Navy",
+  "discount": "Up to 45% off",
+  "validFrom": "2026-11-24",
+  "validTo": "2027-02-28",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-27T02:27:31.766Z",
+  "via": "llm"
+ },
+ "eastwest:extra-10-savings-rustans-online-black-friday-sale#c1f2a53b": {
+  "merchant": "Rustan's",
+  "discount": "Extra 10% off",
+  "validFrom": "2026-11-27",
+  "validTo": "2026-11-30",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-27T02:27:31.978Z",
+  "via": "llm"
+ },
+ "eastwest:get-50-savings-buffet-dining-grand-kitchen#1f256d5d": {
+  "merchant": "The Grand Kitchen",
+  "discount": "50% off buffet",
+  "validFrom": "2026-12-01",
+  "validTo": "2026-12-29",
+  "online": false,
+  "branches": [
+   {
+    "name": "The Grand Kitchen",
+    "address": "Grand Hyatt Manila",
+    "city": "Metro Manila"
+   }
+  ],
+  "at": "2026-11-27T02:27:32.021Z",
+  "via": "llm"
+ },
+ "eastwest:20-savings-claw#a8255937": {
+  "merchant": "CLAW",
+  "discount": "20% off",
+  "validFrom": "2026-12-01",
+  "validTo": "2027-03-31",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-27T02:27:33.826Z",
+  "via": "llm"
+ },
+ "eastwest:20-savings-luljettas-place#0f790dd2": {
+  "merchant": "Luljetta's Place",
+  "discount": "20% off",
+  "validFrom": "2026-12-01",
+  "validTo": "2027-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Luljetta's Place Garden Suites",
+    "address": "Sitio Loreland, Brgy. San Roque, 1870 Rizal",
+    "city": "Antipolo City"
+   }
+  ],
+  "at": "2026-11-27T02:27:34.364Z",
+  "via": "llm"
+ },
+ "rcbc:AVC-1126#26e59384": {
+  "merchant": "Accor Vacation Club",
+  "discount": "Save up to 62%",
+  "validFrom": "2026-11-26",
+  "validTo": "2027-01-15",
+  "online": false,
+  "branches": [],
+  "at": "2026-11-27T02:27:35.353Z",
+  "via": "llm"
+ },
+ "rcbc:AALGHolidays-1126#735ba78f": {
+  "merchant": "Philippine AirAsia",
+  "discount": "20% off flights",
+  "validFrom": "2026-11-25",
+  "validTo": "2026-11-29",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-27T02:27:35.385Z",
+  "via": "llm"
+ },
+ "unionbank:9260#5ed8a102": {
+  "merchant": "Moulin Rouge! The Musical",
+  "discount": "10% off tickets",
+  "validFrom": "2026-12-01",
+  "validTo": "2026-12-04",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-27T02:27:35.972Z",
+  "via": "llm"
+ },
+ "rcbc:RCCBFS-1126#c922c954": {
+  "merchant": "Rustan's",
+  "discount": "10% off",
+  "validFrom": "2026-11-27",
+  "validTo": "2026-11-30",
+  "online": true,
+  "branches": [],
+  "at": "2026-11-27T02:27:36.012Z",
+  "via": "llm"
+ },
+ "chinabank:enjoy-10-percent-off-at-las-casas-filipinas-de-acuzar#d1ff1267": {
+  "merchant": "Las Casas Filipinas de Acuzar",
+  "discount": "10% off rooms and F&B",
+  "validFrom": "2026-09-01",
+  "validTo": "2027-02-15",
+  "online": false,
+  "branches": [
+   {
+    "name": "Las Casas Filipinas de Acuzar",
+    "address": "Brgy. Ibaba, Gate 1",
+    "city": "Bagac, Bataan"
+   }
+  ],
+  "at": "2026-11-27T02:27:36.138Z",
+  "via": "llm"
+ },
+ "securitybank:sm-store-4#48c17918": {
+  "merchant": "SM Store",
+  "discount": "₱300 off every Monday",
+  "validFrom": null,
+  "validTo": null,
+  "online": false,
+  "branches": [],
+  "at": "2026-11-27T02:27:36.444Z",
+  "via": "llm"
+ },
+ "chinabank:enjoy-20-percent-off-on-select-treatments-at-amorea-skin#e2c7b77e": {
+  "merchant": "Amorea Skin",
+  "discount": "20% off select treatments",
+  "validFrom": "2026-09-01",
+  "validTo": "2026-11-30",
+  "online": false,
+  "branches": [
+   {
+    "name": "Amorea Skin",
+    "address": "Unit 1C Cocoon Boutique Hotel, Scout Rallos cor. Scout Tobias St",
+    "city": "Quezon City"
+   }
+  ],
+  "at": "2026-11-27T02:27:36.991Z",
+  "via": "llm"
+ },
+ "pnb:get-15-off-with-your-pnb-jcb-platinum-credit-card#fdff28b8": {
+  "merchant": "ACE Bags and Luggage",
+  "discount": "15% off",
+  "validFrom": "2026-10-05",
+  "validTo": "2026-12-31",
+  "online": false,
+  "branches": [
+   {
+    "name": "ACE Mitsukoshi",
+    "address": "Mitsukoshi Mall",
+    "city": null
+   },
+   {
+    "name": "The Travel Club+ Rockwell Power Plant Mall",
+    "address": "Rockwell Power Plant Mall",
+    "city": null
+   },
+   {
+    "name": "The Travel Club Ayala Malls Center Cebu",
+    "address": "Ayala Malls Center Cebu",
+    "city": "Cebu"
+   },
+   {
+    "name": "The Travel Club Robinsons Magnolia",
+    "address": "Robinsons Magnolia",
+    "city": null
+   },
+   {
+    "name": "The Travel Club Ayala Malls Bonifacio High Street",
+    "address": "Ayala Malls Bonifacio High Street",
+    "city": null
+   },
+   {
+    "name": "The Travel Club+ Ayala Malls Trinoma",
+    "address": "Ayala Malls Trinoma",
+    "city": null
+   },
+   {
+    "name": "The Travel Club+ Shangri-La Plaza",
+    "address": "Shangri-La Plaza",
+    "city": null
+   },
+   {
+    "name": "The Travel Club SM Mall of Asia",
+    "address": "SM Mall of Asia",
+    "city": null
+   },
+   {
+    "name": "The Travel Club SM Megamall",
+    "address": "SM Megamall",
+    "city": null
+   },
+   {
+    "name": "The Travel Club Ayala Malls Abreeza",
+    "address": "Ayala Malls Abreeza",
+    "city": null
+   },
+   {
+    "name": "The Travel Club Estancia Mall",
+    "address": "Estancia Mall",
+    "city": null
+   },
+   {
+    "name": "The Travel Club Ayala Malls Glorietta 4",
+    "address": "Ayala Malls Glorietta 4",
+    "city": null
+   },
+   {
+    "name": "Flight 001 Ayala Malls Center Cebu",
+    "address": "Ayala Malls Center Cebu",
+    "city": "Cebu"
+   },
+   {
+    "name": "The Travel Club Megaworld Newport",
+    "address": "Megaworld Newport",
+    "city": null
+   },
+   {
+    "name": "The Travel Club Ayala Malls Alabang Town Center",
+    "address": "Ayala Malls Alabang Town Center",
+    "city": null
+   }
+  ],
+  "at": "2026-11-27T02:27:38.892Z",
+  "via": "llm"
  }
 }
